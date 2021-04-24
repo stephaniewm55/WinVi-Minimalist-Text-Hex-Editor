@@ -1,0 +1,513 @@
+This file is currently available in German language only.
+=========================================================
+
+Homepage
+~~~~~~~~
+	Link auf C-Compiler: http://www.c-plusplus.de/
+	Tipps & Tricks: Hinweis auf &n und &p (keine anderen Sequenzen)
+	upx-Komprimierung
+
+Fehler / fehlende Features des WinVi (6-Nov-2007)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Utf-8: /\%e2\%80\%a2 geht, /[\%e2][\%80][\%a2] aber nicht
+Utf-8: d6 b8 d7 96 belegt nur eine Position ("Ö¸×–").
+Fehler 300 trat in bisher einem Fall auf (eigentlich "malloc failed")
+	wahrscheinlich in Paint.c auf (evtl. auch Command.c, Exec.c, Map.c)
+Proportionalschrift-Tab-Berechnung beim Drucken und bei
+	Cursorpositionierung/Markierung ist falsch
+Help-Topic #Print gibt es noch nicht
+Help context für Suche ("/...") und ex-Optionen (":se...")
+Alt+F3 zeigt im Hexadezimalmodus einen Literalstring aber das Hexadezimal-Flag,
+	Suchstring sollte dann hexadezimal vorausgefüllt sein,
+Ctrl+Right auch ans Zeilenende
+Zwischenablage:
+	• hexadezimale Behandlung im Hex-Modus
+	• Sonderzeichen als \%hh in ex-Befehlszeile
+spanische Übersetzungen überprüfen:
+	• ¡El fichero existente será sobrescrito!
+	  (Existing file will be overwritten!)
+	• El fichero en el disco ha sido modificado.\n¿Anular ese cambio?
+	  (File on disk has been modified.\nOverride changes?)
+	• Todos los archivos (*.*)
+	  (All Files (*.*))
+Keypad-Tasten, Extended-Flag in Keyboard-Makros einbauen
+Modified-Attribut setzen, wenn Datei auf Platte geändert wurde
+Tote Tastatur bei Fehlermeldung während der Makroausführung
+	(Mausklick bei "Ecrire maintenant" -> No)
+Fehlermeldung "...ist schreibgeschützt", wenn bei Shell-Ausführung
+	mit Mausklick in die Statuszeile der Befehl :f eingegeben wird
+Umsortieren der :args-Liste bei Drag-and-Drop
+Shell-Befehlszeile ohne Längenbegrenzung
+Tastatur-Makros ohne Längenbegrenzung
+Prozentanzeige wird bei Shell-Ausführung zu oft angezeigt
+yG kopiert das abschließende Newline nicht in den Yank-Buffer
+mehrfache oder wiederholte Eingaben mit Ctrl+Alt+V gehen noch nicht
+Hilfe-Datei um Einstellungen ergänzen
+Hilfe-Datei übersetzen
+
+Read-only als Profilauswahlkriterium
+Shell Radiobutton für minimierte/versteckte Ausführung
+Konflikte zwischen Eingaben verschiedener Mappings/Abbreviations
+Profile- und Makroaufruf von Shellkommandozeile, besser als ex-Befehl
+gemischtes Matchen von Abbreviations und Mappings geht nicht richtig
+Profile-Einstellungen nur sichern, wenn sie vom Default-Profile abweichen
+	oder alternativ Anzeige auf "Three-State"-Checkboxes umstellen
+Accelerators in ExpandPath-Menüs
+Mapping von Control-Taste mit Nicht-Control-Zeichen 
+Profil-Auswahl bei Tabwechsel aktiv lassen
+Makro-Menü
+
+Bitmap durch Preprocessor-Switches aus der Übersetzung rausnehmen
+nichtenglische Sprachen in externe Datei auslagern
+Befehlshistory (Pseudo-Combobox nach :, /, ? oder !<pos>)
+<Ctrl+End> ans Ende der letzten Zeile statt an den Anfang
+":set window=" alternativ zu ":set lines=" (?)
+regular expressions:
+- * funktioniert nicht in Verbindung mit \|,
+	wenn hinter \) weitere Suchelemente folgen (Beispiel: "/\(.*\|.*\);")
+- \| sollte auch ohne \( und \) funktionieren
+- Suche nach /\(x\|xy\)\> findet xy am Wortende nicht
+:g/x/s//y/ -> :%s/x/y/
+:g/x/d     -> :%s/.*x.*\(\%0d\%0a\|[\%00\%0a\%0d\%1e]\)//
+\U \u \L \l \E \e im Ersetzungsstring für Änderung der Groß-/Kleinschreibung
+":<range>!" alternativ zu "!<pos>" für einfügende Shellausführung
+Konfigurierbares Verhalten von '.' nach 'u'
+	("repeat undo" oder "repeat previous non-undo")
+Colors-Dialog für die Farben Status,FileOpInProgress,Error,GrayCmd, ToolTip
+Erkennung verfügbarer Zeichen mit TextOut(MemoryDC) statt mit GetGlyphOutline
+Multibyte-Zeichensätze (16-bit Unicode (UCS-2) und UTF-8(Unicode))
+
+Marker korrigieren bei insert/delete in derselben Page
+Vollständige Windows-Liste bei mehrfach belegten Eintragsnummern anzeigen
+Option "disable-mouse-cursor-set" (gewünscht von Tim Cummins 5-Jul-2000)
+Option für Expandierung von ..
+:retab[!] <number>
+beidseitiges Drucken durch getrenntes Drucken ungerader und gerader Seiten
+Win2K/XP: Caretbreite mit SystemParametersInfo(SPI_GETCARETWIDTH) ermitteln
+Win2K/XP: VisualBell wenn GetSystemMetrics(SM_SHOWSOUNDS)
+Befehlszeile wird abgeschnitten, sollte unbegrenzt sein
+Anzahl der Sicherungskopien, Verzeichnis für Sicherungskopien
+DOS/ANSI-Einstellung vorkonfigurierbar machen
+abschaltbares Cursor-Blinken
+falsche Schriftartgruppe bei dialoglosem Drucken (Parameter -p)
+Löschen selektierter Bereiche im Insertmode sollte keinen Yank-Buffer benutzen
+Mindest-Zeilenzahl über und unter dem Caret (am oberen und unteren Rand)
+Select-Operation im Befehlsmodus
+:r! ohne Share-Attribute
+Zeichenposition bei ^G ausgeben.
+initiales Setzen der Default-AnsiCodePage
+Statusanzeige als Byteposition statt Zeile/Spalte
+Änderungen in der Suchen-Dialogbox sollten auch im Mainwindow sofort gültig sein
+Nach !-Befehlen ist Zeilenzahl und Prozentangabe manchmal um eine Zeile zu klein
+<BackSpace> im ReplaceMode sollte wiederherstellen.
+Nach ":cd ..." erscheint eine Dateiänderungsmeldung,
+	wenn es die aktuelle Datei im Zielverzeichnis auch gibt
+	und eine andere Datei im neuen Verzeichnis geändert wurde
+<Ctrl+Up/Down> sollte die Cursorposition im Window erhalten
+spanische Übersetzungen für "Newlines as in Notepad"
+neue Positionierer (, ), {, }
+":<num>w" ohne '!' muß eine Fehlermeldung bringen
+horizontaler Scrollbar in Dateiliste...
+FindValidPosition im HexModus immer mit Flags 1+2 (?)
+:tag optimieren (z.B. optionale Binärsuche)
+Bildschirmupdate bei scrollenden und teilweise verdeckten !-Einfügungen am EOF
+Drucken im Hex-Modus
+Drucken von weiteren Parametern in der Kopf- und Fußzeile:
+	kurzer Dateiname (&f = Filename),
+	aktuelles Datum (&d = Date),
+	Dateiänderungsdatum (&m = Modification date),
+	Gesamtseitenzahl (&l = Last page)
+
+Zeilen mit ~ am Bildschirmende bei Scrollthumb-Größenberechnung mit einbeziehen
+Font-Auswahl über ex-set-Kommando (:set font=...)
+:set directory=... für das Temp-Verzeichnis
+:set noshowmode zum Wegblenden der rechten 6 Statuszeilenfelder
+veralteter Text in der Statuszeile sollte gelöscht werden (z.B. "n lines <ed")
+Mode-Lines (siehe Mail von Marc Yaxley vom 1-Sep-98)
+optionaler Verzeichniswechsel bei Drag&Drop
+File-Association von Optionen aus konfigurierbar machen
+im HexModus wird bei Highlight der matchenden Klammerpositionen zuviel gemalt
+Suche und Substitute während der Ausführung grün anzeigen
+CurrentWorkingDir zusammen mit AlternateFile sichern (?)
+Erhalten von CarriageReturn durch <Ctrl+M> bei mehrfachem Insert mit . oder <n>i
+
+Spracherweiterungen resourceunabhängig integrieren (Ini-File)
+Update im Hexmodus ohne linken Adreßrand
+Zeilenbefehle: map, abbreviate (ohne Argumente -> Dialogbox)
+Settings-Option "indent with spaces only" (statt Tabs und Spaces)
+horizontaler Scrollbar
+Änderungen im Search-Dialog sollten bei "Search again" oder 'n' wirksam werden
+<Ctrl+W> bzw. <Shft+Bksp> mit <Alt+Bksp> in einem Stück wiederherstellbar machen
+":copy <tab>" wird wie ":cd <tab>" behandelt (Befehl sollte überprüft werden)
+
+Scrollen (besonders mit Radmaus) in verschiedenen Geschwindigkeitsstufen
+DDE-Befehl um als Server zu arbeiten (ähnlich wie Einfügen bei '!'-Befehlen)
+":so[urce] filename", '|' (?) als Kommandotrenner
+Tags-File ohne Pfad für Pfad des Source-Files
+Shift-Taste beim Tag- und Datei-RecentFiles-Menü für neue Instanz
+Datei in Dateiliste erst bei Beenden oder Öffnen einer anderen Datei
+Datei->Dateiliste klarer bezeichnen
+Umbenennen in "wvi", "viw", "vinny" oder so etwas
+Positionen zu Dateien in der Fileliste im Dateimenü merken (Torsten)
+Tabulatoren optional als Leerstellen einfügen
+About-Box mit Hyperlinks
+
+Selektierung beim Klicken und Draggen im CommandMode
+Drag&Drop von markierten Textpassagen
+optionale Anzeige von Spaces und Tabs
+optionale Anzeige von Marks
+<Ctrl+C> und <Ctrl+Break> funktionieren noch nicht bei !-Befehlen
+Statusanzeige Hold/<leer> erscheint erst nach neuer Ausgabe
+Syntax highlighting
+Unterstützung von Multi-Byte-Zeichensätzen
+hübschere Variante von ":set list"
+
+Tool- und Statusbar ein- und ausschaltbar
+"" oder "* (Anführunsstrichpaar oder Anführungsstriche Stern)
+	als Buffername für das Clipboard
+ScrollLock zum Arretieren der aktuellen Zeile
+inkrementelles Suchen (Positionierung und Markierung während der Eingabe)
+Drucken des selektierten Bereichs
+Drucken mit mehreren Profiles, z.B. Dokument, Simple
+Statuszeilen-Tips für Menüs und Untermenüs
+bei Programmstart ohne Parameter optional mit zuletzt editierter Datei anfangen
+neuen Befehl und ToolButton zum interaktiven Ausführen (mit Tastatur-Input)
+!-Befehle mit unbegrenzter Kommandolänge
+Vi-Befehle über das Kontext-Menü bekanntmachen
+andere Meldung beim Ändern bei ! (statt "Datei kann nicht geändert werden")
+Erster dd-Befehl macht 2x Refresh (Palettenanimation?)
+"Abbrechen, Wiederholen, Fehler" bleibt hängen (MKS-Tools)
+Compilerfehler bei Wys_net, Wys_int und FaxDrv95.uni
+Such-Positioniermöglichkeit während !-Befehlsausführung
+Tip of the Day (Wußten Sie schon...)
+Konfigurationsschemen
+Tabulator-Expandierung für Substitute-Patterns
+Tabulator-Expandierung auch für !-Kommandos mit Pfad-Einbeziehung
+Doppelklick zum Umschalten vom CommandMode in den InsertMode
+automatischer HexEditMode bei bestimmten Dateitypen (.OBJ, .EXE, .DLL, .RES,...)
+optional Positionen mehrerer Programminstanzen merken und wiederherstellen
+Checkbox für "Use Clipboard for Yank/Delete/Put"
+Cancel in FileList nicht Default, wenn das selektierte File nicht aktuell ist
+HorzScroll: Zurückscrollen, wenn Zeile nicht bis zum rechten Rand reicht
+Undo mit <Ctrl+C>/<Ctrl+Break> unterbrechbar
+bei langem Undo Sanduhr anzeigen
+Emacs-Features (z.B. Smart-Indent)
+Eingabe ":sh[ell]" zum Launchen einer Dos-Box
+Block-/Spalten-Selektierung
+#include in tags-Files
+Varianten in tags-Files (für bedingte Definitionen mit #if...)
+
+Keys: <Ctrl+F> = Find (Konflikt mit Forward)
+<Ctrl+Drag&Drop> zum Einfügen einer Datei
+Installation: NotePad-Ersetzung, 16-/32-Bit-Überprüfung, Deinstallation
+Fileliste vorwärts (und rückwärts?) durchwandern, auch mit Toolbar-Taste(n)
+HorzScroll: Timer bei CaptureDrag, Abrutschlösung fürs Selektieren
+Zeilenumbruch statt horizontales Scrollen bei überlangen Zeilen
+einstellbare MemoryPageSize
+Ein anderer Caret für c/d/y/!/</> ohne bereits getippter <pos>
+"set margin=..." und automatischer Zeilenumbruch
+User-spezifische Einstellungen (in die Registry)
+genauere Mauspositionierung oder erzwungener FixFont im HexEditMode
+Lock von Dateien: Suche und Bearbeitung eines HiddenFile LOCKS.INI
+Vorwegtippen während Dateilesen, Suchen, etc. sollte möglich sein
+Shift+Ins (Einfügen aus Clipboard) wiederholbar machen (mit . oder Faktor)
+Shift: "I^<Ctrl+D>" muß nach Ausrücken den alten Indentcount beibehalten
+Ctrl+V (Escape) in Kommandozeile, InsertMode, ReplaceMode, [ftFT]-Positionierer
+Ctrl+V-Wirkung konfigurierbar (Escape oder Clipboard-Insert)
+Ctrl+C-Wirkung (Clipboard-Copy/Ctrl+Break) abhängig von aktuellem Busy-Zustand
+Sound nach langen Operationen (incl <mmsystem.h>, sndPlaySound(FName,SND_ASYNC))
+kombinierte Befehle ! mit Positionierer (doppelseitige Pipes)
+":read !<cmd>" und ":write !<cmd>" für einseitige Pipes
+Zeilenbefehle: global, void
+Zeilenbefehle: yank, put, join, move, copy, transfer, open, insert
+Toolbar konfigurierbar
+FileListe (":args"): Toolbar-Taste für aktuelle File-Liste
+FileListe (":args"): File bei ":args"-Dialogbox zur FileListe zufügen
+FileListe (":args"): Löschtaste bei ":args"-Dialogbox
+Gesamtkonfiguration speichern und per Parameter laden (aus Default-Verzeichnis?)
+Zeichenlängenberechnung für Ausgabe weiter optimieren (GetCharABCWidths())
+Scrollbehandlung bei Klick auf mittlere Taste/Rad
+neues File sollte initial speicherbar sein
+Hilfe
+SetFileApisToOem (Öffnen von Dateien mit bestimmten OEM-Zeichen, siehe Q141720)
+
+Test:
+01234567891123456789212345678931234567894123456789512345678961234567897123456789812345678991234567890123456789112345678921234567893123456789412345678951234567896123456789712345678981234567899123456789012345678911234567892123456789312345678941234567895123456789612345678971234567898123456789912345678901234567891123456789212345678931234567894123456789512345678961234567897123456789812345678991234567890123456789112345678921234567893123456789412345678951234567896123456789712345678981234567899123456789012345678911234567892123456789312345678941234567895123456789612345678971234567898123456789912345678901234567891123456789212345678931234567894123456789512345678961234567897123456789812345678991234567890123456789112345678921234567893123456789412345678951234567896123456789712345678981234567899123456789
+012345678911234567892123456789312345678941234567895123456789612345678971234567898123456789912345678901234567891123456789212345678931234567894123456789512345678961234567897123456789812345678991234567890123456789112345678921234567893123456789 412345678951234567896123456789712345678981234567899123456789012345678911234567892123456789312345678941234567895123456789612345678971234567898123456789912345678901234567891123456789212345678931234567894123456789512345678961234567897123456789 812345678991234567890123456789112345678921234567893123456789412345678951234567896123456789712345678981234567899123456789012345678911234567892123456789312345678941234567895123456789612345678971234567898123456789912345678901234567891123456789 21234567893123456789412345678951234567896123456789712345678981234567899123456789
+
+Beispiele für :g / :v
+~~~~~~~~~~~~~~~~~~~~~
+	:g/.*/m0
+		This will reverse the order of the lines in the current file.
+		m0 is the ex command to move the line to line 0.
+	:v/./.,/./-1join
+		Replaces multiple blank lines with just one blank line.
+
+Syntax Coloring
+~~~~~~~~~~~~~~~
+	.c,.h:
+	 elements
+	  darkblue:auto,break,case,char,const,continue,default,do,double,else,enum,
+	 		   extern,float,for,goto,if,int,long,register,return,short,signed,
+			   sizeof,static,struct,switch,typedef,union,unsigned,void,volatile,
+			   while
+	 mode-on
+	  darkgreen:/*,//
+	 mode-off
+	  darkgreen:*/,\012
+	.htm,.html:
+	 elements
+	  lightred:<header[^>]*>,<body[^>]*>,<frameset[^>]*><noframes[^>]*>
+	 alt mode-on
+	  darkgreen:<!--
+	   alt darkred:<
+		in darkblue:"
+	 alt mode-off
+	  darkgreen:-->
+	   darkred:>
+		darkblue:"
+
+spanische Monatsnamen
+~~~~~~~~~~~~~~~~~~~~~
+Enero      Ene
+Febrero    Feb
+Marzo      Mar
+Abril      Abr
+Mayo       May
+Junio      Jun
+Julio      Jul
+Agosto     Ago
+Septiembre Sep
+Octubre    Oct
+Noviembre  Nov
+Diciembre  Dic
+
+Syntax highlighting
+~~~~~~~~~~~~~~~~~~~
+	c: 1 "[^"]*"										[strings]
+	   2 ^[ \%09]*#[ \%09]*\(define\|undef\|pragma\|...
+	   		error\|include\|line\|if\|ifdef\|ifndef\|...
+			else\|elif\|elifdef\|elifndef\|endif\)		[preprocessor statement]
+	   3 keywords, expandable with different colors!	[keywords]
+	   4 \(\/\*[^\(\*\/\)]*\*\/\|\/\/.*\)				[comment]
+	   5 \/\*.*											[multi-line comment]
+	html: 1 "[^"]*"										[string (in tags)]
+		  2 <!--[^\(-->\)]*-->							[comment]
+		  3 <!--.*										[multi-line comment]
+		  4 <[^>]*>, matching open/close tags!			[tag]
+
+Auswahlkriterien für Schemes/Profiles
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ok	Drive/host/path specific (<DriveLetter>:[\Path] or \\<Host>[\Path])
+ok	Extension specific  (.<Extension>)
+ok	Explicit (Parameter or Menu Choice)
+ok	Default
+	Fileattribute (Readonly/Archive)
+	User specific
+
+Zeilenumbruch
+~~~~~~~~~~~~~
+	Eingaben zum Auf-/Abwärtspositionieren logischer Zeilen: k/j
+	Bildschirmzeilen auf/abwärts: CursorUp/CursorDown
+	Umbruchposition (Wort-/Zeichengrenze) ermitteln
+	Cursor hoch/runter: Nummer der Fortsetzungszeile ermitteln/wiederherstellen
+	Scroll up: obere Bildschirmzeile mit Startpositionen dynamisch puffern
+	Cursor up: zuviel Scrollerei vermeiden (erst berechnen, dann anzeigen)
+	Trennzeichen (Doppelpfeil): Breite ermitteln, anzeigen
+
+Unicode Zero Width Combining Characters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	0300-036f								(diacritical marks)
+	0591-05bd,05bf,05c1-05c2,05c4-05c5,05c7	(Hebrew)
+	0610-0615,064b-065e,0670,06d6-06dc,
+			  06de-06e4,06e7-06e8,06ea-06ed	(Arabic)
+	0711,0730-074a							(Syriac)
+	07a6-07b0								(Thaana)
+	07eb-07f3								(N'Ko)
+	0901-0903,093c,093e-094d,0951-0954,
+			  0962-0963						(Devanagari)
+	0981-0983,09bc,09be-09c4,09c7-09c8,
+			  09cb-09cd,09d7,09e2-09e3		(Bengali)
+	0a01-0a03,0a3c,0a3e-0a42,0a47-0a48,
+			  0a4b-0a4d,0a70-0a71			(Gurmukhi)
+	0a81-0a83,0abc,0abe-0ac5,0ac7-0ac9,
+			  0acb-0acd,0ae2-0ae3			(Gujarati)
+	0b01-0b03,0b3c,0b3e-0b43,0b47-0b48,
+			  0b4b-0b4d,0b56-0b57			(Oriya)
+	0b82,0bbe-0bc2,0bc6-0bc8,0bca-0bcd,0bd7	(Tamil)
+	0c01-0c03,0c3e-0c44,0c46-0c48,
+			  0c4a-0c4d,0c55-0c56			(Telugu)
+	0c82-0c83,0cbc,0cbe-0cc4,0cc6-0cc8,
+			  0cca-0ccd,0cd5-0cd6,0ce2-0ce3	(Kannada)
+	0d02-0d03,0d3e-0d43,0d46-0d48,
+			  0d4a-0d4d,0d57				(Malayalam)
+	0d82-0d83,0dca,0dcf-0dd4,0dd6,
+			  0dd8-0ddf,0df2-0df3			(Sinhala)
+	0e31,0e34-0e3a,0e47-0e4e				(Thai)
+	0eb1,0eb4-0ebc,0ec8-0ecd				(Lao)
+	0f18-0f19,0f35,0f37,0f39,0f3e-0f3f,
+			  0f71-0f84,0f86-0f87,0f90-0f97,
+			  0f99-0fbc,0fc6				(Tibetan)
+	102c-1032,1036-1039,1056-1059			(Myanmar)
+	1712-1714								(Tagalog)
+	1732-1734								(Hanunoo)
+	1752-1753								(Buhid)
+	1772-1773								(Tagbanwa)
+	17b6-17d3,17dd							(Khmer)
+	18a9									(Mongolian)
+	1920-192b,1930-193b						(Limbu)
+	19b0-19c0,19c8-19c9						(New Tai Lue)
+	1a17-1a1b								(Buginese)
+	1b00-1b04,1b34-1b44,1b6b-1b73			(Balinese)
+	1dc0-1dca,1dfe-1dff						(supplement)
+	20d0-20ef								(symbols)
+	302a-302f								(CJK)
+	3099-309a								(Hiragana)
+	a802,a806,a80b,a823-a827				(Syloti Nagri)
+	fb1e									(Hebrew Presentation)
+	fe20-fe23								(half marks)
+	10a01-10a03,10a05-10a06,10a0c-10a0f,
+				10a38-10a3a,10a3f			(Kharoshthi)
+	1d165-1d169,1d16d-1d172,1d17b-1d182,
+				1d185-1d18b,1d1aa-1d1ad		(western musical)
+	1d242-1d244								(ancient Greek musical)
+
+New WinVi search algorithm:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#define SRCH_DONE							 0	/* no parameter            */
+#define SRCH_FAIL_FROM_SET					 1	/* negative_offset         */
+#define SRCH_REPEAT_MAXIMUM_MATCH			 2	/* 2 bytes, offset         */
+#define SRCH_REPEAT_MINIMUM_MATCH			 3	/* 2 bytes, offset         */
+#define SRCH_REPEAT_MAX_MATCH_LONG			 4	/* 2 longs, offset (LE)    */
+#define SRCH_REPEAT_MIN_MATCH_LONG			 5	/* 2 longs, offset (LE)    */
+#define SRCH_REPEAT_MAX_MATCH_0_1			 6	/*          offset         */
+#define SRCH_SKIP							 7  /*          offset         */
+#define SRCH_ENTER_SUB_RE					 8	/* subre                   */
+#define SRCH_LEAVE_SUB_RE					 9	/* no parameter            */
+#define SRCH_1_BYTE							10	/* 1 byte,  offset         */
+#define SRCH_2_BYTES						11	/* 2 bytes, offset         */
+#define SRCH_3_BYTES						12	/* 3 bytes, offset         */
+#define SRCH_4_BYTES						13	/* 4 bytes, offset         */
+#define SRCH_WCHAR							14	/* 1 wchar, offset (LE)    */
+#define SRCH_1_BYTE_ALTERNATIVE				15	/* 2 bytes, offset         */
+#define SRCH_2_BYTES_ALTERNATIVE			16	/* 4 bytes, offset         */
+#define SRCH_3_BYTES_ALTERNATIVE			17	/* 6 bytes, offset         */
+#define SRCH_4_BYTES_ALTERNATIVE			18	/* 8 bytes, offset         */
+#define SRCH_WCHAR_ALTERNATIVE				19	/* 2 wchars,offset (LE)    */
+#define SRCH_INV_1_BYTE						20	/* 1 byte,  offset         */
+#define SRCH_INV_2_BYTES					21	/* 2 bytes, offset         */
+#define SRCH_INV_3_BYTES					22	/* 3 bytes, offset         */
+#define SRCH_INV_4_BYTES					23	/* 4 bytes, offset         */
+#define SRCH_INV_WCHAR						24	/* 1 wchar, offset (LE)    */
+#define SRCH_INV_1_BYTE_ALT					25	/* 2 byte,  offset         */
+#define SRCH_INV_2_BYTES_ALT				26	/* 4 bytes, offset         */
+#define SRCH_INV_3_BYTES_ALT				27	/* 6 bytes, offset         */
+#define SRCH_INV_4_BYTES_ALT				28	/* 8 bytes, offset         */
+#define SRCH_INV_WCHAR_ALT					29	/* 2 wchar, offset (LE)    */
+#define SRCH_RANGE_1_BYTE					30	/* 2 bytes, offset         */
+#define SRCH_RANGE_2_BYTES					31	/* 4 bytes, offset, UTF-8  */
+#define SRCH_RANGE_3_BYTES					32	/* 6 bytes, offset, UTF-8  */
+#define SRCH_RANGE_4_BYTES					33	/* 8 bytes, offset, UTF-8  */
+#define SRCH_RANGE_1_WCHAR					34	/* 2 wchars,offset, UTF-16 */
+#define SRCH_INV_RANGE_1_BYTE				35	/* 2 bytes, offset         */
+#define SRCH_INV_RANGE_2_BYTES				36	/* 4 bytes, offset         */
+#define SRCH_INV_RANGE_3_BYTES				37	/* 6 bytes, offset         */
+#define SRCH_INV_RANGE_4_BYTES				38	/* 8 bytes, offset         */
+#define SRCH_INV_RANGE_WCHAR				39	/* 2 bytes, offset         */
+#define SRCH_1_BYTE_OR_FAIL					40	/* 1 byte                  */
+#define SRCH_2_BYTES_OR_FAIL				41	/* 2 bytes                 */
+#define SRCH_3_BYTES_OR_FAIL				42	/* 3 bytes                 */
+#define SRCH_4_BYTES_OR_FAIL				43	/* 4 bytes                 */
+#define SRCH_WCHAR_OR_FAIL					44	/* 1 wchar (Little Endian) */
+#define SRCH_1_BYTE_ALT_OR_FAIL				45	/* 2 bytes                 */
+#define SRCH_2_BYTES_ALT_OR_FAIL			46	/* 4 bytes                 */
+#define SRCH_3_BYTES_ALT_OR_FAIL			47	/* 6 bytes                 */
+#define SRCH_4_BYTES_ALT_OR_FAIL			48	/* 8 bytes                 */
+#define SRCH_WCHAR_ALT_OR_FAIL				49	/* 2 wchars(LE)            */
+#define SRCH_BEGIN_OF_LINE					50	/* no parameter            */
+#define SRCH_END_OF_LINE					51	/* no parameter            */
+#define SRCH_BEGIN_OF_WORD					52	/* no parameter            */
+#define SRCH_END_OF_WORD					53	/* no parameter            */
+/* offset is one byte 0-254 or 3 bytes 255,lobyte,hibyte */
+/* appended length is one byte 0-254 or 3 bytes lobyte,hibyte,255 */
+
+Examples:
+/[^a-z]*bla
+	SRCH_REPEAT_MAXIMUM_MATCH	0x00 0xff						13	5
+	SRCH_INV_RANGE_1_BYTE		0x41 0x5a						 8	5
+	SRCH_INV_RANGE_1_BYTE		0x61 0x7a						 3	5
+	SRCH_FAIL_FROM_SET										   -10	3
+	SRCH_1_BYTE_ALT_OR_FAIL		0x42 0x62							4
+	SRCH_1_BYTE_ALT_OR_FAIL		0x4c 0x6c							4
+	SRCH_1_BYTE_ALT_OR_FAIL		0x41 0x61							4
+	SRCH_DONE														-
+/abc\|xyz
+	SRCH_REPEAT_MAX_MATCH_0_1									15	3
+	SRCH_1_BYTE_ALT_OR_FAIL		0x41 0x61							4
+	SRCH_1_BYTE_ALT_OR_FAIL		0x42 0x62							4
+	SRCH_1_BYTE_ALT_OR_FAIL		0x43 0x63							4
+	SRCH_SKIP													12	3
+	SRCH_1_BYTE_ALT_OR_FAIL		0x58 0x78							4
+	SRCH_1_BYTE_ALT_OR_FAIL		0x59 0x79							4
+	SRCH_1_BYTE_ALT_OR_FAIL		0x5a 0x7a							4
+	SRCH_DONE														-
+/\(a\+b\)\{-5}
+	SRCH_REPEAT_MINIMUM_MATCH	0x05 0x05						18	5
+	SRCH_ENTER_SUB_RE						1						3
+	SRCH_REPEAT_MAXIMUM_MATCH	0x01 0xff						 4	5
+	SRCH_1_BYTE_ALT_OR_FAIL		0x41 0x61							4
+	SRCH_1_BYTE_ALT_OR_FAIL		0x42 0x62							4
+	SRCH_LEAVE_SUB_RE												2
+	SRCH_DONE														-
+/[^•]ÿ		(UTF-8)
+	SRCH_INV_3_BYTES			0xe2 0x80 0xa2					 3	6
+	SRCH_FAIL_FROM_SET											-6	3
+	SRCH_2_BYTES_ALT_OR_FAIL	0xc3 0xbf 0xc5 0xb8					6
+	SRCH_DONE														-
+/[€ÿ\%81]	(UTF-16)
+	SRCH_1_WCHAR				0xac 0x20						15	5
+	SRCH_1_WCHAR_ALTERNATIVE	0xff 0x00 0x78 0x01				 8	7
+	SRCH_1_WCHAR				0x81 0x00						 3	5
+	SRCH_FAIL_FROM_SET										   -17	3
+	SRCH_DONE														-
+/[€ÿ\%81]	(UTF-8)
+	SRCH_3_BYTES				0xe2 0x82 0xac					14	6
+	SRCH_2_BYTES_ALTERNATIVE	0xc3 0xbf 0xc5 0xb8				 7	7
+	SRCH_1_BYTE					0x81							 3	4
+	SRCH_FAIL_FROM_SET										   -17	3
+	SRCH_DONE														-
+/[€ÿ\%81]	(ANSI)
+	SRCH_1_BYTE					0x80							12	4
+	SRCH_1_BYTE_ALTERNATIVE		0xff 0x9f						 7	5
+	SRCH_1_BYTE					0x81							 3	4
+	SRCH_FAIL_FROM_SET										   -13	3
+	SRCH_DONE														-
+/[€ÿ\%81]	(OEM)
+	SRCH_1_BYTE					0x98							 7	4
+	SRCH_1_BYTE					0x81							 3	4
+	SRCH_FAIL_FROM_SET											-8	3
+	SRCH_DONE														-
+/123abc\?\>
+	SRCH_3_BYTES_OR_FAIL		0x31 0x32 0x33						5
+	SRCH_1_BYTE_ALT_OR_FAIL		0x41 0x61							4
+	SRCH_1_BYTE_ALT_OR_FAIL		0x42 0x62							4
+	SRCH_REPEAT_MAX_MATCH_0_1									 4	3
+	SRCH_1_BYTE_ALT_OR_FAIL		0x43 0x63							4
+	SRCH_END_OF_WORD												2
+	SRCH_DONE														-
+/^$
+	SRCH_START_OF_LINE												2
+	SRCH_END_OF_LINE												2
+	SRCH_DONE														-
+/\(1\|2\|3\)$
+	SRCH_ENTER_SUB_RE						1						3
+	SRCH_REPEAT_MAX_MATCH_0_1									 6	3
+	SRCH_1_BYTE_OR_FAIL			0x31								3
+	SRCH_SKIP													12	3
+	SRCH_REPEAT_MAX_MATCH_0_1									 6	3
+	SRCH_1_BYTE_OR_FAIL			0x32								3
+	SRCH_SKIP													 3	3
+	SRCH_1_BYTE_OR_FAIL			0x33								3
+	SRCH_LEAVE_SUB_RE												2
+	SRCH_END_OF_LINE												2
+	SRCH_DONE														-

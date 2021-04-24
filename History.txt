@@ -1,0 +1,1282 @@
+Sorry, the first part of this file is available in German language only.
+Starting 6-Dec-00, any further entries are reported in English language.
+-------------------------------------------------------------------------------
+1.08  9-Jun-96  IntersectClipRect am unteren Rand auch wenn kein PaintStatus
+                WriteCmd mit HideEditCaret
+                WriteCmd schaltet in CommandMode zurück
+                GlobalAlloc mit negativer Memorygröße bei Reserve(Amount < 0)
+                Darstellungsfehler bei SoftScroll zu wiedereinfügendem Undo
+                Undo springt an den Anfang des Undo-Bereichs
+                Flag OF_VERIFY beim Öffnen zum Schreiben mit OF_CREATE
+     20-Jun-96  [cdy][ft][/?] korrigiert
+      4-Jul-96  Shift-in, shift-out
+      5-Jul-96  Shift-in, shift-out wiederholbar mit '.'
+      8-Jul-96  Hintergrundbitmaps
+     13-Jul-96  <Ctrl-D>/<Ctrl/T> im Insertmode
+     17-Jul-96  Status bei {y/</>}<Cursortaste> wird nicht geloescht
+                {</>}k am Zeilenanfang mit davorstehendem einzelnen Newline-
+                    Zeichen rückt nicht mehr eine Zeile zuviel ein
+1.09 18-Jul-96  <Ctrl-D> am Zeilenanfang im Insertmode bleibt in der Zeile
+                Cancel in Search-Dlgbox nach (nyi) Replace in "Close" umbenannt
+                <Ctrl-M> wird als einzelnes CarriageReturn erhalten
+                <num>/<string> zeigt nun den Faktor richtig an
+1.10 20-Jul-96  Selektierten String in SearchString (Toolbar-Search) übernommen
+                AboutBox mit OK-Taste oben rechts
+                Kommando ":version"
+                Cut im CommandMode nach Search macht nun das Gewünschte
+     21-Jul-96  Hexadezimal-Modus angefangen
+     24-Jul-96  Bitmap-Init (GlobalUnlock/-Free/SelectPalette) korrigiert
+     25-Jul-96  neue Dateien: toolbar.c toolbar.h status.h
+                erfolgloses Search mit Disable() schaltet Cursor wieder ein
+                Toolbar-Tiptool-Status bei zweimaligem "Abrutschen" korrigiert
+                diverse Korrekturen und neue Features für HexEditMode
+                neue Dateien status.c paint.h
+                Search-Flags MatchCase & IgnoreCase in Search-Dialogbox
+                    (vorausgefüllte Werte und anschließende Flagübernahme)
+1.11 27-Jul-96  HexEditMode weiter verbessert
+                wenn bei Drag&Drop das aktuelle File gesichert werden soll, wird
+                    dieses nun nicht nochmals statt des gedroppten Files geladen
+     28-Jul-96  WM_PALETTECHANGE-Behandlung (InvalidateRect OHNE UpdateWindow)
+                ClipboardPaste mit Längenbegrenzung auf GlobalSize()
+1.12 29-Jul-96  Scroll:ThumbTrack invalidiert erst bei Bewegung des Thumbs
+     30-Jul-96  Maus-Positionierung im HexEditMode
+1.13            InsertChar() und DeleteChar() nun mit InvalidateRect()-Aufruf
+                Assertions nun über <assert.h>
+     31-Jul-96  LineInfo-Korrektur bei Einfügen mit InsertChar am Zeilenanfang
+                HexEditMode aus: Cursorkorrektur wenn Pos zwischen CR und LF
+                Zeilenzählung in DeleteSelected() korrigiert
+1.14  1-Aug-96  FileList (neues file filelist.c)
+                ":rewind", ":next" und ":args" vollständig implementiert
+                Vordergrundfarbe wird gesichert und initialisiert
+                Defaultbutton in :args-Liste ist Cancel
+                Einfachklick auf Listbox setzt Defaultbutton auf "Edit File"
+      2-Aug-96  neuer Menüpunkt File -> File List
+      3-Aug-96  Initialausführung von "+<cmd>"-Parametern
+1.15  4-Aug-96  neuer Befehl ":set"
+                AskForSave()-Sonderbehandlung für ReadOnly-Files
+                Maus-Positionierung nicht weiter als auf das letzte Hex-Byte
+                Assert aktiviert (Option NDEBUG deaktiviert)
+                Memory Model jetzt medium (small paßt mit asserts nicht mehr)
+      5-Aug-96  Fehlermeldung bei ":set" mit unbekannter Variable
+1.16            Flag AutoWrite und ShowMatch
+      6-Aug-96  ShowMatch korrigiert (WM_KEYUP wird durchgelassen)
+1.17            Replace in Search-Dialogbox implementiert
+                Indenting-Fehler bei ClipboardPaste nach AutoIndent korrigiert
+      7-Aug-96  eigene _assert()-Funktion, ein paar zusätzliche asserts
+                mit STRICT übersetzt
+                AutoRestore-Flag implementiert
+                Setting-Dialog ohne "Break lines at right window border"
+1.18            Hex-Button erscheint nun bei Disable() auch gedrckt
+                Args-Listbox etwas breiter
+                HexEdit-Modus mit siebenspaltiger Adresse
+                    mit führendem Blank wenn < 1000000
+                mehrere Korrekturen mit Cursor-Umschaltung
+      8-Aug-96  mehrere Positionierungskorrekturen im HexEditMode
+1.19  9-Aug-96  Sanduhr-Rückschaltung immer auf IDC_ARROW (nicht PrevCursor)
+                Gedroppte Files erscheinen nur einmal in der Args-Liste
+                Statusfont nun an Bildschirmfontgröße angepaßt
+                Escape entselektiert nun auch im CommandMode
+                Positionierung mit '0' ist im HexEditMode dasselbe wie '^'
+                ":cd" und ":filename" implementiert
+                Statusmeldungen [Not edited], [New file]
+     10-Aug-96  Fenstertitel bei ":filename" richtig gesetzt
+     11-Aug-96  'G' (Positionierung auf letzte Zeile) im HexEditMode korrigiert
+                ":cd <drive>:" wechselt in den Defaultpfad des Laufwerks
+     12-Aug-96  Öffnen zum Schreiben ohne Pfad nun auch mit ".\" vorweg
+                Status [Not edited] nach ":cd"
+                Schreibweise ":chd[ir]..." statt ":cd..."
+1.20 13-Aug-96  Textausgabe mit Abfrage x<ClientRect.right
+                Join() ruft nun auch ohne Blank-Insert SetUnsafe() auf
+                'G' (Positionierung auf letzte Zeile) im Nicht-Hex-Mode korrig.
+                Undo am Fileende korrigiert (Ende statt Anfang der Page)
+     14-Aug-96  PaintToolbar() für Disabled==1 korrigiert
+                Großbuchstaben bei yank erweitert den Puffer
+                mehrere Korrekturen bei der StatusCmd-Anzeige
+1.21            Prozentanzeige und Position in Zeile im HexEditMode korrigiert
+1.22 15-Aug-96  Korrekturen der Cursoranzeige im HexEditMode
+                Ctrl+Tab zur Hex-/Text-Spaltenumschaltung
+     16-Aug-96  Activate auf erstes Statusfeld erzeugt die Kommandozeile nicht
+                LineInfo-Korrektur im HexEditMode am Fileende
+1.23 17-Aug-96  MouseDblClk zum Wortselektieren
+                _assert() mit Buffergrößenüberprüfung
+     18-Aug-96  ein paar Korrekturen bei Insert am File-Ende
+                Scrollbar-Positionierung im InsertMode an Zeilenende korrigiert
+1.24 19-Aug-96  substitute angefangen
+     23-Aug-96  substitute weitestgehend fertig
+                kein OpenFile(OF_EXIST) nach Schreiben, wenn IsCurrFile
+1.25 24-Aug-96  OpenFile(OF_EXIST) wieder rückgängig gemacht (ging nicht)
+                Fehlermeldung "More files" bei QuitCmd()
+                Zeilenangaben in Kommandozeile fertig
+                nach Replace>> wird erst einmal der Replace-Button zum Default
+                Anpassungen für WIN32-Übersetzbarkeit
+                Bitmapfile-Magic ("BM") überprüft
+1.26 28-Aug-96  IBeam-Window wieder rausgeworfen, Klassen-Cursor ist NULL
+                SizeGrip (linke untere Ecke zum Vergrößern/Verkleinern)
+1.27            Aufruf ohne Parameter: Sanduhr nach Initialisierung abgeschaltet
+                ThumbSize für Scrollbar erstmalig für Windows 95 eingebaut
+1.28 31-Aug-96  SwitchCursor(), Open() mit anderen Parametern
+                Neues Flag (2=no advance) bei SearchIt()
+                Substitute am Zeilen-/Fileanfang funktioniert damit jetzt
+                Wenn IsFixedFont, dann schnellere TextWidth-Berechnung
+      1-Sep-96  MouseCursor-Umschaltung gründlich überarbeitet
+                Aufsetzen von Suchparametern (StartSearch()) für Substitute
+                Sanduhr bei Substitute in mehr als einer Zeile
+                ScreenStart im HexEditMode korrigiert nach Löschen
+                    eines selektierten Bereichs über den Bildschirmanfang hinaus
+                Kein DestroyWindow bei WM_ENDSESSION
+      2-Sep-96  SysColors in der Statuszeile
+1.29  3-Sep-96  SysColors in der Toolbarzeile
+                Korrektur in Undo.c (NextSequenceUndo bei jedem Eintrag setzen)
+1.30  5-Sep-96  Einzel-Undo wieder eingebaut,
+      6-Sep-96  Find-DialogBox ist jetzt "modeless"
+                mehrere Korrekturen bei Undo
+1.31  6-Sep-96  Position der Search-Dialogbox wird gesichert
+      8-Sep-96  neue Funktion FindValidPosition() zum Positionieren
+1.32 10-Sep-96  Doppelte Abfrage bei Quit ohne Save beseitigt
+     11-Sep-96  korrigierte Caret-Behandlung (wegen Rechner Oakland)
+1.33            HideEditCaret() in Paint() (wegen doppelt negiertem Caret)
+1.34 12-Sep-96  HideEditCaret() jetzt in WM_ERASEBKGND und in WM_PAINT
+                Eingabefehler im CommandMode mit Anzeige und Löschen des Counts
+1.35 15-Sep-96  neues Kommando ":read"
+                diverse Korrekturen bei Zeilenangaben (":<n> write <file>")
+                <Replace All> in der Search-Dialogbox läuft
+     16-Sep-96  explizites SetStyle beim Find-Button im SearchDialog
+1.36 17-Sep-96  Anzeigekorrektur beim Verkleinern der Selektierung in CmdMode
+                Zeilenüberprüfung bei ":x" und ":wq" korrigiert
+                neue Kommandos ":!" und ":!!"
+1.37 18-Sep-96  Suchen bei Substitute immer vorwärts (rückwärts war falsch)
+                mehrere Korrekturen bei Suchstring in der Befehlszeile
+                korrigierte Anzeige bei ":r ..." (falscher Dateiname)
+1.38 19-Sep-96  Pagestruktur nach ":r" (z.B. ":r nul") korrigiert
+1.39 20-Sep-96  Meldung in AskForSave() mit lokalen Puffern
+                    vorher wurde die Statuszeile mit falschem Text refresht
+     21-Sep-96  Neu: StatusStyle mit Rahmenunterdrückung (ToolTip)
+                hwndCmd wird bei ToolTips versteckt
+                Search/Replace mit <Ctrl+Break> oder <Ctrl+C> unterbrechbar
+                Search/Replace-Dialog auch abbrechbar
+                Maximized-Zustand wird gesichert und beim Neustart verwendet
+     22-Sep-96  Erzeugung von hPalette korrigiert
+                Korrektur für Bitmaps > 64 KB
+                noch ein Versuch mit proportialem ScrollBar-Thumb
+1.40 23-Sep-96  SuppressPaint bei initialem Lesen mit Open-Error korrigiert
+     24-Sep-96  Substitute wiederholbar mit '&'
+                Substitute ohne Search-/Replace-Strings nur möglich,
+                    wenn bereits ein Replace-String definiert ist
+                Fehlermeldung bei '.' ohne wiederholbarem Befehl
+                Caretverlust bei Wm_EraseBkGnd ohne Wm_Paint behoben
+1.41 27-Sep-96  System-3D-Farben für Toolbar (als Bitmap-Resource geladen)
+                ColorChange-Behandlung der schwarzen Status-Texte
+                Tooltip-Texte in der Statuszeile wieder schwarz
+1.42 28-Sep-96  ShowMatch wird in Rot ohne CursorSprung angezeigt
+                ShowMatch nicht bei Repeating
+                Default-Font = Courier 10pt
+                HexEditMode: 4er-Byte-Gruppen absolut positioniert
+                MessageBeep bei Fehlern (roter Text in Statuszeile)
+                Screenupdate nach :read ab Einfügeposition
+                Search-Korrektur: /...*$/ hatte das Zeilenende nicht überprüft
+     30-Sep-96  0<Ctrl+D> und ^<Ctrl+D> rücken die aktuelle Zeile ganz aus,
+                    bei ^<Ctrl+D> leider noch mit Reset des IndentCounts
+1.43  1-Oct-96  CapsLock- und NumLock-Anzeige bei Childfenstern und Aktivierung
+1.44  2-Oct-96  LineInfo-Update bei <..., >... mit Rückwärtspositionierung
+      3-Oct-96  Hex-Eingabe im Substitute-Replace-Pattern korrigiert
+                ReadOnly-Flag beim Lesen ohne Open-Dialog beibehalten
+                ReadOnly-Flag beim Lesen mit Open-Dialog als Default
+                ReadOnly-StatusAnzeige nach Lesen/Schreiben vor Größenangabe
+1.45  4-Oct-96  Replace im HexEditMode korrigiert (SetUnsafe / Enter*ForUndo)
+1.46 22-Oct-96  Absturz bei EnterDeleteForUndo (dG) beseitigt
+1.47            Replace-String bei Substitute an Dos-Zeichensatz angepaßt
+                leeres Kommando springt nicht mehr an das Dateiende
+1.48 24-Oct-96  ":set all" wird wie ":set" ohne Argumente behandelt
+                "No previous re" kommt nun als rote Fehlermeldung
+1.49            Toolbars mit hell gerasterten Zeichensatz- und HexMode-Tasten
+                Farben für selektierten Bereich werden angepaßt
+1.50 28-Oct-96  Highlight/HighlightText als Farben für selektierten Bereich
+1.51  3-Nov-96  Farb-Dialogbox fertig
+                bereits erfolgtes Undo wird bei nächster Operation released
+1.52  5-Nov-96  Assertion Botch: 2x Undo: Undo-Buffer war bereits freigegeben
+                Color-Dialogbox: TabStop wandert mit Focus bei oberen 6 Farben
+1.53            Substitute-Status-Ausgabe mit Zeilenanzahl
+      6-Nov-96  IgnoreCase-Behandlung bei Suchoperationen mit Choice ([...])
+1.54            FileOpen mit Common-Dialog trägt Namen in Args-Liste ein
+      7-Nov-96  Korrektur in IgnoreCase-Behandlung (TestBit())
+                Search/Replace korrigiert (Finden der nächsten Position)
+1.55  8-Nov-96  Absturz bei Speichermangel beim Lesen behoben
+                Umstellung von LocalAlloc() auf _fcalloc() für PPAGE
+1.56            CrLf-Matching in Ordnung gebracht in CheckFwd()/SubstituteCmd()
+      9-Nov-96  Neu: <Ctrl+C>, <Ctrl+V> und <Ctrl+X> fürs Clipboard
+                Erkennung von Windows NT 4.0 vorbereitet
+                Undo positioniert auf den Anfang des Bereichs
+                Default-InsertMode konfigurierbar (Default bei Erstaufruf)
+1.57 11-Nov-96  Erkennung von Windows NT 4.0 geändert (geht noch nicht)
+1.58 16-Nov-96  Undo yankt nicht mehr (Assertion botch?)
+                Erkennung von Windows NT 4.0 geändert (geht immer noch nicht)
+                leeren Undo-Sequenzen werden überschrieben
+     18-Nov-96  Erkennung von Windows NT 4.0 geändert (geht immer noch nicht)
+1.59            Erkennung von Windows NT 4.0 geändert (endlich geht's)
+                Fehlerbehandlung bei GetSaveFileName (z.B. falscher Filename)
+                Fehlerbehandlung bei GetOpenFileName
+1.60 21-Nov-96  Undo korrigiert (StartUndoSequence() mit Überprüfung Pos!=-1)
+                Pattern-Search "/[^<letter>]" mit IgnoreCase korrigiert
+1.61 22-Nov-96  Hex-TextSide-Darstellung war bei leerem File manchmal nicht leer
+     24-Nov-96  horizontales AutoScroll im Edit-Bereich (ohne Scrollbar)
+                OF_VERIFY muß beim Schreiben mit OF_REOPEN angegeben werden,
+                    funktioniert aber nicht mit OF_CREATE, daher auskommentiert
+                WM_HSCROLL und WM_COMMAND (filelist.c) nun Win32-kompatibel
+1.62 26-Nov-96  Write ohne OF_CREATE und mit OF_VERIFY und _chsize()
+                Anpassungen an Win32
+1.63 27-Nov-96  4 kleinere Fehler mit Win32 behoben (Scroll, StatusLine, Ctl3d)
+     28-Nov-96  16-/32-Bit-Anzeige im About-Dialog
+1.64  2-Dec-96  bei Win32 kein Aufruf alter SetScroll*()-Funktionen
+1.65  3-Dec-96  mehrere Scrollbar-Korrekturen für Win32
+                Einleitungszeichen deselektiert in Befehlszeile (Win32)
+                Dateiende in Win32 mit SetEndOfFile() statt _chsize()
+      4-Dec-96  Statuszeile im maximierten Zustand mit Abstand zum unteren Rand
+1.66  5-Dec-96  OpenFile(, OF_EXIST) funktioniert bei Netzwerk-Laufwerken nicht
+1.67            Datumlesen nach dem Schreiben auch geändert (OF_EXIST->OF_READ)
+                Ctrl-Tab zum Umschalten zwischen Search- und Main-Window
+                Umsetzen von TabStop in Settings refresht das Hauptfenster
+1.68  7-Dec-96  neue ThumbSize nach Fenstergrößenänderung
+1.70 22-Dec-96  Dateiname werden in Titelzeile auch mit Blanks angezeigt
+                neues Icon mit mehr Schattierungen
+                Scrollbar-Korrektur nach Löschen eines selektierten Bereichs
+                Scrollbar-Korrektur nach Buffer-Insert
+                Flackern bei DragThumb mit ScrollDC() ausgeschaltet
+1.71 26-Dec-96  Korrektur der Erkennung der Zeilentrennzeichen (Fehler bei 0xfe)
+1.72 27-Dec-96  Korrektur beim Suchen am Fileende ohne Literal (":%s/.<cr>")
+     28-Dec-96  Cr/Lf-Korrektur nach HexMode aus (Page-Struktur und Anzahl)
+                Kosmetik im Settings-Fenster
+                Abbruchüberprüfung beim Suchen von Nicht-Literalen
+     29-Dec-96  Tmp-Directory konfigurierbar (mit Settings oder "set tmp=...")
+                Scroll-Positionierungs-Korrektur bei HexMode am Dateiende
+                ScrollPositions-Korrektur nach Einfügen/Löschen im HexEdit-Mode
+1.73 30-Dec-96  Korrektur der TmpDirectory-Benutzung
+                Kontext-Editmenü mit Ins-/Rep-/Cmd-Modes (mit rechter Maustaste)
+     31-Dec-96  Modeumschaltung im Kontext-Menü ohne Cursorbewegung
+                Mode im KontextMenü mit Checked-Kennzeichnung
+      1-Jan-97  neue Bitmap WINVI7.BMP
+1.74  3-Jan-97  <Ctrl+Del> = Löschen bis Zeilenende, <Shift+Del> = Zurücklöschen
+      5-Jan-97  ":r" ohne Filename oder Menü File->InsertFile mit CommDlg-Box
+                Resource-IDs umgestellt (300er-Nummern)
+                selektierte leere Hintergrundbereiche horizontal gescrollt
+                    werden nun richtig aufgebaut
+1.75            Hintergrundbitmap nach OK oder Apply für Hauptfenster übernommen
+1.76  8-Jan-97  HexEditMode / Dos-Charset: Hex-Eingabe von 0xE nicht mehr als 85
+                FindValidPosition() am Fileende im HexEditMode korrigiert
+                ReadOnly-Flag wird dem FileAttribut entsprechend gesetzt
+                Font-CharSet (Griechisch, Kyrillisch, etc.) wird berücksichtigt
+1.77  9-Jan-97  Accelerator-Anzeige Shift+F12 bei Insert File weggenommen
+1.78 10-Jan-97  Win32: CharSet im OptionsMenü und Mode im PopupMenü mit Bullets
+                Win32: Toolbar im Win32-Look
+     11-Jan-97  toolbar.c behandelt jetzt 3.1-Bitmap und Win32-Bitmap richtig
+                16-Bit/Win32-Unterscheidung im rc-File muß manuell erfolgen
+                Replace-Button ist nur enabled, wenn etwas selektiert ist
+                Defaultwert für TabStop von 4 auf 8 erhöht
+                TabStop und ShiftWidth gesichert/restauriert (fehlte bisher)
+1.79 14-Jan-97  Tooltips als Popup-Child-Fenster
+     15-Jan-97  Tooltips nochmal überarbeitet
+                Copyright auf 1997 erhöht
+1.80 16-Jan-97  bei Tastendruck und Toolbarclick wird der Tooltip abgeschaltet
+                    (Darstellungsfehler bei ScrollDC)
+     17-Jan-97  Tooltips mit SetCapture() und variablen Timern
+                Toolbar-Bitmaps geringfügig überarbeitet
+                Farb-Controls, Rahmen in Colors-Dialogbox etwas angepaßt (Win32)
+1.81 18-Jan-97  Doppelklick auf erstes Wort im File war 1 Byte zuviel
+                ShowMatch positioniert nur innerhalb des Bildschirmausschnitts
+1.82 20-Jan-97  ShowMatch jetzt auch für geschweifte Klammern
+     22-Jan-97  anderer Titel bei Read File (":r" oder File->InsertFile)
+.82a 23-Jan-97  Versehentlich 32-Bit-Toolbar in 16-Bit-Version, korrigiert
+.82b 26-Jan-97  Version nur bei Gudrun mit permanentem Hintergrund-Brush
+1.83 29-Jan-97  ausführlichere Tooltips in der Statuszeile
+                Hintergrund-Brush jetzt immer permanent
+                DeleteSelected() korrigiert (hat Page->IsSafe nicht gesetzt)
+                InsertChar() korrigiert (hat bei Replace IsSafe nicht gesetzt)
+                Substitute() korrigiert (hat bei Einfügen kein Unsafe() gemacht)
+     30-Jan-97  Anzeigekorrektur nach Einfügen am Bildschirmanfang,
+                    wenn LineInfo[0].Pos.i==0 (z.B. "1G0i..<Esc>uu")
+                ScrollThumb-AnzeigeKorrektur nach Substitute()
+                    (Jump() in Jump()+NewPosition()-Kombination auskommentiert)
+1.84 31-Jan-97  Icon nochmal geändert
+                <Ctrl+Break> wie <Ctrl+C>
+      1-Feb-97  mehrere Korrekturen für Restore/Close während GlobalSubstitute
+                FileSave-Abfrage vor "More files to edit" bei ":q" 
+                "More files to edit" als Dialogbox auch bei normalem Close
+      2-Feb-97  "More files"-Abfrage abschaltbar
+                Menu (Search/Replace) und ein paar Tooltips etwas umbenannt
+                neuer Modus "ViewOnly" ohne Änderungsmöglichkeiten
+                Undo-Button wird erst bei EnterUndoFor...() enabled
+1.85  3-Feb-97  Undo stellt jetzt Safe-Zustand immer richtig ein
+1.86  5-Feb-97  Mehrsprachigkeit angefangen
+      6-Feb-97  Endlosschleife beseitigt bei ":s/x*//g"
+1.87  7-Feb-97  Endlosschleife beseitigt bei ":s/x*/./g"
+                fast alle Strings in deutsch und englisch
+1.88  8-Feb-97  deutsche Übersetzung etwas korrigiert und überarbeitet
+                Darstellungskorrektur bei ChangeCase() nach horizontalem Scroll
+      9-Feb-97  neuer Menu-Eintrag Fenster/Windows
+                ReadOnly-Test für Win32 mit offenem FileHandle
+                    (mit GetFileInformationByHandle(), _fstat() geht nicht)
+                Puffergrößen-Korrektur bei deutschen Strings (207/208)
+1.89 11-Feb-97  Korrektur für Anzeigefehler bei "1G0sxx<esc>u"
+1.90 11-Feb-97  AnzeigeKorrektur beim String "... Änderungen überschreiben?"
+                NotMatched geändert in "nicht gefunden bis «zum» Anfang/Ende"
+                Parent von Messagebox "String not found" ist die Dialogbox
+     12-Feb-97  RButton-PopupMenu schaltet den ScrollTimer ab
+                FileDescription in Englisch geändert (Compatible mit großem C)
+                Y-TextPosition in maximierter Windows4.0-Statuszeile verschoben
+1.92 15-Feb-97  Anzeigekorrektur bei "<<" (Fehler in 1.89 entstanden)
+                generische Tooltip-Callbackfunktion auch für Statuszeile
+                Status-Popup-Fenster (wenn erstes Feld zu lang)
+     16-Feb-97  ":set lines=... columns=..." zum Verändern der Fenstergröße
+1.93 17-Feb-97  Piped Commands angefangen
+     19-Feb-97  richtige Vordergrundfarbe bei StatusTips
+                Kommando-Erkennung ohne Unterscheidung von Groß-/Kleinschreibung
+                Bitmap-Darstellungskorrektur bei ScrollDrag
+                3 neue Bitmaps
+1.94 20-Feb-97  leerer Statustip nach TooltipButton=-1 korrigiert
+     21-Feb-97  Weiterreichen eines <Ctrl+Break>-Events an !...-Commands
+1.95 24-Feb-97  PrintSettings() angefangen (mit Menüeintrag)
+     28-Feb-97  korrektes Wiederaufsetzen von "!..." bei Mausklicks
+      1-Mar-97  "/^$" matcht das Dateiende nun nicht mehr
+                HorizontalScroll Richtung Zeilenanfang schon ab Bildschirmmitte
+                StatusZeilenHöhe bei StatusTip und CommandResize korrigiert
+                PrintSettings-MenüEintrag erst mal wieder rausgenommen
+                Endlosschleife bei "!..." und Exit beseitigt
+                <Ctrl+`> als <Ctrl+6> ohne Shift wird wie <Ctrl+^> behandelt
+1.96  4-Mar-97  ExecPiped() verbessert, BrokenPipe-Problem (NT) nicht gelöst
+1.97  5-Mar-97  FilenameExpansion in Kommandos in der Statuszeile
+      6-Mar-97  FilenameExpansion mit Popup-Menu
+1.98  7-Mar-97  Expansion auch von internen Commands
+1.99  8-Mar-97  TabExpansion auch von Variablen
+      9-Mar-97  Positionierung vor PopupMenü bei rechtem Mausklick
+                keine ModeUmschaltung aus KontextMenü, wenn dieser bereits aktiv
+                wieder als 16-Bit-Version übersetzbar (ohne Tab-PathExpand)
+                "Save as..." setzt den alternate FileName
+     10-Mar-97  nochmalige Positionierung nach PopupMenü bei Mode-Umschaltung
+.99a 13-Mar-97  "!..." funktioniert jetzt schon ganz gut
+.99b 17-Mar-97  <Ctrl+C> und <Ctrl+Break> wird bei !-Befehlen weitergeleitet
+     19-Mar-97  CREATE_DEFAULT_ERROR_MODE bei ExecPiped() auskommentiert
+.99c 20-Mar-97  Positionierung bei !... vor Einfügen auch am Dateiende
+                kein FindValidPosition in InsertBuffer() bei !...
+                Tooltip-Fenster nun WS_POPUP statt WS_CHILD
+.99d            Status-Popup-Fenster nun auch WS_POPUP statt WS_CHILD
+     22-Mar-97  wieder als 16-Bit-Version erzeugt
+.99e 23-Mar-97  <Ctrl+C>, <Ctrl+Break> wird nicht endlos wiederholt
+     26-Mar-97  Positionierung während !-Befehlen möglich
+                ShowEditCaret() wird nach Einfügen bei !-Ausführung aufgerufen
+                automatische Positionierung bei !-Ausführung nur,
+                    wenn der Caret bereits an der Einfügeposition war
+                Update der gesamten Hintergrund-Bitmap bei ScrollDrag
+                Bei !-Programmstart bleibt der Focus bei WinVi
+                AskForSave() mit anderer Meldung bei ":cd" mit unsafe, read-only
+.99f 27-Mar-97  NewPosition() auch bei !-Input mit geänderter Position
+                Tabulatorexpandierung mit kleingeschriebenen Dateinamen
+                nur Directories bei Tabulatorexpandierung mit ":cd "
+                Korrektur bei Tabulatorexpandierung mit '&' im Namen
+                StatusTip-Korrektur bei neuer Status-Ausgabe
+.99g 29-Apr-97  Tab-Expandierung nun auch in 16-Bit-Version mit Dateinamen
+                (Bremen -> Thomas)
+.99h  1-Apr-97  ":set nowrapscan" fehlte in der Tab-Expand-Liste
+                "<Drive>:" wird bei Tab-Expandierung mit \ erweitert
+                (Bremen -> Gudrun)
+                mehrspaltiges TabExpand-PopupMenu
+.99i  2-Apr-97  x-Position in vielen Modulen auf 32 Bits erweitert
+                Eingabe ".." wird bei TabExpandierung als Directory akzeptiert
+.99j 10-Apr-97  ein paar französische Anpassungen
+.99k 11-Apr-97  noch ein bißchen französisches Zeug
+     12-Apr-97  eine Pixel-Linie mehr bei ":set lines=..."
+     14-Apr-97  TabExpand für lange Dateinamen bei ":next " korrigiert
+.99l            Zeichensetzung im Französischen korrigiert
+                "!<pos>!" zum Wiederholen des letzten Befehls
+     15-Apr-97  ":ee" für edit im neuen WinVi-Fenster
+.99m 19-Apr-97  Neu-Toolbutton löscht immer das ReadOnly-Flag
+     20-Apr-97  InterCom.c völlig umgeschrieben
+                    (gerichtetes SendMessage() mit Auswertung des Return-Werts)
+                LastCmd ist nun ein dynamischer malloc()-String statt char[260]
+.99n 21-Apr-97  Neu-Toolbutton und Lesen einer nicht vorhandenen Datei setzt
+                    für die Datei das Default-ReadOnly-/-ViewOnly-Flag
+                Control-Position und -Größen im About-Dialog geändert
+     22-Apr-97  ScrollLine() und InvalidateText() forciert den entsprechenden
+                    Paint()-Aufruf, um LineInfo korrekt zu aktualisieren
+.99o 23-Apr-97  Initial-Fenster-Ermittlung mit Wiederholung bei Konflikten
+                Status-Popup erscheint bei NewStatus() automatisch, wenn
+                    der MouseCursor über dem ersten Feld positioniert ist
+2.00 24-Apr-97  französische Übersetzungen vollständig
+.00a 25-Apr-97  Hintergrund und Vordergrund war in der deutschen
+                    Farben-Dialogbox vertauscht
+                weitere editorische Korrekturen in den Ressourcen
+2.01 26-Apr-97  gelöschter selektierter Bereich wird bei undo wieder selektiert
+                Tabexpandierung bei ! und :! mit mehreren Parametern
+                Tabexpandierung: Anführungsstriche paarweise
+                Tabexpandierung mit Path vorbereitet
+     28-Apr-97  ein paar französische Korrekturen (von Valérie)
+                TabExpand-PopupMenu nicht weiter als am Ende des ersten Feldes
+2.02  1-May-97  "!<pos>! <more params>" kopiert <more params> jetzt richtig
+                WM_ERASEBKGND hat bei 256 Farben zu kleinen Bereich neu gemalt
+      2-May-97  ContextMenu mit CopyClipboard des ersten Statuszeilenfeldes
+                Windows-Submenu mit Blank/Tabulator statt Blank/Blank getrennt
+2.03  5-May-97  &-Verdopplung in PathExpandierung beseitigt (nur ohne Menü)
+      6-May-97  EndlosPaint bei !-Ausführung, wenn nur eine Zeile verdeckt war
+                Schreiben wird bei implizitem ReadOnly trotzdem versucht
+2.04 10-May-97  schwerer Fehler (Systemabsturz) bei Undo behoben
+                Undo-Startflag mit Undo-Selected-Flag kombinierbar
+     11-May-97  <Del> in InsertMode -> Undo selektiert nicht mehr
+                im Windows-Menü kommt als 9. Eintrag nun 'a' statt ':'
+                ":cd" überprüft, ob die aktuelle Datei an andere Stelle gelangt,
+                    wenn ja: AskForSave() wenn geändert und [not edited]
+                ":ee" benutzt nicht mehr den Zwischenpuffer für %/#
+     12-May-97  noch ein paar Pointer-Bereinigungen in undo.c
+.001 14-May-97  englische 16-Bit-Version
+2.05  8-Aug-97  Undo entselektiert
+                Read Error setzt HasBeenRenamed=TRUE (entspricht [Not Edited])
+                zu lesende Datei wird bei Abbruch mit Close geschlossen
+                Cursorpositionierung korrigiert, wenn <Ctrl+Home> scrollt
+      9-Aug-97  HasBeenRenamed umbenannt in NotEdited
+                NotEdited wird nun auch bei OpenError gesetzt
+                :e mit Cancel bei AskForSave() setzt den AltFileName
+                initialer Newlines-Count in erster Page bei File->New korrigiert
+                Änderung der Textfarbe im Font-Dialog löscht wUseSysColor-Flag
+                Überprüfung des ReadOnly-Attributs bei <Ctrl+G> / :f
+     10-Aug-97  oberer und unterer Bitmaprand bei ScrollLine() neu gemalt
+                Change/Delete mit Suchen selektiert nun in die richtige Richtung
+2.06 14-Aug-97  ReadOnlyFile-Überprüfung auch bei AskForSave()
+     16-Aug-97  Pfeil nach unten in der letzten Zeile entselektiert nun auch
+                Undo mit Selektierung setzt die Clipboard-Toolbar-Tasten wieder
+                Ersetzen eines selektierten Bereichs bis Zeilenende aus dem
+                    Clipboard im Commandmode positioniert nun nicht mehr
+                    zwischendurch vor das letzte nicht selektierte Zeichen
+                <Ctrl+C>, <Ctrl+V> und <Ctrl+X> funktionieren nun im Commandmode
+                Taste F2 für File->New
+                InvalidateArea in Substitute() in jedem Fall bis end of screen
+                Vorder-/Hintergrundfarben (Text und Selected)
+                    bei WM_SYSCOLORCHANGE korrigiert
+2.06a 20-Aug    Print-Menuitems wieder herausgenommen
+2.07 23-Aug-97  maximiert ohne Parameter kommt die rechte obere Bitmapecke
+                Contextmenu mit <Shift+F10>
+                :ee speichert Dateinamen als alternativen Dateinamen
+     24-Aug-97  malloc() in AskForSave() korrigiert (für unbenannt 1 zu klein)
+                Drucken funktioniert rudimentär
+2.09 29-Aug-97  :d implementiert
+2.10  1-Sep-97  Drucken funktioniert vollständig
+2.11            Parameter -p für Ausdrucken (ohne Editieren)
+2.12  2-Sep-97  Korrektur bei einspaltigem Ausdruck
+2.13  5-Sep-97  Befehlsausführung ohne Busy-Waiting
+2.14  6-Sep-97  Fehler bei Einfügen in undo() beseitigt (neue Pagestruktur)
+                Darstellungsfehler in InsertBuffer() beseitigt
+2.15  9-Sep-97  Win32-Parameter SW_SHOWDEFAULT bei WinNT von CMD.EXE gestartet
+     10-Sep-97  Ausdruck über Dialogbox abrbrechbar
+2.16 11-Sep-97  PrintTo implementiert
+.16a 16-Sep-97  ein paar französische Korrekturen
+                Umbenennung "Druckereinstellung" -> "Seite einrichten"
+                Fehler bei Befehlsausführung in der 16-Bit-Version
+2.17 21-Sep-97  Darstellungskorrektur nach :substitute
+2.18  1-Oct-97  Seitenbereich beim Drucken
+                Shell Intrinsics werden in Befehlszeile expandiert
+     13-Oct-97  wieder in 16-Bit-Version übersetzbar
+2.19  8-Nov-97  :cd-Ausführung und -Anzeige unter Win32 mit Ansi-Zeichensatz
+                Unterstützung der Rad-Maus (Microsoft IntelliMouse)
+                StatusTip nur wenn Hauptfenster den Focus hat
+                Alt+F4 geht auch bei sichtbarem StatusTip
+                Menü in WinVi.rc ist nun mit Identifiern definiert
+     11-Nov-97  Der Cursor wird auch bei verdeckter Darstellung richtig gesetzt
+2.20 12-Nov-97  bei sofortigem Beenden wird nicht mehr auf den Desktop gemalt
+                IntelliMouse-Messages überarbeitet
+                WinVi-Enumerierung (InterCom.c) überarbeitet (Endlosschleife)
+                Undo während Befehlsausführung unterbunden
+2.21 13-Nov-97  Endlosschleife bei sofortigem Beenden behoben
+                nur ein WheelMessage-Typ wird akzeptiert (erste Message)
+                neues ScrollLine() in NewPosition() (paint.c) überarbeitet
+2.22  2-Dec-97  wenn kein CR/LF vorkommt, wird LF oder CR als Default verwendet
+2.23  3-Dec-97  Rückwärts-Yanken hat bis Dateianfang geyankt, behoben
+                [Cr]-/[Lf]-Anzeige auch bei :w und :f (bzw. <Ctrl+G>)
+      4-Dec-97  bei Win32 mehr als 64 KByte Clipboard-Daten erlaubt
+                F5 für Refresh (wie <Ctrl+L>)
+                neugestaltete Aboutbox
+                Fehlermeldung bei Clipboard-Copy mit Nullbytes
+2.24 17-Dec-97  Statuszeile: zweites Feld wird bei !-Ausführung nicht mehr grau
+     18-Dec-97  Menüeintrag für Copy bei ViewOnlyFlag korrigiert
+                %- und #-Ersetzung bei !<Pos>-Befehlen
+                Statuszeile: Copy filename to clipboard
+                Accelerator <Ctrl+Shift+F10> für Status-Kontextmenü
+                Clipboard-Toolbar-Tastenanzeige vor und nach !-Befehl korrigiert
+2.25 20-Dec-97  "z." in die Mitte, "z-" nach unten, "z<Enter>" nach oben
+                Flag in viewonly umbenannt (war vorher nur als view zugreifbar)
+     21-Dec-97  Scrollbar wird nun disabled, wenn alle Zeilen angezeigt werden
+2.26 23-Dec-97  "Save as" setzt den aktuellen Filenamen um (":w <fn>" nicht!)
+                Wort rückwärts löschen mit <Ctrl+Bksp> oder <Ctrl+W>
+2.27 27-Dec-97  Clipping-Region um rechte Scrollbar vermindert
+                englischer Fehlertext für ViewOnly-Files geändert
+                Tilde-Anzeige am Dateiende im Hexadezimalmodus
+                <Esc> in Statuszeile deselektiert und zeigt CommandMode-Caret
+                keine Extension im Titel, wenn im Explorer ausgeschaltet, 32-Bit
+     29-Dec-97  '^' mit Faktor geht mehrere Zeilen zurück (analog zu '$')
+     30-Dec-97  ',' erzeugt Fehler, wenn noch kein t/f-Befehl ausgeführt wurde
+                Wiederholungsfaktor vor ':' wird in Anzeige entfernt
+                'z<Char>' und 'ZZ' auch bei ViewOnly-Flag möglich
+                <Ctrl+BkSp> nach 'o' nimmt nun alles zurück (Indenting falsch)
+                kein Sichern möglich, wenn ViewOnly gesetzt ist
+                Schatten am linken Rand (wie im InternetExplorer)
+      1-Jan-98  Schatten auch am rechten Rand
+                Copyright auf 1994-1998 erhöht
+                "z." bei gerader Zeilenzahl eine Zeile höher
+2.28  8-Jan-98  "Z'" und "Z`" führt zum Fehler (Beep und Abbruch der Eingabe)
+                "!<Esc>" macht das zweite Statusfeld grau
+                "!/<...><Enter>" läßt das zweite Statusfeld schwarz
+                "!`a" macht im Fehlerfall zweites Statusfeld grau
+2.29 13-Jan-98  "z." positioniert den Cursor jetzt immer richtig
+     14-Jan-98  "[cdy!<>][<Shift+Enf><Ctrl+Enf><Entf>]" wird sauberer behandelt
+                linker Rand aus Bitmap-Paint ausgeschlossen (Flackern)
+                linker Rand bei Textausgabe ausgeschlossen (Darstellungsfehler)
+2.30 16-Jan-98  DefaultInsert war beim zweiten Aufruf wieder deaktiviert
+     19-Jan-98  Preview-GroupBox erscheint nicht mehr in "Seite einrichten"
+2.31  3-Feb-98  Neu: Tags
+                neues Flag: magic
+                ":set {sw|ts}<Tab>" löscht den Variablennamen nicht mehr
+                [Lf]-/[Cr]-Mode: ":e <neues File>": keine Pfeilanzeige mehr
+2.32  4-Feb-98  Tags-Suchziele werden relativ zum tags-File gefunden
+      5-Feb-98  Fontattribute Bold, Italics u.s.w. (Anzeige und Drucken)
+2.33            Korrektur bei Tags-Filebehandlung (Fill=0 an anderer Stelle)
+2.34  6-Feb-98  "/..." und "?..." funktioniert wieder mit einem Faktor
+                Tag-Befehl ändert Suchstring nicht
+2.35  7-Feb-98  Tag-Befehl im Kontextmenü
+                "<Ctrl+6>" alternative Datei öffnen im Dateimenü
+                "nosm" und "nows" in Tab-Expandierung aufgenommen
+      8-Feb-98  "/?<Enter>N" bzw. "?/<Enter>N": '\' eingefügt
+                Selektierter Bereich wird nach Undo jetzt richtig dargestellt
+                verdeckte letzte Zeile scrollt jetzt richtig bei !-Befehlen (?)
+2.36 10-Feb-98  Undo re-selektiert nur bei <Ctrl+BkSpace> (nicht bei 'u')
+                "^T" zum Zurückblättern der Tags
+                englisch: File -> E&xit statt File -> &Exit
+                ":..<Tab>", ":/<Tab>", ":\<Tab>" etc. macht keine Expandierung
+.36b            neuen Fehler PathExpandierung korrigiert
+2.37 11-Feb-98  ":/<String>" positioniert auch im HexEditMode richtig
+     12-Feb-98  farbige Toolbar
+2.38            ":s:/:..." korrigiert
+2.39 14-Feb-98  ShowMatch auch für Positionierungen im CommandMode
+                ":'<Letter>" als Zeilenangabe in der Befehlszeile
+                Weiterwandern der Cursorposition bei !-Ausführung geht nun
+                "Tag zurück" (^T) im Bearbeiten-Menü
+                "Neues Fenster" (":ee") im Datei-Menü
+2.40 15-Feb-98  Zeilenende-Behandlung wie Zeichen bei <Left>,<Right>,<Del>,<Bks>
+                mehrere Korrekturen am Dateiende (besonders bei fehlendem Cr/Lf)
+2.41 18-Feb-98  Korrektur vom CommandMode-ShowMatch (u.a. Endlosschleife)
+                eMail-Adresse im Info-Fenster auf <ramo@snafu.de> geändert
+2.42            ShowMatch/CmdMode: bei Scroll blieben hervorgehobene Klammern
+2.43            <Shift+Pos1> selektiert wieder wie erwartet (falsch seit 2.41)
+                Context-Menüpuffer seit 2.39 übergelaufen, behoben
+                neuer Befehl 'q' für detailliertere Fehlermeldungen
+                Toolbutton für Save mit anderer Etikettfarbe
+2.44 19-Feb-98  Absturz in Paint.c:ScrollJump(), wenn aktuelle Position verdeckt
+                assert() in CountBytes() wegen Absturz bei Torsten
+2.45 20-Feb-98  Samba-Bug umgangen: zu schreibendes File älter als gelesenes
+2.46            Absturz behoben (untere Zeilen verdeckt, ScrollDragDown->PgDown)
+2.47            Tags-Erweiterung («;"» wie von "Exuberant CTags" erzeugt)
+                Sanduhr bei Tags-Ansprung
+     21-Feb-98  ChangeCase ('~') setzte das IsSafe-Flag nicht, korrigiert
+     22-Feb-98  Shift-Befehle ("'<'<Pos> / '>'<Pos>) ohne ShowMatch
+2.48 25-Feb-98  doppelte ~-Spalte bei HexMode-Einschaltung beseitigt
+                http-Adresse und Freeware-Hinweis im Info-Dialog
+     27-Feb-98  Liste der zuletzt bearbeiteten Files im File-Menü
+                Abbruch des Tag-Befehls wenn der Edit-Befehl schon gescheitert
+      4-Mar-98  <num>p und <num>P führt nun auch den Faktor aus
+                Fileliste erscheint nicht mehr im normalen Kontextmenü
+2.48a 5-Mar-98  Fileliste nicht mehr im Status-Kontextmenü (rechte Maustaste)
+2.49  8-Mar-98  ":set number" zum Anzeigen von Zeilennummern
+      9-Mar-98  Zeilennummer bei ":set columns=..." mitgerechnet
+                '~' als Eof-Anzeige bei Zeilennummern trotzdem links
+                Zeilennummernabstand auf ganze Zeichenbreite vergrößert
+                diverse Dialogboxkorrekturen für französisch
+                wieder 16bittig übersetzbar (seit Fileliste (2.48) fehlerhaft)
+                Cancel-Taste im Settings-Dialog nicht mehr disabled
+                deutsche Settings-Dialog-Korrektur (Temp-Ordner)
+.49a 11-Mar-98  überlappte Mehrfachbenutzung von Buff in profile.c behoben
+.49b 14-Mar-98  F3 ohne bishgerigen Suchbefehl öffnet Dialogbox (Torsten)
+     17-Mar-98  Clipboard kann WinVi-übergreifend auch Nullbytes enthalten
+     19-Mar-98  Hexadezimale Suche (Checkbox im Dialog, \%xx im Pattern)
+                Korrektur für \-Behandlung in Search-Dialogbox
+     20-Mar-98  Matchen von "\<" am Dateianfang korrigiert
+                Shift+Drag&Drop erzeugt ein neues Fenster
+     21-Mar-98  Alternativen im Suchstring mit "\(...\|...\)"
+2.50 23-Mar-98  ":set number" Falschdarstellung von selektiertem rechten Rand
+                tabstop=1 means insert spaces (instead of tabs)
+                Positionierer '*' und '#': Vorwärts-/Rückwärtssprung Identifier
+     24-Mar-98  Rücksprung mit '#' bei Nicht-Startposition positioniert richtig
+2.50a           *, #: Spaltenposition wird erhalten, ``-Positions wird gesetzt
+2.51 26-Mar-98  <Shift+F10> bei xOffset != 0 positionierte Popup-Menü falsch
+     27-Mar-98  *, #: Fehler (return(FALSE)), wenn Cursor nicht auf einem Wort
+                HexEditMode: 'G'/<Ctrl+End> springt auf/hinter letztes Zeichen
+2.52 28-Mar-98  ":set number": Zeilennummern nach InsertEol/DeleteEol korrigiert
+                Zeilennummernkorrektur außerdem bei DeleteSelected()
+                Scrollbar bleibt enabled, wenn Position nicht am Dateianfang
+2.53 30-Mar-98  "/\(\(a\|b\).*c\|d\)" findet a oder b nur mit c wieder
+2.54  2-Apr-98  yank mit Zeilenpositionierer (SkipSpaces==TRUE) yankt nl mit
+                SUBLANG_... umgesetzt auf SUBLANG_NEUTRAL
+2.55  3-Apr-98  französische übersetzungen von Yves Belanger
+2.55a 4-Apr-98  <Ctrl+^>, <Ctrl+]>, <Ctrl+T> mit schwarzer Anzeige ohne Faktor
+                Tag-Befehl stellt MatchValid wieder her (<Ctrl+]> n ohne /...)
+                <PageUp> positioniert nicht an den Zeilenanfang
+                grüne Statusanzeige *bevor* die das Datum überprüft wird
+                '*'/'#' funktionierte in 16-Bit-Version nicht (Identifier leer)
+                Befehl 'q' wieder entfernt
+2.56  7-Apr-98  "/^\012" findet ab jetzt "\015\012" nicht mehr
+      8-Apr-98  "[dcy!<>][ftFT][1-9]" hat Ziffer als Faktor interpretiert
+2.57 16-Apr-98  MouseWheel-Richtung für 16-Bit-Version korrigiert
+                Sprache auswählbar
+2.58            Englisch "Close" in der Suchen/Ersetzen-Dialogbox sprachabhängig
+                Tips, Titelzeile und Caps/Maj/Groß werden sofort umgeschaltet
+                Suchen/Ersetzen (Dialogbox) ersetzt '\' ohne RE korrekt
+                Button "Weitersuchen" während der Suche disabled
+.58a 17-Apr-98  /^ matcht nicht mehr das Newline am Dateiende
+.58b 18-Apr-98  RegEx $ oder \> bleibt nicht auf dem letzten Zeichen der Zeile
+                Undo.c: Undo-Elemente mit _fcalloc() statt LocalAlloc alloziert
+                File.c: String in AskForSave mit _fcalloc() statt malloc() all.
+                ":/$<Enter>" bzw. ":?$<Enter>" überspringt keine Zeilen mehr
+2.59 19-Apr-98  Darstellungsfehler am Bildschirmanfang bei >% <% rückwärts
+                Edit-Menü eng/fra: Tag und Tag back: "Strg" umbenannt in "Ctrl"
+.59a 20-Apr-98  "Weitersuchen" / "Find Next" erhält den Focus nach der Suche
+.59b 21-Apr-98  zweite Ziffer bei Hex-Eingabe löscht nun das IsSafe-Bit
+                ":s/<any>/<any>\%0d\%0a/g" positionierte jeweils 1 Byte zu weit
+     22-Apr-98  ":s/\(<any>\)/\1/" hat mindestens ein Byte übernommen
+                ReplaceString ist nun unbegrenzt (vorher 512 Bytes ohne Check)
+.59c 23-Apr-98  verschiedene weitere Korrekturen beim Suchen von Newlines
+2.60 24-Apr-98  ":s/.*/&-/g" fügt nicht mehr zwei Minuszeichen am Zeilenende ein
+                Newline-Ersetzung in Substitute mit richtiger Zeilenzählung
+                FindValidPosition() nach Substitute
+2.60a           Zeilenzählung in Substitute nochmals korrigiert
+                Der Maximized-Zustand hat nun die korrekt große Statuszeile
+                CapsLock-Feldgröße wird bei Sprachumschaltung korrigiert
+                Nach Scroll, Mauspos Ctrl+Tab wird HexFirstNibble zurückgesetzt
+2.61 25-Apr-98  Fileliste erweitert auf sechs Dateien
+                HexEditFirstNibble auch nach Ein- und Ausschalten zurückgesetzt
+.61a 29-Apr-98  Lesen des Tag-Files korrigiert (\ als (255+n*256)stes Zeichen)
+                <Ctrl+]> auf dem nicht-ersten Zeichen am Dateianfang korrigiert
+      1-May-98  Spanische Übersetzung integriert
+2.61b 2-May-98  <Ctrl+U> und scrollendes <Ctrl+B> positionierten Cursor falsch
+                ^L beginnt im Ausdruck eine neue Seite (bzw. Seitenhälfte)
+                Toolbar-Suchen findet auch die aktuelle Position (auch :set ws)
+      3-May-98  spanische Dialogboxen überarbeitet (Warten auf José)
+.61c  4-May-98  Richtung der Radmaus anders ermittelt (0x80008000 statt 0x8000)
+.61d  6-May-98  Cursorpositionierungen/Einfügen am EOF korrigiert
+2.62  7-May-98  spanische Übersetzungen z.T. wieder rückgängig gemacht
+                deutscher Accelerator für Sprachen auf E&nglisch gesetzt
+2.62a           noch ein paar spanische Korrekturen
+2.63 11-May-98  letzte kleine Änderungen von José, Valérie und Franck eingebaut
+                "Rundumsuche" im Deutschen
+                Delete/BkSp im HexModus am EOF: Position nach Löschen
+                                                des LFs von CR/LF auf CR
+                Scrollender Doppelklick zeigt selektierten Bereich nun richtig
+                Verschmelzen beim Einfügen von CR vor LF (Darstellungskorrektur)
+.63a 12-May-98  Nach Sprachwechsel erscheinen File-Menü-Eintrage ab &2 wieder
+.63b 14-May-98  Rechtspfeil übersprang eine Zeile, wenn Anfang von 2 Leerzeilen
+                Clipboard-Nullbyte-Warnung erscheint nicht mehr als "Fehler".
+                Überschrift Fehlermeldungsbox bei Sprachwechsel in neuer Sprache
+                keine Positionierung nach Löschen des letzten Zeichens eines
+                    Files wenn es ein LF von CR+LF im InsertMode/HexEditMode
+.63c 15-May-98  Beim Übertippen der ersten Null von 0d 0a wurde das 'd' zur '0'
+                Bessere Warnungsmeldung bei Null-Bytes im Clipboard
+                Die Taste "Weitersuchen" etwas breiter gemacht
+                horizontal gescrollt, wenn Suchen/Ersetzen-Dialogbox mit Focus
+2.64  6-Jun-98  keine Dateinamenbegrenzung auf 128 Zeichen mehr (CreateFile)
+                spanische "not found"-Meldungen arriba<->abajo
+                diverse Text- und Feldgrößenanpassungen in mehreren Sprachen
+      7-Jun-98  RecentFile-Liste überarbeitet (es gab mehrfache Indizes)
+      8-Jun-98  Darstellungskorrektur von '&' in RecentFiles-Menü
+.64a            Pfadexpandierung bei nicht-letztem Tags-File funktionierte nun
+.64b 10-Jun-98  französische Strings von Yves übernommen
+.64c 12-Jun-98  Popup-Menü wird bei Sprachumschaltung neu erzeugt
+                Feedback grün in Statuszeile bei <Ctrl+]>
+2.65 14-Jun-98  leicht geänderte Dateidatumsüberprüfung
+.65a 16-Jun-98  Dateischreiben wegen Samba-Bug nochmals geändert
+                    (OPEN_ALWAYS/SetEndOfFile)
+.65f 23-Jun-98  Dateizeit-Überprüfung wegen Samba mehrmals geändert
+     24-Jun-98  Hochziehen des Scrollthumbs, wenn eine Zeile mehr als sichtbar
+                Timer 101 (Tooltips) wird gelöscht, wenn nicht mehr gebraucht
+2.66 25-Jun-98  Abbruch des Scrollens, wenn deaktiviert wird (KillFocus)
+                erste Position im File finden mit ":set ws", "/.*include" oder
+                                                             "/.*#include"
+2.66a 3-Jul-98  Fehlermeldungen im VisualC++ beim Lesen des RC-Files beseitigt
+      4-Jul-98  Wildcards in Befehlszeile und im :next-Befehl
+2.67  5-Jul-98  neues Win.ini-Flag "SuppressCaptionAsterisk"
+2.67a 7-Jul-98  Positionskorrektur, wenn am Dateianfang ein LF eingefügt wird
+      9-Jul-98  Anzeigefehler nach Ausführung von :1s/\%0a/xxx\%0d\%0a/
+                    wenn erstes Byte == '\n'
+                kein Fehler "Vorhandene Datei wird ersetzt!" bei ":w!"
+                "wq must be exclaimed" umformuliert
+2.67b           ":w!" nochmals korrigiert
+                ":tags"-Befehl ist nun unterbrechbar
+     10-Jul-98  ShowEditCursor() nach Enable() während ":tags"-Befehl
+.67c 11-Jul-89  Disable(2)-Disable(1)-Enable() funktioniert nun auch
+                Clipboard-Codierung von Binärdaten geändert
+     13-Jul-98  Übersetzungshelfer in der About-Box
+.67e 18-Jul-98  Assertion-Fehler bei Tags (16-Bit-Verion)
+                vollständige Anzeige der grünen :tag-Zeile (16-Bit-Version)
+.67f 20-Jul-98  grüne :tag-Zeile entfernt bei "Noch nicht gespeichert"/Abbrechen
+                Tag-Stack wird abgeräumt  bei "Noch nicht gespeichert"/Abbrechen
+.67g 22-Jul-98  richtige Behandlung von 24-Bit-Hintergrundbitmaps ohne Palette
+                Größencheck für Hintergrundbitmaps
+.67h 23-Jul-98  Leerzeile am Fileende mit <Del> löschbar (Notepad-kompatibel)
+                Verzeichnis wird beim Öffnen aus Dateiliste immer gewechselt
+                Dateiliste wird bei anderer Groß-/Kleinschreibweise geändert
+.67i 24-Jul-98  Ermittlung gültiger Zeichen im Zeichensatz
+                AddToFileList() erst nach Lesen/Schließen der Datei (win.ini!)
+                ":ee" umbenannt in ":vi"
+.67j 25-Jul-98  "/'/`/t/f/m mit Cursor führt zum Befehlsabbruch
+                '/` mit undefiniertem Markerbuchstaben führt zum Beep
+                längenbegrenzte Anzeige der Statusfelder 2-7
+                Statusfelder werden nur ausgegeben, wenn im zu malenden Rechteck
+2.68 26-Jul-98  Map437 in MapOem umbenannt und Inhalt korrigiert (1/2,1/4)
+                neue Befehle ":set OemCodePage=..." und "set AnsiCodePage=..."
+.68a 28-Jul-98  Zeilenzählung beim Einfügen an Position 3999 korrigiert
+     29-Jul-98  Fehlermeldung bei nicht erfolgreichem SetFileTime unterdrückt
+.68b 29-Jul-98  / als nicht-erstes Zeichen aus der Suchdialogbox nicht gefunden
+                Ctrl+T->Schreiben?->Cancel springt irgendwo hin\
+                Ctrl+]->nicht gefunden->Fehlermeldung wird wieder entfernt
+     30-Jul-98  Feedback-Anzeige vor chdir bei Auswahl aus RecentFile-Liste
+                Meldung bei 2 oder mehr ein- oder ausgerückten Zeilen
+.68c 31-Jul-98  Statusanzeige bei Tag-Befehl immer grün
+                keine Mausbehandlung, wenn LineInfo noch nicht gesetzt (NT 3.51)
+                nur noch ein MessageBeep wenn Ctrl+C eingegeben wird
+.68d  1-Aug-98  ein paar zusätzliche Checks (wegen Absturz unter NT 3.51)
+                Refresh von verschobenen Bitmap-Zeilen testweise im Hintergrund
+                Refresh wegen Flackern wieder deaktiviert
+.68e  3-Aug-98  32-Bit-Version unter NT 3.51: Scrollthumb blieb immer oben
+                32-Bit-Version unter NT 3.51: Fenster-Menü blieb leer
+      4-Aug-98  Buchstabenflags (CharFlags & 8) in fremden Ansi-Codepages
+.68f            im Kontextmenü (32bit,NT3.51) war 1. String weg, Rest verschoben
+                Statuszeile (32bit,NT3.51) erscheint 2 Pixels höher
+.69  15-Aug-98  AssertionBotch in Undo.c (line 141) beseitigt (16-Bit-Version)
+                Wiederholungsfaktor bei Put aus benannten Puffern korrigiert
+.69a 23-Aug-98  Menüpunkt zum Selektieren der gesamten Datei
+      6-Sep-98  'dw' löscht ein folgendes Newline nicht
+.69b 12-Sep-98  Menüpunkt korrigiert (Ctrl+A statt Alt+A),
+                Ctrl+A auch im InsertMode möglich
+     14-Sep-98  '[dc...][wWbB]' nochmal überarbeitet (Zeilenende)
+.69c  6-Oct-98  Refresh nach Zeile einfügen/entfernen (BOOL RefreshBackground)
+     12-Oct-98  Sofortige MessageBox bei Dateiänderung auf der Platte
+     13-Oct-98  mehrfache ':' am Anfang der ex-Befehlszeile ignoriert
+                ":<num>xit" ist nun verboten, Fehler in Überprüfung beseitigt
+     15-Oct-98  Autorepeat-Hänger in ShowMatch() beseitigt
+                Unterdrückung von ShowMatch() bei timergesteuertem Scrollen
+                ((BOOL)Page.IsSafe) geändert in ((DWORD)Page.Flags & ISSAFE)
+                Fehlermeldung für Page-Speichermangel auf GlobalMem geändert
+                CrLf-Check beim Ausschalten des HexEditModus beschleunigt
+                Positionierung mit ScrollDrag im HexEditMode an EOF korrigiert
+     16-Oct-98  ShowMatch() nun auch bei Mauspositionierung (wenn LButtonDown)
+                IncompleteLastLine wird bei Scrolling und ex-Kommandos
+                    mit Zeilennr. mitgezählt
+     17-Oct-98  SetUnsafe() statt EnableToolButton() bei "<num>w<enter>"
+     18-Oct-98  Neuer Replace-Caret (underline)
+.69d 22-Oct-98  AdjustWindowParts() bei neuer Language (wegen hwndCmd)
+                hwndCmd wird bei Mausklick nur erzeugt, wenn noch nicht da
+.69e 31-Oct-98  Paste bleibt im Hex- & InsertMode hinter letztem Byte des Files
+                <End> geht im ReplaceMode hinter statt auf das letzte Zeichen
+     11-Nov-98  WatchMessage wird vom HauptThread ausgegeben (Deadlock unter NT)
+                Beim Schreiben dürfen die Sekunden um 2 abweichen (Samba-Bug)
+.69f 15-Nov-98  2-Sekunden-Samba-Bug nochmals bei Minutenwechsel korrigiert
+     16-Nov-98  Tab-Popup-Menü in Statuszeile überarbeitet (sortierte Ausgabe)
+     17-Nov-98  Tab-Popup-Menü mehrstufig bei Übergröße, Absturz beseitigt 32bit
+.69g 17-Nov-98  Absturz nun auch un der 16-Bit-Version beseitigt
+     18-Nov-98  noch ein Absturz bei Popup-Menüs beseitigt (doppeltes _ffree())
+.69h 23-Nov-98  Positionierer [[ und ]] implementiert
+.69i 26-Nov-98  Trennung von Anzeige- und Edit-Einstellungen
+                neue Anzeige-Einstellung "Hintergrung-Bitmap aktualisieren"
+     27-Nov-98  initialer Defaultwert LowerCaseFnames=No bei WIN32
+                neue Editier-Einstellung "zeilenübergreifende !/c/d/y..."
+     29-Nov-98  Trennung der Einstellungsdialoge nun in allen vier Sprachen
+                Off-By-One-Error in ScrollJump() im HexEditMode beseitigt
+2.70 30-Nov-98  Dialogboxen in allen Sprachen
+.70a  2-Dec-98  Yves Übersetzungen integriert
+                Zeilenexpandierung am Dateianfang korrigiert
+                '*' und '#' nun mit FullRowExtend
+.70b  3-Dec-98  Übersetzungen von José María integriert
+      6-Dec-98  numerierte Buffer implementiert (z.B.: "1p)
+                leere Statuszeile (nur ':') verschwindet bei Mausklick im Text
+                <Esc> in Statuszeile schaltet nicht in CommandMode
+                    (dabei wurde vorher ein falscher Caret angezeigt)
+                Hex-Modus/Replace: Cursorbewegungen auch hinter das letzte Byte
+.70c  8-Dec-98  Undo/SafeState nach ":w <otherfile>" in Ordnung gebracht
+                ":vi <enter>" löscht den alternativen Dateinamen nicht mehr
+                Positionierung im Replace-Modus auch hinter eine Zeile
+.70d 13-Dec-98  Cursor bleibt während des Hintergrundrefreshs ausgeschaltet
+.70e 22-Dec-98  <Ctrl+V> in der Statuszeile (noch nicht fertig)
+     24-Dec-98  CheckGlyphs() unter Windows 3.1 nicht mehr aufgerufen (Absturz)
+     25-Dec-98  <Shift+Ins> (bzw. <Ctrl+V>) läßt sich einzeln rückgängig machen
+                *- und #-Suche ohne IgnoreCase
+                $-Zeichen im Text nicht als alphanumerisches Zeichen
+                Positionierung mit ^ auch im Hexmodus am logischen Zeilenanfang
+                Positionierung mit + (analog zu -) an den Anfang der Screenzeile
+.70f 29-Dec-98  Posititionierungen mit '^' und '+' rückgängig gemacht
+                "cc" und "dd" positionieren im HexMode mit '\r' statt '$'/'j'
+                Refresh bis Fensterende bei Einfügen im HexEditMode (z.B. Undo)
+2.71 31-Dec-98  '~' setzt den Unsafe-Status nur noch bei Änderungen
+     10-Jan-99  Änderung der Groß-/Kleinschreibung (~) bei AnsiCodepages != 1252
+     12-Jan-99  mehrfaches Öffnen bei Scheitern beim Filewatching
+                $-Positionierung im HexEditMode auf das Ende der Screenzeile
+                ansicodepage in PathExp expandierbar
+                '!"Befehl" <Tab>' zeigt die internen Befehle nicht mehr an
+                SetNewCodePage initial auch bei default aufgerufen (wegen '~')
+.71a 12-Feb-99  ":%s/\%0d//" bei großen Dateien korrigiert (no memory for Yank)
+.71b 22-Feb-99  :Substitute ohne Yank-Buffer (ist sowieso zu langsam)
+                [IiAaOo] löschen den Yankbuffer-Namen («"xi» nun wie «i»)
+                Undo überarbeitet (z.B.: Returnwert TRUE im NewUndo() fehlte)
+.71c 24-Feb-99  Überprüfung der Gültigkeit der Modification-Time bei WatchFile()
+                Nebenläufigkeitsproblem in WatchFile() beseitigt
+.71d 25-Feb-99  Korrektur an der gestrigen WatchFile()-Änderung
+.71e 26-Feb-99  <Ctrl+Bksp>, <Ctrl+W> löscht nun auch WhiteSpace & Sonderzeichen
+                SpecialFont für Zeilenendezeichen bei Fontänderung neu geladen
+                Nullbyte-Zeilenende ist nun eine kleine Raute aus Specialfont
+                Returnwert von GetFileTime() in WatchFile() wird überprüft
+                Vor Neueinlesen einer Datei wird ein alter WatchThread beendet
+2.72 27-Feb-99  neuer Befehl ":set hexmode" / ":set nohexmode"
+                nicht zu konvertierende # und % in ex-Dateinamen verdoppeln
+2.72a 4-Mar-99  BOOL Exiting zum Vermeiden des Scrollens bei sofortigem Beenden
+      5-Mar-99  Klammern-Highlight nach i)<Esc>
+2.73 11-Mar-99  % und # wird in nicht-letzten Argumenten nicht mehr verdoppelt
+                %% und ## wird auch in cd-Befehlen zurückgewandelt
+                Statuszeile wird gelöscht nach [Modified] -> File->1..6 -> <Esc>
+.73a 13-Mar-99  Settings-Dialog etwas weitergemacht
+     17-Mar-99  ":set [no]hm" schaltet nun auch die Toolbar-Taste um
+     25-Mar-99  kein ShowMatch bei Shift+F12 (Speichern)
+     24-Apr-99  Ergebnisüberprüfung in ReloadPage
+     20-May-99  Sonderbehandlung in File32Error bei Fehlernummer 161
+     22-May-99  Einfügen von LF nach CR+LF positioniert nun hinter das LF
+     28-May-99  <Enter> im ReplaceMode ersetzt genau ein Zeichen
+                AutoIndent im ReplaceMode wird eingefügt (statt ersetzt)
+.74d 18-Jun-99  Fehler-Returnwert-Abfrage bei CreateThread/CreateEvent
+                    in WatchFile korrigiert (0 statt INVALID_HANDLE_VALUE)
+.74e 25-Jun-99  Lesefehler am Dateianfang wurden nicht angezeigt, behoben
+     26-Jun-99  Keine Share-Einschränkungen beim Lesen einer Datei
+                CurrentDirectory wird nach InsertFile und nach
+                    Open/SaveAs:Cancel auf vorherigen Wert zurückgesetzt
+     27-Jun-99  Exec.c: command.com wird bei Win95/98 zuerst unter c:\ gesucht
+.74f 29-Jun-99  Seitenbereich drucken, dann alles, trotzdem kam nur der Bereich
+     27-Jul-99  Absturz bei Löschen eines sehr großen Bereichs beseitigt
+.74g 31-Jul-99  Length-abhängiges Disable der Toolbar geht nun auch bei Write
+      1-Aug-99  Dateilesen mit Ctrl+C und Ctrl+Break unterbrechbar
+      3-Aug-99  bereits erfolgte Eingabe wird bei Tabexpandierung nicht mehr
+                    gelöscht, wenn kein Match; bisher nur bei Dateinamen
+.74h  6-Aug-99  AskForSave() vor dem Directory-Wechsel bei "File" -> '1'...'6'
+.74i 15-Aug-99  mehrfache Abfrage durch AskForSave vor File->1...6 unterbunden
+                Anpassung der Größe der letzten beiden Felder der Statuszeile
+     16-Aug-99  1. Statusfeld wird bei File->1...6 nach Open gelöscht,
+                    nicht mehr nach Open, wenn es scheitert
+.74j 18-Sep-99  Statuszeile wird im Hexmodus nach Dateilesen upgedated
+     20-Sep-99  Positionspeicherung nur wenn Fenstermittelpunkt sichtbar ist
+      4-Dec-99  PathExp erzeugt '/' und Blank nicht nur beim 2. Menüeintrag
+                <Ctrl+B>, k positioniert nun auch am Dateianfang richtig
+      5-Dec-99  Expadierung von selektierten Hex-Strings mit CrLf im SearchDlg
+                diverse Änderungen im Settings-Dialog
+.74k 10-Dec-99  Scrollbar-Falschdarstellungen bei sehr großen Files behoben
+                    betrifft auch Drag-Positionierungen an das Dateiende
+     13-Dec-99  Nummer des Unterdialog für "Seite einrichten..." korrigiert
+     14-Dec-99  Fehlerkorrektur im Menüaufbau der Filename-Autocompletion
+                Korrekturen beim Abbrechen der Farbeinstellungen
+.74l 16-Dec-99  DefaultSchaltung der PushButtons bei den Settings fertig
+                3"aY yankt nun auch mehrere Zeilen (wie auch schon "a3Y)
+     17-Dec-99  3"a2Y wird jetzt auch richtig angezeigt
+                <Ctrl+End> positioniert im Hexmodus nun an das Bildschirmende
+     27-Dec-99  ReadOnlyFlag wird beim Start aus WIN.INI gesetzt
+                Settings-Tabs-Beschriftung ins RC-File gezogen
+                SystemParametersInfo(SPI_GETCARETWIDTH,...) vorbereitet
+     28-Dec-99  neuer Font für Hexadezimaldarstellung
+.74n 29-Dec-99  Font-Sample wird bei Änderung invalidiert (für NT)
+                <Ctrl+Right> bei initial leerer Datei ändert Position nicht mehr
+      3-Jan-00  Ressourcenauslagerung für neuen Einstellungsdialog abgeschlossen
+                Einstellungsdialog in englisch
+     11-Jan-00  diverse englische Accelerator in den Settings umgestellt
+                noch ein Versuch, die OK-Taste unter NT3.51 hinzukriegen
+.74u 15-Jan-00  OK-Taste sollte jetzt hoffentlich endlich funktionieren
+     17-Jan-00  Page-Up positioniert korrekt nach oben, wenn weniger als ein
+                    Screen aber trotzdem "hart" gescrollt wird (:set scroll=1)
+                Fileüberwachung wird bei ":f <name>" abgeschaltet
+                spanische Settings nun endlich auch provisorisch drin
+.74v 18-Jan-00  noch ein Versuch für die OK-Taste unter NT 3.51
+                ein paar Accelerator angepasst
+.74zb 3-Feb-00  OK-Taste geht jetzt endlich unter NT 3.51
+.74zc 5-Feb-00  Alt-Tastenbehandlung bei aktiven Status-Tooltip überarbeitet,
+                    Alt+Space und Alt->AltOff funktionieren dadurch jetzt
+.74zd 8-Feb-00  Tabexpandierung (\%09) funzt beim Substitute-Befehl besser
+                Anzahl der Zeilen bei Radbenutzung wird jedes Mal ermittelt
+                Shift+F12 schaltet auch in CommandMode, wenn nicht geschrieben,
+                    aber nur wenn nicht initial InsertMode gesetzt ist
+.74ze 9-Feb-00  Übersetzung von Scrollbereich von Yves eingebaut
+                Übersetzung von "Sample" in die Schriftart-Tabsheets eingebaut
+74zf 10-Feb-00  Befehl ":set" führt nun wieder zur Einstell-Dialogbox
+74zg 11-Feb-00  '$' positioniert besser (größerer Pixeloffset als 32000)
+                kein horizontales Scrollen mit etwa 65536 Pixeln mehr
+                kein TextOut mehr mit X-Position von etwa -65536
+     12-Feb-00  überflüssige Ressourcen entfernt (alte Einstellungsdialoge)
+                Focus auf Scrollbar nicht mehr abhängig von WINE_FIXUP
+74zh 17-Feb-00  ein paar Korrekturen bei der Verwendung von MaxScroll
+                spanische Übersetzung der Eingabefeldbeschreibung von MaxScroll
+2.75 18-Feb-00  nur neue Versionsnummer
+     20-Feb-00  Korrektur von <Esc> nach CompoundCmd mit '/' (z.B. "c/<Esc>")
+                diverse Anpassungen zur Unterdrückung von Warnungen vom Bcc
+                GroupBox im RC-File immer mit NOT WS_TABSTOP (wegen Bcc)
+                Toolbar-Bitmap wird vor Änderung der Farben kopiert (wegen Bcc)
+                kein SetFocus im Settings-Dialog (wegen Bcc)
+     21-Feb-00  korrigierte <Shift+Tab>-Behandlung im Colors-Dialog
+                PageUp/PageDown springt bei MaxScroll==0 statt zu scrollen
+     22-Feb-00  Web-Adresse im Info-Dialog auf "home.snafu.de" umgestellt
+                unterschiedliche Web-Referenzen in den verschiedenen Sprachen
+2.80 27-Feb-00  letzte Änderung von Yves vor Veröffentlichung
+2.81 28-Feb-00  Sicherung der File-Einstellungen korrigiert
+2.82  2-Mär-00  beim Ersetzen des letztes Zeichen einer Zeile durch Newline
+                    im ReplaceMode wurde auf das vorletzte Zeichen positioniert
+                Absturz bei "/\)<Enter>" behoben
+                Join positioniert auf das eingefügte Leerzeichen
+                Assert in Borland-Übersetzung deaktiviert
+.82b 15-Mär-00  Behandlung der WM_CONTEXTMENU-Message eingefügt (VK_APPS-Taste)
+                Ctrl-Tab im Einstellungsdialog funktioniert nun
+.82c 16-Mär-00  Fonts werden nur gespeichert, wenn "permanent" angeklickt ist
+                Darstellungskorrektur bei >> korrigiert
+.82d 17-Mär-00  Bildschirmupdate nach Substitute-Befehl
+2.83  2-Apr-00  Spanische Übersetzung der Scroll-Einstellung
+.83a  2-Apr-00  Korrektur des Accelerator für die neue Übersetzung
+.83b  2-Apr-00  Versionsnummer 2.83a in Version.c versehentlich vergessen
+.83c  5-Apr-00  wiederholbares Undo mit '.' (noch nicht fertig)
+      5-Mai-00  Info-Dialog: neue E-Mail-Adresse und neue Web-Page bei IN-Berlin
+      6-Mai-00  ^M im HexMode (auch dd, yy, !!) positioniert nun mit Repeatcount
+     23-Jun-00  neuer Parameter -R für readonly
+                wiederholbares Undo fast fertig
+     23-Jul-00  nochmals geänderte Homepage-Adresse (Sprach-Unterverzeichnisse)
+.83d  6-Okt-00  Dos- und Ansimode per :set setzbar
+      7-Okt-00  Positionierung auf die Originalspalte beim Draggen der Scrollbar
+                Shift+LButton, Shift+ScrollLine und Shift+ScrollDrag erweitern
+                    die Markierung statt neu zu selektieren
+     20-Okt-00  <Ins> schaltet zwischen Insert- und Replace-Modus um
+                <Esc>ZQ wird wie <Esc>:q!<Enter> behandelt
+                PathExp enthält nun ..\ als directory
+     23-Okt-00  Hotkeys im Kontextmenü
+                <Ctrl+Z> gleichwertig mit <Alt+Bksp>
+     24-Okt-00  Bei 'M' und 'L' zählen EOF-Zeilen (~) als nicht vorhanden
+                diverse Korrekturen bei Positionierung im HexEditMode
+.83e 27-Okt-00  Line-Parameter (2.) von AdvanceToCurr wieder rückgängig gemacht
+                    wegen Absturz bei 'k' (Zeile hoch) in der oberen Zeile
+                Toolbar-Flackern beim Exec (!...) beseitigt (neuer Fehler)
+                PathExp von ..\ wieder rückgängig gemacht
+.83f  8-Nov-00  16-Bit-Version ist wieder übersetzbar (Settings.c noch falsch)
+                Absturz bei Suche während einer Programmausführung beseitigt
+     19-Nov-00  Linux/Wine: Mausklick im Settings-Subdialog funktioniert
+                Linux/Wine: Ctrl+Tab schaltet nun ein TabSheet weiter (vorher 2)
+                Linux/Wine: Focusanzeige im initialen Settings-Subdialog korrekt
+     21-Nov-00  TabControl/16-Bit: funktioniert in den meisten Fällen
+                SendMessage in InterCom.c durch SendMessageTimeout ersetzt
+.83g 24-Nov-00  TabControl/16-Bit: funktioniert nun vollständig
+                eigene TabControls auch in 32-Bit-Version eingebaut
+                Undo/16-Bit: Segmentdescriptormangel beseitigt
+     26-Nov-00  DM_REPOSITION beim Öffnen und Aufklappen der Search-Dialogbox
+                H-File-Abhängigkeiten im BCC-Makefile
+                Undo-Speicherbegrenzung in französisch und spanisch
+                Ctrl+F6 und Ctrl+Shift+F6 zum Umschalten der WinVi-Fenster
+.83i 30-Nov-00  Settings/16-Bit: funktioniert endlich vollständig
+.83j  1-Dec-00  diverse kleine Korrekturen
+                neue Übersetzungen von Valérie
+2.90  2-Dec-00  noch ein paar Resource-Änderungen in französisch und spanisch
+                MakeProcInstance fehlte bei InterCom:EnumWindows
+                einige Anpassungen für Wine
+.90a  6-Dec-00  darker hilite color for very bright Win3.1-non3D background
+                16-bit: positioning behind pixel 32767 and behind column 32767
+                feedback when repeat count input overflows (beep and maxuint)
+                color selectbox with double click on first 6 color boxes
+.90b  7-Dec-00  16-bit: repeat count overflow at unsigned maxint (2^16-1)
+                32-bit: repeat count overflow at signed   maxint (2^31-1)
+                new color dialog layout with custom color button
+     12-Dec-00  missing initialization of i in InterCom.c:EnumWindowsProc
+     13-Dec-00  several changes making WinVi compatible with LCC
+.90c 18-Dec-00  several changes in color dialogbox
+.90d 19-Dec-00  string change in English Search dialogbox (regular expression)
+.90e 21-Dec-00  new color dialog box in English, French and Spanish
+                no more warnings when using LCC
+     22-Dec-00  color dialog with sunken boxes now also in 32-bit version
+                info dialog with simple sunken box (for Win32s compatibility)
+     23-Dec-00  WinME: command.com searched in $PATH
+.90f 27-Dec-00  private window class for sunken frames in color settings + info
+                browse-bitmap file is correctly set into corresponding editfield
+.90g 28-Dec-00  color sunken frames defined after color controls again,
+                    needed for click and double click
+                    (previous 2 errors made in 2.90b; earlier versions were ok)
+                debug messages for exec problems
+     29-Dec-00  check for working directory on network path (Win32 on Win9x/ME)
+     31-Dec-00  another small change in Spanish translation
+.90h  4-Jan-01  newline character included in length of line
+                    (for correct calculation of horizontal scrollbar)
+     23-Jan-01  removed Compiler warning in Colors.c
+.90i  3-Mar-01  selecting font tabsheet without pushing a font button does not
+                    set the color to black
+      8-Mar-01  consistent foreground color selection in color and font dialog
+2.91 12-Mar-01  no font decoration (color, underline, strikethrough) available
+                    if foreground colour is non-basic
+                corrected focus handling for custom color dialog
+     14-Apr-01  some comments on recent changes
+     18-Aug-01  removed compiler warnings when using gcc (Linux)
+.91b 28-May-02  e-mail and web address encoded for irritating worms like Klez.H
+     21-Jun-02  tmOverhang removed, Courier Bold is now displayed correctly
+                ":set ts=..." recalculates current pixel position
+.91c 21-Jun-02  new print button in toolbar
+                current working directory in file dialogs of Win ME and Win XP
+     23-Jun-02  handling of DBCS lead byte (unable to test)
+                larger buffer for text output hopefully reduces display problems
+                new icons for 16x16 presentation
+     24-Jun-02  removed line if selection area is made smaller at left border
+     27-Jun-02  validating position after Ctrl+E in the near of EOF in hex mode
+2.92 28-Jun-02  enlarged output buffer (160 bytes instead of 40) needs lower
+                    left border for output, now -20000 (was -1000)
+.92a 20-Jul-02  no error (message "file is read-only") when saving while
+                    shell command is running
+                keep insert mode after saving while shell command is running
+     22-Jul-02  new assertion handling with new include file MyAssert.h
+                removed an assertion failure in undo with low memory settings
+.92b 24-Jul-02  disable New and Open toolbar and menu items when executing shell
+.92c 27-Jul-02  scrollbar invalidated at end of initialization phase
+                'c' (confirm) option at end of substitute command
+.92d 15-Aug-02  MessageBeep not called when MessageBox is called as a result
+                    of searching from the dialogbox
+                several more checks when shell insertion is running
+     16-Aug-02  search string (dialogbox F3) pre-filled with identifier
+                    at current position if nothing is selected
+     19-Aug-02  safe flag (gray write button) not set after write if some text
+                    is being inserted from shell command while writing
+2.93 23-Aug-02  new version 2.93 only
+.93a 15-Sep-02  missing file SrchDlg.c added to makefiles
+.93c 22-Sep-02  tab expansion of domains/workgroups
+.93d 30-Sep-02  EBCDIC handling (including ":set ebcdimode")
+      1-Oct-02  display and crash problems solved for :s/^$/xxx/c
+                corrected handling of backslashed letters in search sets ([...])
+                corrected handling of oem letters in search sets ([...])
+                /$/ finds the end of last line if not terminated by a newline
+                Apply button disabled in Settings if nothing has been changed
+      3-Oct-02  corrected handling of :<number><tab> and :<number><letter><tab>
+                corrected handling of :w>><tab>
+      6-Oct-02  corrected handling of :s///<tab>
+                ^O und ^S for file open/save (still buggy)
+.92h  6-Oct-02  corrected caret positioning at EOF with incomplete last line
+.93i  9-Oct-02  display errors corrected after inserting ^M before a ^J
+.93j 10-Oct-02  ^O und ^S for file open/save now ok
+                corrected new general caret positioning (incorrect since 2.93h)
+2.94 11-Oct-02  disallow drag&drop while reading/writing/searching/shell-exec
+                scrollable scrollbar if first line of file is not visible
+.94a 18-Oct-02  keeping insert mode after saving with ^S while shell is running
+                assertion failure fix with empty filename #/% in shell command
+                corrected error message when expanding % to empty filename
+     23-Oct-02  better handling of Ctrl+S/Ctrl+Q/Pause/RollLock
+                    in shell command insertions
+                keep hex/text side when switching from hex to text and back
+     25-Oct-02  keep previous Interruptable flag after write operations
+     29-Oct-02  some more fixes for stopped shell command insertions
+                less processor load when showing matching parentheses
+     30-Oct-02  corrected counting of number of lines in InsertBuffer
+     31-Oct-02  corrected inherit attrs for shell command pipes, now EOF works
+      1-Nov-02  Ctrl+C/Ctrl+Break handling for Windows XP
+      2-Nov-02  fixed caret shape at start of file after removing contents
+      3-Nov-02  NS_READING_WRITING renamed to NS_BUSY
+                substitute command displayed in status line while executing
+      9-Nov-02  Ctrl+V in insert/replace mode
+     11-Nov-02  Ctrl+Alt+V as escape character in insert/replace mode
+     13-Nov-02  Profile name combobox in Settings dialog
+     14-Nov-02  fixed positioning bug in first line if empty and
+                    lf terminated when switching from hex to text mode
+                fixed failure to count single lf at start of buffer when reading
+                prevent mouse positioning after Ctrl+Alt+V
+     15-Nov-02  tag back in same file with NewPosition() (uses scrolling)
+     17-Nov-02  tabcontrol with multiline tabs
+     27-Nov-02  multiple profiles, automatic profile selection
+     31-Dec-02  no error beep after escaped character (Ctrl+Alt+V)
+     10-Jan-03  configurable shell for use of bash
+     15-Jan-03  configurable url for help file
+     15-Jan-03  keyboard handling with mappings/abbreviations
+     16-Jan-03  custom color settings saved
+     16-Jan-03  fix of rare display problem after Shift
+      4-Feb-03  fixed an assertion failure (new problem in 2.95)
+                    when opening a hex file
+     14-Feb-03  new Spanish translations
+2.95 14-Feb-03  fixed a deadlock in keyboard handling after
+                    Ctrl+S -> Ctrl+C/Ctrl+Break (new problem in 2.95)
+     13-Mar-03  codepage conversions when using clipboard (NT/2K/XP only)
+                ebcdic conversions when using clipboard
+.95b  4-Apr-03  ebcdic text input corrected
+                positioners F/f/T/t now handle OEM and EBCDIC character sets
+                showmatch deactivated while keyboard macros are expanded
+.95c  8-Jun-03  keyboard macro buffer resized in TranslateMapping
+      3-Jul-03  bugfix for search pattern /[\]]/
+      2-Sep-03  dot caret at eof in insert mode changed to a vertical bar
+      7-Oct-03  WinVi32.exe: versioninfo marked as 32-bit application
+.95e 20-Oct-03  Windows XP Theme integrated for dialogboxes and scrollbars
+     22-Oct-03  optional forward slash for tab expanding dirs in shell cmds
+.95g  6-Apr-04  saving glyph availability for preventing xp blue screens
+                    when starting multiple instances at the same time
+.95h 22-Jun-04  crash fixed after :s at EOF, CharAt() did not load last page
+.95i 29-Jun-04  using default glyph map if glyphs are not available
+                    (makes default font "Courier" work again,
+                     bugfix for 2.95g and 2.95h only)
+.95j 29-Jul-04  adapted to MinGW (Gnu based), compilable with Borland BCC again
+                MinGW multilingual version info not working - only English
+     31-Jul-04  ":cd -" changes to previous working directory
+                    (reverting the previous "cd ..." command)
+                ":.w <tab>", ":+2r <tab>" etc. now show a file list popup menu
+.95k 05-Aug-04  fixed wrong error text when open fails for edit, e.g. ":e 1:\b"
+                MinGW: fixed change of constant string, e.g. when entering
+                    Ctrl+^ with no alternate filename
+                ":cd -" now checks if alternate directory has already been set
+.95l 13-Sep-04  fixed assertion failures in undo operations
+.95m 20-Oct-04  button explanations in status bar shifted to the right place
+.95n 04-Dec-04  MinGW: got multilingual version information for MinGW working
+     08-Dec-04  switch profile after "save as"
+                correct status line display after open if initial insert mode
+                    is switched off
+                don't leave insert mode after cancelling "save as" if initial
+                    insert mode is switched off
+.95o 22-Dec-04  show at least one additional character in shortened menu
+                    entries if tab expands to many files
+.95p 01-Jan-05  Bugfix in tab expansion of server/share names with
+                    comma/semicolon separated lists containing '?' wildcards
+.95q 05-Jan-05  reload dialog after switching profiles if language changed
+                enable Apply button if profile changed
+                restore profile after pushing Cancel if profile changed
+.95r 06-Jan-05  setting appropriate system colors when changing profiles
+.95s 09-Jan-05  dynamic e-mail address in about dialog
+     12-Jan-05  changed profile tabsheet labels and keyboard shortcuts
+.95t 19-Jan-05  crash fixed after font change
+.95u 04-Feb-05  saving current settings when creating new profiles 
+                corrected cancel data when removing profiles
+                bugfix in switching tabs after settings error
+2.96 25-Feb-05  new version number only
+.96a 14-Mar-05  bugfix for failing drag&drop
+                bugfixes for handling comma separated domain lists
+                    when tab-expanding hosts
+     15-Mar-05  additional null-pointer check in TextLine
+                sign-extend bugfix for ANSILOWER_CMP (gcc compiler only)
+.96b 12-Apr-05  crash fixed if initial hex mode is switched on
+     19-Apr-05  hexmode and charset changed in SwitchMatchingProfile
+                    even if profile does not change
+.96c 13-Jun-05  default print orientation is selectable again
+                restored some resource.h identifiers in WinVi.rc (not all)
+.96d 21-Oct-05  using SystemParametersInfo() to determine wheel scroll amount
+     23-Oct-05  fixed a miscalculated memory allocation (error 300)
+                added a numeric hint value to error 300 (fatal error/no memory)
+.96e 23-Feb-06  fixed byte order when pasting binary data containing null bytes
+                    in command mode at end of file
+.96f 07-Mar-06  new calculation of caret dimensions (customizable)
+.96g 05-Apr-06  fixed caret width calculation for empty lines (wrong since .96f)
+2.97 09-Apr-06  new version number only
+.97a 21-May-06  display an error box when a page size error occurs in yank
+.97b 06-Nov-06  explicit specification of STARTF_USESHOWWINDOW and SW_NORMAL
+                    when starting a sub-winvi process
+.97c 22-Nov-06  solved focus problems when starting with ":vi" etc.
+     23-Nov-06  restored old mark position if search operation had failed
+.97d 05-Jun-07  using TextOutW/GetTextExtentPointW functions for later
+                    unicode support
+.97i 22-Jul-07  Unicode-Testversion
+.97m 30-Jul-07  "+n ..." parameter does not clear following + parameters
+                status line uses tooltip font
+                solved a display problem when inserting a new line into
+                    an entirely empty file
+                full EBCDI support (now translates all characters)
+                full Unicode support, exeptions and drawbacks:
+                    search for UTF-8 non-ASCII characters not working yet,
+                    substitute for non-ANSI characters not working yet
+                    incompatible with Win3.0/Win3.1/Win95/Win98/WinMe, sorry
+.97n  4-Aug-07  correctly setting up text height in hexadecimal mode
+.97u  4-Oct-07  many Unicode issues solved
+                searching UTF-8 and UTF-16 now working
+                fixed a crash when starting with EBCDIC
+                line counting fixed for LF-only EBCDIC files
+                GlyphsAvail registry value of older WinVi versions now ignored,
+                    removed when font is changed
+      9-Oct-07  Input of space not mapped to \0 in OEM mode anymore
+                clipboard copy now translates OEM control characters
+.97v  9-Oct-07  fixed a display error when deleting the last hexadecimal
+                    character on a display line by backspacing in insert mode
+.97w 10-Oct-07  correctly setting up cursor width on 2-byte UTF-16 characters
+                    in hexadecimal mode
+                fixed a redo buffer filling error when expanding redo chain
+                fixed incorrent redo buffer size checks
+                preventing undo in UTF-16 mode with odd number of bytes
+.97x 11-Oct-07  UTF-16 toolbar button now works as a toggle switching between
+                    Little Endian and Big Endian
+.97y 16-Oct-07  invalidating the text when switching default end-of-line
+                shell command output now converted to UTF-8 or UTF-16
+.97za 18-Oct    setting paged to unsafe when moving bytes after switching
+                    between UTF-16 and non-UTF-16
+     20-Oct-07  move buffer size corrected for path expansion when file name
+                    contains double quotes
+     21-Oct-07  error fixed hiding UTF-16 input in first line after BOM
+                corrected number of removed UTF-16 bytes in 'J'oin command
+                bugfix in substite command replacing UTF-8 text by \1 reference
+                    containing multibyte characters
+                new options for fix setting of ANSI, UTF-8 and UTF-16 encoding
+                clearing flag for appended make-even \0 byte when inserting or
+                    deleting at EOF in UTF-16 files
+                odd select length incremented by one when switching to UTF-16
+                solved a line end replacement problem entered in 2.97u
+.98beta 23-Oct  new version number
+.98rc1  31-Oct  insert of clipboard containing linefeed separated lines into
+                    EBCDIC files now count lines appropriately
+                corrected error message when setting unknown variables
+                switching character encoding does not change default newline
+                searching /• still works with 'n' after switching to UTF-8
+     5-Nov-07   fixed a bug when printing continuation lines of UTF-16 texts
+                used "Courier New" as default character font when not set yet
+     6-Nov-07   first-time window size set to 80x24 (with 96dpi Courier New)
+                initial printer font size calculated from screen DC
+                fixed wrong character mapping when printing OEM files
+     9-Nov-07   repainting empty lines after removing autoindent spaces
+                using compare functions with localized sorting
+                    for path expansion again
+     15-Nov-07  fixed identifier extraction for '*' and '#' in UTF-16 mode
+     21-Nov-07  fixed filling and resolving hexadecimal search input
+      5-Dec-07  fixed some UTF-16 search issues
+     16-Dec-07  Tab-expanding host names works again
+     28-Jan-07  treating any output of UTF encoded text as variable pitched
+      5-Feb-07  fixed a range-check bug when searching in a UTF-8 encoded file
+     19-Feb-07  fixed a crash when joining lines
+                    (dereferencing a NULL pointer in ComparePos())
+                multiple 'J'oin command made interruptable
+.98rc2  26-Feb  crash fixed on startup if initial character set is not automatic
+                initial character set had been ignored in some cases, fixed
+.99  14-Dec-08  inserting an empty line at start of a UTF-8 file after the BOM
+                    resulted in an endless loop, fixed
+      1-Jan-09  compilable with VC++ 2008 Express Edition
+                dialog box "File" -> "Insert file" now show up with readable 
+                    caption line
+.99a 10-Jan-09  fixed identifier extraction when using positioning commands 
+                    '#', '*' or Ctrl+']' behind a multi-byte character in a 
+                    UTF-8 file
+     31-Jan-09  inserting multibyte characters (e.g. from clipboard) into 
+                    UTF-8 file at end of line misplaced cursor position, fixed
+      1-Feb-09  inserting multibyte characters (e.g. from clipboard) into 
+                    UTF-8 file at end of file misplaced cursor position, fixed
+.99b  2-Feb-09  deleting to end of line in hex mode did not remove last byte of 
+                    row, fixed
+.99c  6-Sep-09  fixed a bug when positioning on CR in a LF-CR-LF sequence
+      7-Sep-09  performing a control-break event at program exit
+.99d 12-Nov-09  check of interrupted flag completed in tags file handling
+.99e 23-Nov-09  fixed insertion of CR before an existing LF and 
+                    insertion of a LF after an existing CR
+.99f 28-Dec-09  fixed wrong toolbar painting when quitting WinVi while tagging
+.99g  9-Jan-10  Ctrl+End sets cursor to end of last line
+                bugfix: 'G' sets cursor to first character on 
+                    a one-line file with no leading spaces (was 2nd char before)
+3.00 10-Jan-10  positioning behind last character after inserting text 
+                    from clipboard in replace mode
+     12-Jan-10  fixed a counting problem when using InsertBuffer() for 
+                    inserting a non-newline character between CR and LF
+.00a  8-Apr-10  fixed inserting a double newline in a UTF-16 file with 
+                    autoindent enabled and with an indentation level of at 
+                    least one space character
+.00b 30-Apr-10  slightly modified heuristics for auto-detecting UTF-16 encoding,
+                    with no BOM present, file must now:
+                    - be even-sized,
+                    - have no 16-bit word entirely null and
+                    - must have an average of more than one null byte for each 
+                      500 bytes of the file plus 2 (changed, was at least 
+                      2 null-bytes at even or odd positions before)
+.00c  5-May-10  languages of version info in different order (English first)
+.00d 17-Jun-10  escaping search input does not set a new default marker anymore
+.00e 22-Jun-10  skipping BOM character when printing
+.00f 31-Aug-10  forcing DLL load from Windows system directory
+.00g  9-Jan-11  setting proper mouse position in vertical scroll operations by 
+                    dragging cursor out of the text area when horizontal 
+                    display position is not at line start (leftmost position)
+     12-Jan-11  cd command with ## and/or %% works as expected
+     24-Dec-11  switching to UTF-8 charsets does not change position if utf-8 
+                    encoding is invalid
+3.02 18-Mar-12	new release

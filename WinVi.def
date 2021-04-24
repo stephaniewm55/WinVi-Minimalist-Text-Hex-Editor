@@ -1,0 +1,22 @@
+NAME        WinVi
+DESCRIPTION "Visual Editor for Windows"
+EXETYPE     WINDOWS
+CODE        PRELOAD MOVEABLE DISCARDABLE
+DATA        PRELOAD MOVEABLE MULTIPLE
+HEAPSIZE    1024
+
+EXPORTS
+            MainProc				 @1
+            ArgsCallback			 @2
+            SearchCallback			 @3
+            ColorProc				 @4
+            AboutCallback			 @5
+            EnumWindowsProc			 @6
+            PrintCancelCallback		 @7
+            WrapScrollCallback		 @8
+            SettingsCallback		 @9
+            SubSetCallback			@10
+            TabCtrlProc				@11
+            ChooseFontHook			@12
+            SubstChkCallback		@13
+            GetStringCallback		@14

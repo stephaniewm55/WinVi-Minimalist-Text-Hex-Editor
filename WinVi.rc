@@ -1,0 +1,3917 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+#include "TabCtrl.h"
+#if defined(_WIN32)
+# include "WinVi32.rc"
+#else
+# include "WinVi16.rc"
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+#if defined(__LCC__)
+# define COMPILER_IDENT "LCC"
+#elif defined(__BCC__)
+# define COMPILER_IDENT "Borland BCC"
+#elif defined(__MINGW__)
+# define COMPILER_IDENT "MinGW"
+#elif defined(__MSVC_VER__)
+# define COMPILER_IDENT "Microsoft Visual C"
+#else
+# define COMPILER_IDENT "unknown"
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+100                     ICON    DISCARDABLE     "WINVI.ICO"
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+1 VERSIONINFO
+ FILEVERSION 3,3,0,0
+ PRODUCTVERSION 3,3,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x3L
+#else
+ FILEFLAGS 0x2L
+#endif
+#ifdef _WIN32
+ FILEOS 0x4L        //VOS__WINDOWS32
+#else
+ FILEOS 0x1L        //VOS__WINDOWS16
+#endif
+ FILETYPE 0x1L      //VFT_APP
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "Stephanie W. Myers, Raphael Molle\0"
+            VALUE "FileDescription", "Vi Compatible Editor for Windows\0"
+            VALUE "LegalCopyright", "© 1994-2021 Stephanie W. Myers, Raphael Molle\0"
+            VALUE "FileVersion", "3.3\0"
+            VALUE "InternalName", "WinVi\0"
+            VALUE "OriginalFilename", "WINVI32.EXE\0"
+            VALUE "ProductName", "WinVi\0"
+            VALUE "ProductVersion", "3.3\0"
+        END
+    END
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040704e4"
+        BEGIN
+            VALUE "CompanyName", "Stephanie W. Myers, Raphael Molle\0"
+            VALUE "FileDescription", "Vi-kompatibler Editor für Windows\0"
+            VALUE "LegalCopyright", "© 1994-2021 Stephanie W. Myers, Raphael Molle\0"
+            VALUE "FileVersion", "3.3\0"
+            VALUE "InternalName", "WinVi\0"
+            VALUE "OriginalFilename", "WINVI32.EXE\0"
+            VALUE "ProductName", "WinVi\0"
+            VALUE "ProductVersion", "3.3\0"
+        END
+    END
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040a04e4"
+        BEGIN
+            VALUE "CompanyName", "Stephanie W. Myers, Raphael Molle\0"
+            VALUE "FileDescription", "Editor vi compatible para Windows\0"
+            VALUE "LegalCopyright", "© 1994-2021 Stephanie W. Myers, Raphael Molle\0"
+            VALUE "FileVersion", "3.3\0"
+            VALUE "InternalName", "WinVi\0"
+            VALUE "OriginalFilename", "WINVI32.EXE\0"
+            VALUE "ProductName", "WinVi\0"
+            VALUE "ProductVersion", "3.3\0"
+        END
+    END
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040c04e4"
+        BEGIN
+            VALUE "CompanyName", "Stephanie W. Myers, Raphael Molle\0"
+            VALUE "FileDescription", "Editeur vi compatible pour Windows\0"
+            VALUE "LegalCopyright", "© 1994-2021 Stephanie W. Myers, Raphael Molle\0"
+            VALUE "FileVersion", "3.3\0"
+            VALUE "InternalName", "WinVi\0"
+            VALUE "OriginalFilename", "WINVI32.EXE\0"
+            VALUE "ProductName", "WinVi\0"
+            VALUE "ProductVersion", "3.3\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+#if defined(__LCC__)
+        VALUE "Translation", 0x409, 1252
+#else
+        VALUE "Translation", 0x409, 1252, 0x407, 1252, 0x40a, 1252, 0x40c, 1252
+#endif
+    END
+END
+
+#if !defined(__LCC__)
+# if !defined(RT_MANIFEST)
+#  define MANIFEST 24
+# else
+#  define MANIFEST RT_MANIFEST
+# endif
+#endif
+
+1 MANIFEST "WinVi32.exe.manifest"
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+301 DIALOG DISCARDABLE  12, 60, 226, 43
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "WinVi"
+FONT 9, "Arial"
+BEGIN
+    LTEXT           "",IDC_GETSTRINGTITLE,6,5,154,8
+    EDITTEXT        IDC_GETSTRINGSTRING,6,16,154,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,167,6,53,14
+    PUSHBUTTON      "Cancel",IDCANCEL,167,23,53,14
+END
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) (unknown sub-lang: 0x0) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, 0x0
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+9100 MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tF2",                    ID_NEW
+        MENUITEM "New &Window",                 ID_NEWVI
+        MENUITEM "&Open...",                    ID_OPEN
+        MENUITEM "&Save\tShift+F12",            ID_SAVE
+        MENUITEM "Save &as...",                 ID_SAVEAS
+        MENUITEM SEPARATOR
+        MENUITEM "Alte&rnate file\tCtrl+6",     ID_ALTERNATE
+        MENUITEM "&Insert file...",             ID_READFILE
+        MENUITEM "&File list...\tShift+F2",     ID_FILELIST
+        MENUITEM SEPARATOR
+        MENUITEM "Page se&tup...",              ID_PRINTSETTINGS
+        MENUITEM "&Print...",                   ID_PRINT
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "T&ag\tCtrl+]",                ID_TAG
+        MENUITEM "Tag &back\tCtrl+T",           ID_TAGBACK
+        MENUITEM SEPARATOR
+        MENUITEM "&Undo\tAlt+Bksp",             ID_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tShift+Del",             ID_CUT
+        MENUITEM "&Copy\tCtrl+Ins",             ID_COPY
+        MENUITEM "&Paste\tShift+Ins",           ID_PASTE
+        MENUITEM "&Delete\tDel",                ID_DELETE
+        MENUITEM SEPARATOR
+        MENUITEM "&Select all\tCtrl+A",         ID_SELECTALL
+        MENUITEM "&Refresh\tF5",                ID_REFRESH
+    END
+    POPUP "&Search"
+    BEGIN
+        MENUITEM "&Search/Replace...\tAlt+F3",  ID_SEARCH
+        MENUITEM "Search &again\tF3",           ID_SRCHAGN
+    END
+    POPUP "&Options"
+    BEGIN
+        MENUITEM "&Settings...",                ID_SETTINGS
+        MENUITEM SEPARATOR
+        MENUITEM "&ANSI character set",         ID_ANSI, CHECKED
+        MENUITEM "&DOS character set",          ID_OEM
+        MENUITEM "UTF-&8 character set",        ID_UTF8
+        MENUITEM "UTF-16 &LE character set",    ID_UTF16LE
+        MENUITEM "UTF-16 &BE character set",    ID_UTF16BE
+        MENUITEM "&EBCDIC character set",       ID_EBCDIC
+		MENUITEM SEPARATOR
+        MENUITEM "&Hex edit mode",              ID_HEX
+    END
+    POPUP "&Windows"
+    BEGIN
+        MENUITEM "",                            ID_NEW
+    END
+    POPUP "&Help"
+    BEGIN
+//        MENUITEM "&Help",                       ID_HELP
+        MENUITEM "&WinVi web page",             ID_WEBPAGE
+        MENUITEM "&About WinVi...",             ID_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    9102                    "%s: not an editor command"
+    9103                    "Invalid command introducer"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    9104                    "Line (range) not allowed"
+    9105                    "Specify one line only"
+    9106                    "Rubbish after command"
+    9107                    "%s: WRITE ERROR! (disk full?)"
+    9108                    "%s: CANNOT RELOAD SWAPPED PAGES!"
+    9109                    "%s: INTERNAL ERROR!"
+    9112                    "%s: file is read-only!"
+    9113                    "No alternate filename"
+    9114                    "%s: %s"
+    9115                    "%s: unexpected error %d"
+    9116                    "%s: bad pathname"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    9120                    "Error writing temporary intermediate file!\n\nOkay to use virtual memory instead?\nYes continues reading,\nNo aborts."
+    9121                    "No more virtual memory available"
+    9123                    "WinVi - Fatal Error"
+    9124                    "Fatal Error!  Please save into a new file!"
+    9125                    "Command execution not supported!"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    9202                    "What?"
+    9203                    "Existing file will be overwritten!"
+    9204                    "File on disk has been modified.\nOverride changes?"
+    9205                    "«%s»  not saved yet.\n\nWrite now?"
+    9206                    "Untitled file not saved yet.\n\nWrite now?"
+    9207                    "«%s»  (read-only) not saved yet.\n\nChanges will be discarded!"
+    9208                    "Untitled read-only file not saved yet.\n\nChanges will be discarded!"
+    9209                    "Nothing selected"
+    9210                    "No match to bottom"
+    9212                    "No match to top"
+    9214                    "No match"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    9216                    "No previous regular expression"
+    9217                    "No previous re"
+    9218                    "Interrupt"
+    9219                    "Nothing to undo"
+    9220                    "No more files"
+    9221                    "No files to rewind"
+    9222                    "Flag is not Boolean"
+    9223                    "Value must be between %d and %d"
+    9224                    "Use «wq!» for writing partial contents"
+    9225                    "eXit with line range not allowed! Use «wq!» instead"
+    9226                    "%s: no such option"
+    9227                    "Cannot change working dir to «%s»"
+    9228                    "Cd failed  «%s»"
+    9229                    "Cannot locate working dir"
+    9230                    "Illegal escaped digit"
+    9231                    "Invalid grouping of \\( and \\)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    9232                    "More files"
+    9233                    "No file name specified"
+    9234                    "No previous substitute"
+    9235                    "Nothing to repeat"
+    9236                    "File cannot be changed"
+    9237                    "wd is «%s»"
+    9238                    "String not found"
+    9239                    "Illegal hexadecimal input"
+    9240                    "1 substitution"
+    9241                    "%ld substitutions"
+    9242                    "%ld substitutions in 1 line"
+    9243                    "%ld substitutions in %ld lines"
+    9244                    "«%s»  (read-only) not saved yet.\n\nDirectory is being changed!"
+    9245                    "Untitled read-only file not saved yet.\n\nDirectory is being changed!"
+    9246                    "inch"
+    9247                    "Page &p"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    9248                    "Printer incorrectly specified!"
+    9249                    "Too many \\("
+    9250                    "Too many \\)"
+    9251                    "Too deep nesting of \\( \\)"
+    9252                    "\\| only within \\( \\)"
+    9253                    "%s:\nFile on disk has been modified."
+    9254                    "Font (Text Mode)"
+    9255                    "Font (Hexadecimal Mode)"
+    9256                    "Font (Printing)"
+    9257                    "Sample:"
+    9258                    "No match to bottom, restarting from top"
+    9259                    "No match to top, restarting from bottom"
+    9260                    "Undo entry has odd number of bytes,\nswitch off UTF-16 encoding and retry."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    9280                    "Open (Insert File)"
+    9281                    "Select Background Bitmap"
+    9282                    " [Read only]"
+    9283                    " [Not edited]"
+    9284                    " [Modified]"
+    9285                    " [New file]"
+    9286                    " [Reading...]"
+    9287                    " [Writing...]"
+    9288                    " line %lu of %lu"
+    9289                    " %ld lines, %ld characters"
+    9290                    "Unexpected error %04lx"
+    9291                    "All Files (*.*),*.*,"
+    9292                    "Bitmap Files (*.bmp;*.dib),*.bmp;*.dib,"
+    9293                    " [Testing...]"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    9300                    "FATAL ERROR\nNot enough local memory! (%d)\n\nPlease save immediately to a new file!"
+    9301                    "Error creating command window"
+    9302                    "Cannot open clipboard"
+    9303                    "Cannot empty clipboard"
+    9304                    "Cannot allocate clipboard memory"
+    9305                    "Cannot lock clipboard memory"
+    9306                    "Clipboard text is not available"
+    9307                    "Clipboard paste > 64 KByte not supported"
+    9308                    "Not enough memory for yank"
+    9309                    "Invalid numeric value"
+    9310                    "Value is too small"
+    9311                    "Value is too large"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    9312                    "Not enough memory for replace"
+    9313                    "FATAL ERROR\nNot enough memory!\n\nPlease save immediately to a new file!"
+    9314                    "WinVi - Error"
+    9315                    "More files to edit!\n\nClose again to quit anyway."
+    9320                    "Error while printing"
+    9321                    "General error while printing"
+    9322                    "Printing interrupted"
+    9323                    "Printing interrupted by user"
+    9324                    "Printing stopped (hard disk full)"
+    9325                    "Printing stopped (no memory)"
+    9326                    "Error %d while printing"
+    9327                    "No default printer specified"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    9328                    "Clipboard data contains null bytes!\n\nThe data may not be accessible in total."
+    9329                    "Tag not found"
+    9330                    "Tag stack empty"
+    9331                    "' requires following letter"
+    9332                    "Undefined mark referenced"
+    9334                    "%d lines >ed"
+    9335                    "%d lines <ed"
+    9336                    "unlimited"
+    9337                    "Profile Name"
+    9338                    "Specify a name for the new profile:"
+    9339                    "This name is invalid!"
+    9340                    "Cancel"
+    9341                    "WinVi - Confirm"
+    9342                    "Delete this profile?\n\n""%s"""
+    9343                    "Reset all settings to default values?"
+    9344                    "system"
+    9345                    "This profile already exists!"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    9398                    "read error"
+    9399                    "write error"
+    9401                    "invalid function"
+    9402                    "file not found"
+    9403                    "path not found"
+    9404                    "too many open files"
+    9405                    "access denied"
+    9406                    "invalid handle"
+    9407                    "arena trashed"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    9408                    "not enough memory for write"
+    9409                    "invalid block"
+    9410                    "bad environment"
+    9411                    "bad format"
+    9412                    "invalid access"
+    9413                    "invalid data"
+    9415                    "invalid drive"
+    9416                    "invalid current directory"
+    9417                    "not same device"
+    9418                    "file system full"
+    9419                    "write protect error"
+    9420                    "bad unit"
+    9421                    "drive not ready"
+    9422                    "bad command"
+    9423                    "crc error"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    9424                    "bad length"
+    9425                    "seek error"
+    9426                    "file system not supported"
+    9427                    "sector not found"
+    9428                    "out of paper"
+    9429                    "write fault"
+    9430                    "read fault"
+    9431                    "general failure"
+    9432                    "sharing violation"
+    9433                    "lock violation"
+    9434                    "wrong disk"
+    9435                    "file control block unavailable"
+    9436                    "sharing buffer exceeded"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    9450                    "not supported"
+    9451                    "remote not listed"
+    9452                    "duplicate name"
+    9453                    "bad net path"
+    9454                    "network busy"
+    9455                    "device does not exist"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    9456                    "too many commands"
+    9457                    "adaptor hardware error"
+    9458                    "bad network response"
+    9459                    "unexpected network error"
+    9460                    "bad remote adaptor"
+    9461                    "print queue full"
+    9462                    "no spool space"
+    9463                    "print canceled"
+    9464                    "net name deleted"
+    9465                    "network access denied"
+    9466                    "bad device type"
+    9467                    "bad network name"
+    9468                    "too many names"
+    9469                    "too many sessions"
+    9470                    "sharing paused"
+    9471                    "request not accepted"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    9472                    "redirection paused"
+    9480                    "file exists"
+    9481                    "duplicate file control block"
+    9482                    "cannot make"
+    9483                    "interrupt 24 failure"
+    9484                    "out of structures"
+    9485                    "already assigned"
+    9486                    "invalid password"
+    9487                    "invalid parameter"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    9488                    "net write fault"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    9700                    "file is not executable"
+    9702                    "file not found"
+    9703                    "path not found"
+    9705                    "sharing violation"
+    9706                    "no separate data segments"
+    9708                    "insufficient memory"
+    9710                    "incompatible windows version"
+    9711                    "invalid executable"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    9712                    "incompatible operating system"
+    9713                    "cannot execute DOS 4.0 application"
+    9714                    "unknown type of executable"
+    9715                    "cannot execute real mode executable"
+    9716                    "already running"
+    9719                    "executable is compressed"
+    9720                    "uses invalid dll"
+    9721                    "32-bit extension required"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    9901                    "(untitled)"
+    9902                    "Num"
+    9903                    "Caps"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    9904                    "&Insert mode,R&eplace mode,C&ommand mode,T&ag,Tag &back,&Undo,Cu&t,&Copy,&Paste,&Delete,&Select all,&Refresh"
+    9905                    "Create new file,Open file,Save file,Print,Cut,Copy,Paste,Undo,Search,Search again,ANSI character set,DOS character set,UTF-8 character set,UTF-16 Little Endian or Big Endian (toggle),Hexadecimal mode"
+    9906                    "Creates a new document,Opens an existing file...,Saves current file to disk,Prints the current file...,Copies into clipboard and deletes,Copies into clipboard,Inserts from clipboard"
+    9907                    "Undoes last change,Search and replace in current file...,Repeats last search in same direction"
+    9908                    "Windows style display and keyboard mapping,Display and keyboard mapping for DOS files,UTF-8 display and keyboard mapping,Toggle between UTF-16 Little Endian and UTF-16 Big Endian,Toggles hexadecimal edit mode"
+    9909                    "Close"
+    9910                    "Copy &status field"
+    9911                    "Copy &file name"
+    9912                    "Profile,File type,Display,Edit,Files,Keyboard macros,Shell,Colors,Fonts,Print,Language"
+    9913                    "APT:"
+    9914                    "Hold"
+END
+
+#endif    // English (U.S.) (unknown sub-lang: 0x0) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Spanish (Castilian) (unknown sub-lang: 0x0) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ESP)
+#ifdef _WIN32
+LANGUAGE LANG_SPANISH, 0x0
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+10100 MENU DISCARDABLE 
+BEGIN
+    POPUP "&Fichero"
+    BEGIN
+        MENUITEM "&Nuevo\tF2",                  ID_NEW
+        MENUITEM "Nueva &ventana",              ID_NEWVI
+        MENUITEM "&Abrir...",                   ID_OPEN
+        MENUITEM "&Guardar\tMayús+F12",         ID_SAVE
+        MENUITEM "G&uardar como...",            ID_SAVEAS
+        MENUITEM SEPARATOR
+        MENUITEM "&Fichero alterno\tCtrl+6",    ID_ALTERNATE
+        MENUITEM "Ins&ertar fichero...",        ID_READFILE
+        MENUITEM "&Lista de ficheros...\tMayús+F2", ID_FILELIST
+        MENUITEM SEPARATOR
+        MENUITEM "Configu&ración de página...", ID_PRINTSETTINGS
+        MENUITEM "&Imprimir...",                ID_PRINT
+        MENUITEM SEPARATOR
+        MENUITEM "&Salir",                      ID_EXIT
+    END
+    POPUP "&Editar"
+    BEGIN
+        MENUITEM "Ta&g\tCtrl+]",                ID_TAG
+        MENUITEM "Tag anterio&r\tCtrl+T",       ID_TAGBACK
+        MENUITEM SEPARATOR
+        MENUITEM "&Deshacer\tAlt+Ret",          ID_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cor&tar\tMayús+Supr",         ID_CUT
+        MENUITEM "&Copiar\tCtrl+Ins",           ID_COPY
+        MENUITEM "&Pegar\tMayús+Ins",           ID_PASTE
+        MENUITEM "Borr&ar\tSupr",               ID_DELETE
+        MENUITEM SEPARATOR
+        MENUITEM "&Seleccionar todo\tCtrl+A",   ID_SELECTALL
+        MENUITEM "R&efrescar\tF5",              ID_REFRESH
+    END
+    POPUP "&Buscar"
+    BEGIN
+        MENUITEM "&Buscar/Cambiar...\tAlt+F3",  ID_SEARCH
+        MENUITEM "Buscar &siguiente\tF3",       ID_SRCHAGN
+    END
+    POPUP "&Opciones"
+    BEGIN
+        MENUITEM "&Configuración...",           ID_SETTINGS
+        MENUITEM SEPARATOR
+        MENUITEM "Caracteres &ANSI",            ID_ANSI, CHECKED
+        MENUITEM "Caracteres &DOS",             ID_OEM
+        MENUITEM "Caracteres UTF-&8",           ID_UTF8
+        MENUITEM "Caracteres UTF-16 &LE",       ID_UTF16LE
+        MENUITEM "Caracteres UTF-16 &BE",       ID_UTF16BE
+        MENUITEM "Caracteres &EBCDIC",          ID_EBCDIC
+        MENUITEM "Edición &hexadecimal",        ID_HEX
+    END
+    POPUP "Ve&ntanas"
+    BEGIN
+        MENUITEM "",                            ID_NEW
+    END
+    POPUP "&Ayuda"
+    BEGIN
+        MENUITEM "Ay&uda",                      ID_HELP
+        MENUITEM "&Pagina de Internet WinVI",   ID_WEBPAGE
+        MENUITEM "&Acerca de WinVi...",         ID_ABOUT
+    END
+END
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    10102                   "%s: no es un mandato del editor"
+    10103                   "El mandato introducido es inválido"
+    10104                   "Línea (rango) no permitido"
+    10105                   "Indicar una sóla línea"
+    10106                   "Texto inválido detrás después del comando"
+    10107                   "%s: ¡ERROR DE ESCRITURA! (¿disco lleno?)"
+    10108                   "%s: ¡NO PUEDO CARGAR LAS PAGINAS DEL DISCO!"
+    10109                   "%s: ¡ERROR INTERNO!"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    10112                   "%s: ¡el fichero es de sólo lectura!"
+    10113                   "No existe nombre de fichero alternativo"
+    10114                   "%s: %s"
+    10115                   "%s: error inesperado %d"
+    10116                   "%s: nombre de localización errónea"
+    10120                   "¡Error escribiendo a el fichero temporal!\n\n¿Usar memoria virtual?\nSí, continua la lectura,\nNo cancela."
+    10121                   "No hay más memoria virtual disponible"
+    10123                   "WinVi - Error grave"
+    10124                   "¡Error grave!  ¡Por favor guarde el documento en un fichero nuevo!"
+    10125                   "¡Ejecución del mandato no implementado!"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    10202                   "¿ Que?"
+    10203                   "¡El fichero existente será sobrescrito!"
+    10204                   "El fichero en el disco ha sido modificado.\n¿Anular ese cambio?"
+    10205                   "«%s»  aún no guardado.\n\n¿Escribir ahora?"
+    10206                   "Fichero sin nombre no guardado aún.\n\n¿Escribir ahora?"
+    10207                   "«%s»  (solo-lectura) no guardado aún.\n\n¡Los cambios serán desechados!"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    10208                   "Fichero sin nombre (solo-lectura) no guardado aún.\n\n¡Los cambios serán ignorados!"
+    10209                   "Nada seleccionado"
+    10210                   "No se encontró nada hacia abajo"
+    10212                   "No se encontró nada hacia arriba"
+    10214                   "No se encontró nada"
+    10216                   "No se indicó una expresión regular"
+    10217                   "No se indicó una RE"
+    10218                   "Interrupción"
+    10219                   "Nada que deshacer"
+    10220                   "No hay más ficheros"
+    10221                   "No hay más ficheros que editar"
+    10222                   "Esta opción no es boleana"
+    10223                   "El valor debe encontrarse entre %d y %d"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    10224                   "Se debe usar «wq!» cuando se indican rangos de línea"
+    10225                   "¡eXit con rango de líneas no es válido! Utilice «wq!»"
+    10226                   "%s: no existe tal opción"
+    10227                   "No puedo cambiar la carpeta de trabajo a «%s»"
+    10228                   "falló el comando Cd «%s»"
+    10229                   "No se puede encontrar el directorio de trabajo"
+    10230                   "dígito ilegal de escape "
+    10231                   "Agrupación de  \\( y \\) inválida"
+    10232                   "Más ficheros"
+    10233                   "No se indicó nombre de fichero"
+    10234                   "No substituto previo"
+    10235                   "No hay nada que repetir"
+    10236                   "El fichero no puede ser cambiado"
+    10237                   "Carpeta es «%s»"
+    10238                   "Cadena no encontrada"
+    10239                   "Entrada hexadecimal ilegal"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    10240                   "1 substitución"
+    10241                   "%ld substituciones"
+    10242                   "%ld substituciones en 1 línea"
+    10243                   "%ld substitutciones en %ld líneas"
+    10244                   "«%s» (sólo-lectura) no guardado todavía.\n\n¡El directorio está siendo cambidado!"
+    10245                   "Fichero sin nombre (sólo-lectura) no guardado todavía.\n\n¡El directorio está siendo cambidado!"
+    10246                   "pulgada"
+    10247                   "Página &p"
+    10248                   "!Impresora incorrectamente determinada!"
+    10249                   "Demasiados \\("
+    10250                   "Demasiados \\)"
+    10251                   "Anidamiento de \\( \\) demasiado profundo"
+    10252                   "\\| solo dentro de \\( \\)"
+    10253                   "%s:\nEl fichero en el disco ha sido modificado."
+    10254                   "Tipos de letra (modo de texto)"
+    10255                   "Tipos de letra (modo hexadecimal)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    10256                   "Tipos de letra (impresión)"
+    10257                   "Muestra:"
+    10258                   "No se encontró nada hacia abajo"
+    10259                   "No se encontró nada hacia arriba"
+    10260                   "Undo entry has odd number of bytes,\nswitch off UTF-16 encoding and retry."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    10280                   "Abrir (Insertar Fichero)"
+    10281                   "Elegir un Bitmap de Fondo"
+    10282                   " [Sólo lectura]"
+    10283                   " [No editado]"
+    10284                   " [Modificado]"
+    10285                   " [Fichero nuevo]"
+    10286                   " [Leyendo...]"
+    10287                   " [Escribiendo...]"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    10288                   " línea %lu de %lu"
+    10289                   " %ld líneas, %ld caracteres"
+    10290                   "Error inesperado %04lx"
+    10291                   "Todos los archivos (*.*),*.*,"
+    10292                   "Archivos de mapas de bits (*.bmp;*.dib),*.bmp;*.dib,"
+    10293                   " [Probando...]"
+    10300                   "ERROR GRAVE\nNo hay suficiente memoria local! (%d)\n\n¡Por favor, guarde el documento en un nuevo fichero inmediatamente!"
+    10301                   "Error creando ventana de comandos"
+    10302                   "No puedo abrir el sujetadatos"
+    10303                   "No puedo vaciar el sujetadatos"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    10304                   "No puedo asignar memoria para el sujetadatos"
+    10305                   "No puedo bloquear la memoria del sujetadatos"
+    10306                   "El texto del sujetadatos no se encuentra disponible"
+    10307                   "No es posible pegar más de 64KBytes en el sujetadatos"
+    10308                   "No hay suficiente memoria para copiar"
+    10309                   "Valor numérico inválido"
+    10310                   "Valor demasiado pequeño"
+    10311                   "Valor demasiado grande"
+    10312                   "No hay suficiente memoria para reemplazar"
+    10313                   "ERROR GRAVE\n¡Memoria insuficiente!\n\n¡Por favor guarde el documento inmediatamente en un fichero nuevo!"
+    10314                   "Error de WinVi"
+    10315                   "¡Hay más ficheros que editar!\n\nCierre otra vez para salir de todos modos."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    10320                   "Error mientras se imprimía"
+    10321                   "Error General imprimiendo"
+    10322                   "Impresión interrumpida"
+    10323                   "Impresión interrumpida por el usuario"
+    10324                   "Impresión parada (disco duro lleno)"
+    10325                   "Impresión parada (no hay memoria)"
+    10326                   "Error %d mientras se imprimía"
+    10327                   "No se indicó impresora por defecto"
+    10328                   "¡Los datos del sujetadatos contienen null bytes!\n\nLos datos pueden no ser accesibles en su totalidad."
+    10329                   "Tag no encontrada"
+    10330                   "pila de Tag vacía"
+    10331                   "' requiere una letra a continuación"
+    10332                   "Marca indefinida referenciada"
+    10334                   "%d líneas >ind."
+    10335                   "%d líneas <ind."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    10336                   "ilimitado"
+    10337                   "Nombre de Perfil"
+    10338                   "Especifique un nombre para el nuevo perfil:"
+    10339                   "¡Este nombre es invalido!"
+    10340                   "Cancelar"
+    10341                   "WinVi - Confirmación"
+    10342                   "¿Suprima este perfil?\n\n""%s"""
+    10343                   "¿Reajuste todos los ajustes a los valores prefijados?"
+    10344                   "sistema"
+/*e*/10345                   "Este perfil ya existe!"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    10398                   "error de lectura"
+    10399                   "error de escritura"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    10401                   "función inválida"
+    10402                   "fichero no encontrado"
+    10403                   "ruta no encontrada"
+    10404                   "demasiados ficheros abiertos"
+    10405                   "acceso denegado"
+    10406                   "handle inválido"
+    10407                   "No se puede abrir el fichero. Arena trased"
+    10408                   "no hay suficiente memoria para escribir"
+    10409                   "bloque inválido"
+    10410                   "entorno mal"
+    10411                   "formato mal"
+    10412                   "acceso inválido"
+    10413                   "datos inválidos"
+    10415                   "dispositivo inválido"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    10416                   "directorio actual inválido"
+    10417                   "no es el mismo dispositivo"
+    10418                   "sistema de ficheros lleno"
+    10419                   "error de protección contra escritura"
+    10420                   "unidad mala"
+    10421                   "dispositivo no preparado"
+    10422                   "commando malo"
+    10423                   "error de crc"
+    10424                   "longitud errónea"
+    10425                   "error de posicionamiento"
+    10426                   "sistema de ficheros no implementado"
+    10427                   "sector no encontrado"
+    10428                   "sin papel"
+    10429                   "fallo de escritura"
+    10430                   "fallo de lectura"
+    10431                   "fallo generalizado"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    10432                   "violacíon de compartición"
+    10433                   "violación de bloqueo"
+    10434                   "disco equivocado"
+    10435                   "no está disponible el bloque de control de ficheros"
+    10436                   "se sobrepasó el buffer de compartición"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    10450                   "no implementado"
+    10451                   "remoto no listado"
+    10452                   "nombre duplicado"
+    10453                   "ruta de red mala"
+    10454                   "red ocupada"
+    10455                   "el dispositivo no existe"
+    10456                   "demasiados commandos"
+    10457                   "error de hardware del adaptador"
+    10458                   "mala respuestas de la red"
+    10459                   "error inesperado de la red"
+    10460                   "adaptador remoto malo"
+    10461                   "cola de impresión llena"
+    10462                   "no hay espacio para el spool de impresión"
+    10463                   "impresión cancelada"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    10464                   "nombre de red borrado"
+    10465                   "acceso de red denegado"
+    10466                   "tipo de dispositivo erróneo"
+    10467                   "nombre de red erróneo"
+    10468                   "demasiados nombres"
+    10469                   "demasiadas sesiones"
+    10470                   "compartición parada"
+    10471                   "solicitud no aceptada"
+    10472                   "redirección parada"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    10480                   "el fichero existe"
+    10481                   "bloque de control de ficheros duplicado"
+    10482                   "no puedo hacerlo"
+    10483                   "fallo en la interrupción 24"
+    10484                   "fuera de estructuras"
+    10485                   "ya asignado"
+    10486                   "password inválida"
+    10487                   "parámetro inválido"
+    10488                   "fallo de escritura en la red"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    10700                   "el fichero no es ejecutable"
+    10702                   "no se encuentra el fichero"
+    10703                   "no se encuentra la ruta"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    10705                   "violación de compartición"
+    10706                   "segmentos de datos no reservados"
+    10708                   "memoria insuficiente"
+    10710                   "versión de windows incompatible"
+    10711                   "ejecutable inválido"
+    10712                   "sistema operativo incompatible"
+    10713                   "no puedo ejecutar una aplicación para DOS 4.0"
+    10714                   "tipo de ejecutable desconocido"
+    10715                   "no puedo ejecutar un ejecutable en modo real"
+    10716                   "ya en ejecución"
+    10719                   "el ejecutable se encuentra comprimido"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    10720                   "se utiliza una dll inválida"
+    10721                   "se necesita la extensión de 32-bits"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    10901                   "(Sin título)"
+    10902                   "Num"
+    10903                   "Mayús"
+    10904                   "Modo inserció&n,Modo reempla&zo,Modo command&o,Ta&g,Tag anterio&r,&Deshacer,Cor&tar,&Copiar,&Pegar,Elimin&ar,&Seleccionar todo,R&efrescar"
+    10905                   "Crear un fichero nuevo,Abrir fichero,Guardar fichero,Imprimir,Cortar,Copiar,Pegar,Deshacer,Buscar,Buscar siguiente,caracteres ANSI,caracteres DOS,caracteres UTF-8,caracteres UTF-16LE o UTF-16BE,Modo Hexadecimal"
+    10906                   "Crea un nuevo documento,Abre un fichero existente...,Guarda el fichero actual en disco,,Copia en el portapapeles y elimina,Copia en el portapapeles,Inserta desde el portapapeles"
+    10907                   "Deshace el último cambio, Busca y reemplaza en el fichero actual...,Repite la última búsqueda en la misma dirección"
+    10908                   "Mapa de pantalla y teclado original,Mapa de pantalla y teclado para ficheros DOS,Mapa de pantalla y teclado para ficheros UTF-8,UTF-16 Little Endian o UTF-16 Big Endian,Cambia el modo de edición hexadecimal"
+    10909                   "Cierra"
+    10910                   "Copia campo de e&stado"
+    10911                   "Copia nombre de &fichero"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+/*e*/10912                   "Perfil,Tipo del fichero,Presentación,Edición,Ficheros,Keyboard macros,Shell,Colores,Tipos de letra,Impresión,Idioma"
+    10913                   "APR:"
+/*e*/10914                   "Aguantado"
+END
+
+#endif    // Spanish (Castilian) (unknown sub-lang: 0x0) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// French (France) (unknown sub-lang: 0x0) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FRA)
+#ifdef _WIN32
+LANGUAGE LANG_FRENCH, 0x0
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+12100 MENU DISCARDABLE 
+BEGIN
+    POPUP "&Fichier"
+    BEGIN
+        MENUITEM "&Nouveau\tF2",                ID_NEW
+        MENUITEM "No&uvelle fenêtre",           ID_NEWVI
+        MENUITEM "&Ouvrir...",                  ID_OPEN
+        MENUITEM "&Enregistrer\tMaj+F12",       ID_SAVE
+        MENUITEM "Enregistrer &sous...",        ID_SAVEAS
+        MENUITEM SEPARATOR
+        MENUITEM "Fichier &alternatif\tCtrl+6", ID_ALTERNATE
+        MENUITEM "&Insérer un fichier...",      ID_READFILE
+        MENUITEM "&Liste des fichiers...\tMaj+F2", ID_FILELIST
+        MENUITEM SEPARATOR
+        MENUITEM "Mise en &page...",            ID_PRINTSETTINGS
+        MENUITEM "I&mprimer...",                ID_PRINT
+        MENUITEM SEPARATOR
+        MENUITEM "&Quitter",                    ID_EXIT
+    END
+    POPUP "&Edition"
+    BEGIN
+        MENUITEM "&Tag\tCtrl+]",                ID_TAG
+        MENUITEM "&Retourner du tag\tCtrl+T",   ID_TAGBACK
+        MENUITEM SEPARATOR
+        MENUITEM "&Annuler\tAlt+Arrière",       ID_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Co&uper\tMaj+Suppr",          ID_CUT
+        MENUITEM "&Copier\tCtrl+Ins",           ID_COPY
+        MENUITEM "C&oller\tMaj+Ins",            ID_PASTE
+        MENUITEM "&Supprimer\tSuppr",           ID_DELETE
+        MENUITEM SEPARATOR
+        MENUITEM "Sél&ectionner tout\tCtrl+A",  ID_SELECTALL
+        MENUITEM "Actual&iser\tF5",             ID_REFRESH
+    END
+    POPUP "&Recherche"
+    BEGIN
+        MENUITEM "Re&chercher/remplacer...\tAlt+F3", ID_SEARCH
+        MENUITEM "&Répéter la recherche\tF3",   ID_SRCHAGN
+    END
+    POPUP "&Options"
+    BEGIN
+        MENUITEM "Para&mètres...",              ID_SETTINGS
+        MENUITEM SEPARATOR
+        MENUITEM "Jeu de caractères &ANSI",     ID_ANSI, CHECKED
+        MENUITEM "Jeu de caractères &DOS",      ID_OEM
+        MENUITEM "Jeu de caractères UTF-&8",    ID_UTF8
+        MENUITEM "Jeu de caractères UTF-16 &LE",ID_UTF16LE
+        MENUITEM "Jeu de caractères UTF-16 &BE",ID_UTF16BE
+        MENUITEM "Jeu de caractères &EBCDIC",   ID_EBCDIC
+        MENUITEM "Mode &hexadécimal",           ID_HEX
+    END
+    POPUP "Fe&nêtres"
+    BEGIN
+        MENUITEM "",                            ID_NEW
+    END
+    POPUP "&Aide"
+    BEGIN
+        MENUITEM "Ai&de",                       ID_HELP
+        MENUITEM "&Page web de WinVi",          ID_WEBPAGE
+        MENUITEM "&A propos de WinVi...",       ID_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    12102                   "%s : pas une commande de l'éditeur"
+    12103                   "Le 1er caractère de l'instruction doit être :, /, ? ou !"
+    12104                   "Indication de ligne(s) non-permise"
+    12105                   "Indiquer une seule ligne"
+    12106                   "Texte invalide après directive"
+    12107                   "%s : ERREUR D'ÉCRITURE ! (disque plein ?)"
+    12108                   "%s : IMPOSSIBLE DE CHARGER LES PAGES D'ÉCHANGE !"
+    12109                   "%s : ERREUR INTERIEURE !"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    12112                   "%s : fichier est en lecture seulement !"
+    12113                   "Aucun nom de fichier alternatif"
+    12114                   "%s : %s"
+    12115                   "%s : erreur inattendue %d"
+    12116                   "%s : nom chemin incorrect"
+    12120                   "Erreur d'écriture dans le fichier temporaire !\n\nUtiliser la mémoire virtuelle à la place ?\nOui pour continuer la lecture,\nNon pour annuler."
+    12121                   "Plus de mémoire virtuelle disponible"
+    12123                   "WinVi - Erreur fatale"
+    12124                   "Erreur fatale !  Enregistrer dans un nouveau fichier, svp !"
+    12125                   "L'éxecution de commandes n'est pas supportée !"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    12202                   "Pardon ?"
+    12203                   "Le fichier déjà existant sera écrasé !"
+    12204                   "Le fichier sur le disque a été modifié parallèlement.\nDoit-on l'écraser ?"
+    12205                   "«%s» n'a pas encore été enregistré.\n\nÉcrire maintenant ?"
+    12206                   "Le fichier est sans titre et n'a pas encore été enregistré.\n\nÉcrire maintenant ?"
+    12207                   "«%s», qui est en lecture seulement, n'a pas encore été enregistré.\n\nLes changements ne seront pas effectués !"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    12208                   "Le fichier est sans titre, en lecture seulement et est non enregistré.\n\nLes changements ne seront pas effectués !"
+    12209                   "Rien n'est pas sélecté"
+    12210                   "Non trouvé vers le bas"
+    12212                   "Non trouvé vers le haut"
+    12214                   "Non trouvé"
+    12216                   "Aucune expression régulière précédente"
+    12217                   "Aucune ER précédente"
+    12218                   "Interruption"
+    12219                   "Rien à annuler"
+    12220                   "Pas d'autres fichiers"
+    12221                   "Aucun fichier disponible pour REWind"
+    12222                   "Cette option n'est pas Booléenne"
+    12223                   "Specifiez une valeur entre %d et %d"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    12224                   "La commande «wq» avec étendu de lignes doit être suivie de '!'"
+    12225                   "La commande eXit avec étendu de lignes n'est pas permise ! Utiliser plutôt «wq!»"
+    12226                   "%s : option invalide"
+    12227                   "Impossible de changer de répertoire vers «%s»"
+    12228                   "Cd impossible  «%s»"
+    12229                   "Impossible de localiser le répertoire de travail"
+    12230                   "Chiffre d'escapade illégal"
+    12231                   "Groupement invalide avec \\( et \\)"
+    12232                   "Encore d'autres fichiers"
+    12233                   "Aucun nom du fichier spécifié"
+    12234                   "Aucune substitution antérieure"
+    12235                   "Rien à répéter"
+    12236                   "Le fichier ne peut pas être modifié"
+    12237                   "Répertoire de travail : «%s»"
+    12238                   "Chaîne introuvable"
+    12239                   "L'entrée hexadécimale n'est pas valide"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    12240                   "1 substitution"
+    12241                   "%ld substitutions"
+    12242                   "%ld substitutions sur 1 ligne"
+    12243                   "%ld substitutions sur %ld lignes"
+    12244                   "«%s», en lecture seulement, n'a pas encore été enregistré.\n\nLe répertoire de travail changera !"
+    12245                   "Le fichier, sans titre et en lecture seulement, n'a pas encore été enregistré.\n\nLe répertoire de travail changera !"
+    12246                   "pouce"
+    12247                   "Page &p"
+    12248                   "Specification d'imprimante incorrecte !"
+    12249                   "Trop de \\("
+    12250                   "Trop de \\)"
+    12251                   "Structure \\( \\) trop profondément imbriqués"
+    12252                   "\\| invalide en dehors de la structure \\( \\)"
+    12253                   "%s:\nLe fichier sur le disque a été modifié parallèlement."
+    12254                   "Police (mode texte)"
+    12255                   "Police (mode hexadécimal)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    12256                   "Police (imprimer)"
+    12257                   "Exemple:"
+    12258                   "Non trouvé vers le bas, répétition à partir du haut"
+    12259                   "Non trouvé vers le haut, répétition à partir du bas"
+    12260                   "Undo entry has odd number of bytes,\nswitch off UTF-16 encoding and retry."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    12280                   "Ouvrir (insérer un fichier)"
+    12281                   "Sélection d'image de fond"
+    12282                   " [lecture seulement]"
+    12283                   " [non edité]"
+    12284                   " [modifié]"
+    12285                   " [nouveau fichier]"
+    12286                   " [Lecture en cours...]"
+    12287                   " [Écriture en cours...]"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    12288                   " ligne %lu de %lu"
+    12289                   " %ld lignes, %ld caractères"
+    12290                   "Erreur inattendue %04lx"
+    12291                   "Tous les fichiers (*.*),*.*,"
+    12292                   "Fichiers images (*.bmp;*.dib),*.bmp;*.dib,"
+    12293                   " [Test en cours...]"
+    12300                   "ERREUR FATALE\nMémoire locale insuffisante ! (%d)\n\nEnregistrer immédiatement dans un nouveau fichier, svp !"
+    12301                   "Erreur de création de la fenêtre de commande"
+    12302                   "Impossible d'accéder au presse-papier"
+    12303                   "Impossible de vider le presse-papier"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    12304                   "Impossible d'allouer de la mémoire pour le presse-papier"
+    12305                   "Impossible de verrouiller la mémoire du presse-papier"
+    12306                   "Aucun texte dans le presse-papier"
+    12307                   "Collage d'un presse-papier de plus de 64 Ko n'est pas supporté"
+    12308                   "Mémoire insuffisante pour la commande «Yank»"
+    12309                   "La valeur numerique est invalide"
+    12310                   "La valeur est trop petite"
+    12311                   "La valeur est trop grande"
+    12312                   "Mémoire insuffisante pour la commande «remplacer»"
+    12313                   "ERREUR FATALE\nMémoire insuffisante !\n\nEnregistrer immédiatement dans un nouveau fichier, svp !"
+    12314                   "WinVi - Erreur"
+    12315                   "Encore d'autres fichiers à éditer !\n\nRépéter la fermeture pour quitter."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    12320                   "Erreur durant l'impression"
+    12321                   "Erreur générale durant l'impression"
+    12322                   "Impression interrompue"
+    12323                   "Impression interrompue par l'utilisateur"
+    12324                   "Impression interrompue (manque d'espace du disque)"
+    12325                   "Impression interrompue (manque de mémoire)"
+    12326                   "Erreur %d durant l'impression"
+    12327                   "L'imprimante par défaut n'est pas spécifiée"
+    12328                   "Les données du presse-papier contiennent des octets nuls !\n\nIl se peut que les données ne soient pas toutes accessibles."
+    12329                   "Tag non trouvé"
+    12330                   "La liste des tags est vide"
+    12331                   "' nécessite une lettre à sa suite"
+    12332                   "Le marqueur référencé n'est pas défini"
+    12334                   "> sur %d lignes"
+    12335                   "< sur %d lignes"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    12336                   "illimité"
+    12337                   "Nom du profil"
+    12338                   "Nom du nouveau profil :"
+    12339                   "Ce nom est invalide !"
+    12340                   "Annuler"
+    12341                   "WinVi - Confirmation"
+    12342                   "Voulez-vous supprimer ce profil ?\n\n""%s"""
+    12343                   "Voulez-vous retourner aux valeurs par défaut ?"
+    12344                   "système"
+/*f*/12345                   "Ce profil existe déjà !"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    12398                   "erreur de lecture"
+    12399                   "erreur d'écriture"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    12401                   "fonction invalide"
+    12402                   "fichier non trouvé"
+    12403                   "chemin non trouvé"
+    12404                   "trop de fichiers ouverts"
+    12405                   "accès refusé"
+    12406                   "numéro d'accès invalide"
+    12407                   "Mémoire corrumpue"
+    12408                   "mémoire insuffisante à l'écriture"
+    12409                   "bloc invalide"
+    12410                   "mauvais environnement"
+    12411                   "mauvais format"
+    12412                   "accès invalide"
+    12413                   "données invalides"
+    12415                   "unité de disque invalide"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    12416                   "répertoire de travail invalide"
+    12417                   "le périphérique n'est pas le même"
+    12418                   "système de fichiers est plein"
+    12419                   "lecture seulement"
+    12420                   "mauvais unité de disque"
+    12421                   "unité de disque non-disponible"
+    12422                   "mauvaise commande"
+    12423                   "erreur de crc"
+    12424                   "mauvaise longueur"
+    12425                   "erreur de positionnement"
+    12426                   "système de fichiers non-supporté"
+    12427                   "secteur non-trouvé"
+    12428                   "manque de papier"
+    12429                   "défaillance d'écriture"
+    12430                   "défaillance de lecture"
+    12431                   "défaillance générale"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    12432                   "violation d'accès partagé"
+    12433                   "violation de verrouillage"
+    12434                   "mauvais disque"
+    12435                   "bloc de contrôle du fichier non-disponible"
+    12436                   "mémoire commune épuisée"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    12450                   "n'est pas supporté"
+    12451                   "éloigné n'est pas énuméré"
+    12452                   "nom en double"
+    12453                   "chemin réseau incorrect"
+    12454                   "réseau surchargé"
+    12455                   "le périphérique n'existe pas"
+    12456                   "trop des commandes"
+    12457                   "erreur matérielle d'adaptateur"
+    12458                   "réponse réseau insuffisante"
+    12459                   "erreur réseau inattendue"
+    12460                   "trouble fonctionnel d'adaptateur éloigné"
+    12461                   "file d'attente d'impression pleine"
+    12462                   "trop peu d'espace dévidoir"
+    12463                   "impression interrompue"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    12464                   "nom réseau supprimé"
+    12465                   "accès réseau refusé"
+    12466                   "type de périphérique incorrect"
+    12467                   "nom réseau incorrect"
+    12468                   "trop de noms"
+    12469                   "trop de sessions"
+    12470                   "accès partagé suspendu"
+    12471                   "demande refusée"
+    12472                   "redirection suspendu"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    12480                   "fichier déjà existant"
+    12481                   "bloc du contrôle de fichier en double"
+    12482                   "impossible de faire"
+    12483                   "défaillance avec l'interruption 24"
+    12484                   "plus de structures"
+    12485                   "déjà assigné"
+    12486                   "mot de passe invalide"
+    12487                   "paramètre invalide"
+    12488                   "faute d'ecriture dans le réseau"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    12700                   "fichier non exécutable"
+    12702                   "fichier introuvable"
+    12703                   "chemin introuvable"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    12705                   "violation d'accès partagé"
+    12706                   "aucun segment de données séparé"
+    12708                   "mémoire insuffisante"
+    12710                   "version incompatible de Windows"
+    12711                   "fichier exécutable invalide"
+    12712                   "système d'exploitation incompatible"
+    12713                   "impossible d'exécuter des applications DOS 4.0"
+    12714                   "type inconnu de fichier exécutable"
+    12715                   "impossible d'exécuter en mode réel"
+    12716                   "déjà en exécution"
+    12719                   "le fichier exécutable est compressé"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    12720                   "utilisation d'un DLL invalide"
+    12721                   "extension 32 bits requis"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    12901                   "(Sans titre)"
+    12902                   "Num"
+    12903                   "Maj"
+    12904                   "Mode d'i&nsertion,Mode &de remplacement,Mode de co&mmande,&Tag,&Retourner du tag,&Annuler,Co&uper,&Copier,C&oller,&Supprimer,Sél&ectionner tout,Actual&iser"
+    12905                   "Créer un nouveau fichier,Ouvrir un fichier,Sauvegarder le fichier,Imprimer,Couper,Copier,Coller,Annuler,Rechercher,Répéter la recherche,Caractères ANSI,Caractères DOS,Caractères UTF-8,Caractères UTF-16LE ou UTF-16BE,Mode hexadécimal"
+    12906                   "Crée un nouveau document,Lit un fichier existant...,Sauve le fichier courant sur disque,,Copie dans le presse-papier et supprime,Copie dans le presse-papier,Insère du presse-papier"
+    12907                   "Défaire le dernier changement,Recherche et remplacement dans le fichier courant...,Répète la dernière recherche dans la même direction"
+    12908                   "Codage de clavier et d'affichage original,Codage de clavier et d'affichage pour fichier DOS,Codage de clavier et d'affichage pour fichier UTF-8,UTF-16 Little Endian ou UTF-16 Big Endian,Commute le mode d'édition hexadécimal"
+    12909                   "Fermer"
+    12910                   "Copier le &champ d'état"
+    12911                   "Copier le &nom du fichier"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    12912                   "Profil,Type du fichier,Présentation,Édition,Fichiers,Macros clavier,Shell,Couleurs,Polices,Impression,Langage"
+    12913                   "APT:"
+    12914                   "Pause"
+END
+
+#endif    // French (France) (unknown sub-lang: 0x0) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// German (Germany) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)
+#ifdef _WIN32
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+7100 MENU DISCARDABLE 
+BEGIN
+    POPUP "&Datei"
+    BEGIN
+        MENUITEM "&Neu\tF2",                    ID_NEW
+        MENUITEM "Neues Fens&ter",              ID_NEWVI
+        MENUITEM "Ö&ffnen...",                  ID_OPEN
+        MENUITEM "&Speichern\tUmschalt+F12",    ID_SAVE
+        MENUITEM "Speichern &unter...",         ID_SAVEAS
+        MENUITEM SEPARATOR
+        MENUITEM "&Alternative Datei\tStrg+6",  ID_ALTERNATE
+        MENUITEM "Datei &einfügen...",          ID_READFILE
+        MENUITEM "&Dateiliste...\tUmschalt+F2", ID_FILELIST
+        MENUITEM SEPARATOR
+        MENUITEM "Seite ein&richten...",        ID_PRINTSETTINGS
+        MENUITEM "Dru&cken...",                 ID_PRINT
+        MENUITEM SEPARATOR
+        MENUITEM "&Beenden",                    ID_EXIT
+    END
+    POPUP "&Bearbeiten"
+    BEGIN
+        MENUITEM "&Tag\tStrg+]",                ID_TAG
+        MENUITEM "Tag &zurück\tStrg+T",         ID_TAGBACK
+        MENUITEM SEPARATOR
+        MENUITEM "&Rückgängig\tAlt+Rück",       ID_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "&Ausschneiden\tUmschalt+Entf", ID_CUT
+        MENUITEM "&Kopieren\tStrg+Einfg",       ID_COPY
+        MENUITEM "&Einfügen\tUmschalt+Einfg",   ID_PASTE
+        MENUITEM "&Löschen\tEntf",              ID_DELETE
+        MENUITEM SEPARATOR
+        MENUITEM "Alles &markieren\tStrg+A",    ID_SELECTALL
+        MENUITEM "Akt&ualisieren\tF5",          ID_REFRESH
+    END
+    POPUP "&Suchen"
+    BEGIN
+        MENUITEM "&Suchen/Ersetzen...\tAlt+F3", ID_SEARCH
+        MENUITEM "&Weitersuchen\tF3",           ID_SRCHAGN
+    END
+    POPUP "&Optionen"
+    BEGIN
+        MENUITEM "&Einstellungen...",           ID_SETTINGS
+        MENUITEM SEPARATOR
+        MENUITEM "&ANSI-Zeichensatz",           ID_ANSI, CHECKED
+        MENUITEM "&DOS-Zeichensatz",            ID_OEM
+        MENUITEM "UTF-&8-Zeichensatz",          ID_UTF8
+        MENUITEM "UTF-16-&LE-Zeichensatz",      ID_UTF16LE
+        MENUITEM "UTF-16-&BE-Zeichensatz",      ID_UTF16BE
+        MENUITEM "EB&CDIC-Zeichensatz",         ID_EBCDIC
+        MENUITEM "&Hexadezimalmodus",           ID_HEX
+    END
+    POPUP "&Fenster"
+    BEGIN
+        MENUITEM "",                            ID_NEW
+    END
+    POPUP "&Hilfe"
+    BEGIN
+        MENUITEM "&Hilfe",                      ID_HELP
+        MENUITEM "&WinVi-Webpage",              ID_WEBPAGE
+        MENUITEM "&Info über WinVi...",         ID_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+7310 DIALOG DISCARDABLE  8, 36, 170, 45
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Ausdruck in Arbeit"
+FONT 9, "Arial"
+BEGIN
+    LTEXT           "Ausdruck in Arbeit.",IDC_STATIC,14,12,80,9
+    LTEXT           "Bearbeitung Seite:",IDC_STATIC,14,23,63,9
+    LTEXT           "",IDC_PAGESPRINTED,77,23,30,9
+    DEFPUSHBUTTON   "Abbruch",IDCANCEL,126,7,36,14
+END
+
+7305 DIALOG DISCARDABLE  8, 36, 294, 113
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Info über WinVi"
+FONT 9, "Arial"
+BEGIN
+    ICON            100,IDC_STATIC,9,4,21,20
+    CTEXT           "WinVi",IDS_VERSIONTITLE,50,7,76,14
+    CONTROL         "",IDC_FRAME,"WinVi - SunkenBox",0x0,4,28,285,81 ABOUTSTYLE
+    LTEXT           "Version",IDS_VERSION,13,35,68,9
+    CTEXT           "(-- bit)",IDS_VERSIONBITS,81,35,38,9
+    RTEXT           "Freeware GPLv3",IDC_STATIC,115,35,64,9
+    LTEXT           "Compiler:",IDC_STATIC,13,45,39,9
+    RTEXT           COMPILER_IDENT,IDS_COMPILER,52,45,127,9
+    LTEXT           "Autor:",IDC_STATIC,13,55,23,9
+    RTEXT           "Stephanie W. Myers, Raphael Molle",IDS_AUTHOR,40,55,139,9
+    LTEXT           "französisch:",IDC_STATIC,13,65,39,9
+    RTEXT           "Valérie Gunslay, Yves Bélanger",IDC_STATIC,61,65,117,9
+    LTEXT           "spanisch:",IDC_STATIC,13,74,39,9
+    RTEXT           "José María Romero",IDC_STATIC,61,74,117,9
+    LTEXT           "Web:",IDC_STATIC,13,84,19,9
+    RTEXT           "https://www.open-source.tech/WinVi-Minimalist-Text-Hex-Editor/",IDS_WEBADDRESS,37,84,241,9
+    LTEXT           "Copyright",IDC_STATIC,13,94,32,9
+    RTEXT           "© 1994-2021 Stephanie W. Myers, Raphael Molle",IDC_STATIC,54,94,
+                    224,9
+    DEFPUSHBUTTON   "OK",IDCANCEL,249,7,36,14
+END
+
+7306 DIALOG DISCARDABLE  140, 10, 206, 138
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Suchen"
+FONT 9, "Arial"
+BEGIN
+    LTEXT           "&Suchmuster:",IDC_STATIC,4,8,134,9
+    EDITTEXT        IDC_SEARCHSTRING,6,19,132,12,ES_AUTOHSCROLL
+    CONTROL         "als &regulärer Ausdruck",IDC_MAGIC,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,6,39,116,9
+    CONTROL         "he&xadezimal",IDC_HEXSEARCH,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,6,50,141,9
+    CONTROL         "&Groß-/Kleinschreibung unterscheiden",IDC_MATCHCASE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,6,61,141,9
+    CONTROL         "ga&nzes Wort",IDC_WHOLEWORD,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,6,72,81,9
+    CONTROL         "Rundu&msuche",IDC_WRAPSCAN,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,6,83,81,9
+    CONTROL         "rü&ckwärts",IDC_BACKWARD,"Button",BS_AUTORADIOBUTTON,
+                    94,72,51,10
+    CONTROL         "&vorwärts",IDC_FORWARD,"Button",BS_AUTORADIOBUTTON,
+                    94,83,51,10
+    DEFPUSHBUTTON   "&Weitersuchen",IDOK,147,6,54,14
+    PUSHBUTTON      "Abbrechen",IDCANCEL,147,23,54,14
+    LTEXT           "&Ersetzung:",IDC_STATIC,4,101,132,8
+    EDITTEXT        IDC_REPLACESTRING,6,113,132,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Ersetzen >>",IDC_SHOWREPLACE,147,73,54,14
+    PUSHBUTTON      "Erset&zen",IDC_REPLACE,147,100,54,14
+    PUSHBUTTON      "&Alles ersetzen",IDC_REPLACEALL,147,117,54,14
+END
+
+7307 DIALOG DISCARDABLE  12, 60, 322, 92
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "WinVi - Liste der Dateien"
+FONT 9, "Arial"
+BEGIN
+    LTEXT           "Liste der Dateien:",-1,6,5,117,8
+    LISTBOX         1022,7,16,253,68,LBS_USETABSTOPS | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Editieren",1,266,6,50,14
+    DEFPUSHBUTTON   "Abbrechen",2,266,23,50,14
+END
+
+7313 DIALOG DISCARDABLE  120, -30, 218, 26
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "WinVi - Ersetzen"
+FONT 9, "Arial"
+BEGIN
+    DEFPUSHBUTTON   "&Y: Ersetzen",IDOK,6,6,60,14
+    PUSHBUTTON      "&N: Weitersuchen",100,70,6,78,14
+    PUSHBUTTON      "Abbrechen",IDCANCEL,152,6,60,14
+END
+
+7300 DIALOG DISCARDABLE  16, 34, 342, 225
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Einstellungen"
+FONT 9, "Arial"
+BEGIN
+    LTEXT           "Profilname&:",IDC_PROFILETITLE,42,10,42,10
+    COMBOBOX        IDC_PROFILENAME,88,8,95,133,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Tab1",IDC_SETTINGSTAB,TABCTRLCLASS,
+                    WS_TABSTOP | TCS_MULTILINE,7,28,328,170
+    EDITTEXT        101,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    PUSHBUTTON      "",102,0,0,0,0
+    EDITTEXT        100,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    CONTROL         "&dauerhafte Einstellung",IDC_SAVEPERMANENTLY,"Button",
+                    BS_AUTORADIOBUTTON,7,203,108,9
+    CONTROL         "&Einstellung verfällt nach Beenden",IDC_ONETIMESETTING,
+                    "Button",BS_AUTORADIOBUTTON,7,213,126,9
+    DEFPUSHBUTTON   "OK",IDOK,177,206,50,14
+    PUSHBUTTON      "Abbrechen",IDCANCEL,231,206,50,14
+    PUSHBUTTON      "Ü&bernehmen",ID_APPLY,285,206,50,14
+END
+
+7320 DIALOG DISCARDABLE  13, 56, 317, 139
+STYLE WS_CHILD
+FONT 9, "Arial"
+BEGIN
+    PUSHBUTTON      "&Neues Profil anlegen...",IDC_NEWPROFILE,63,14,90,15
+    PUSHBUTTON      "Pr&ofil löschen",IDC_DELPROFILE,183,14,61,15
+    GROUPBOX        "Aktivierung dieses Profils",IDC_STATIC,10,40,293,70
+    LTEXT           "Bitte jeweils eine kommaseparierte Liste eingeben:",
+                    IDC_PROFILEACTIVATE,20,54,271,12
+    LTEXT           "&Pfad (Laufwerk, UNC):",IDC_DRIVEPATHUNCTITLE,20,74,73,10
+    EDITTEXT        IDC_DRIVEPATHUNC,100,72,193,12,ES_AUTOHSCROLL
+    LTEXT           "D&ateiendungen:",IDC_EXTENSIONSTITLE,20,88,73,10
+    EDITTEXT        IDC_EXTENSIONS,100,86,193,12,ES_AUTOHSCROLL
+    CONTROL         "da&uerhafte Einstellung als Standard für diesen Dialog",
+                    IDC_AUTOPERMANENT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    20,120,274,10
+    EDITTEXT        101,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    EDITTEXT        100,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+END
+
+7321 DIALOG DISCARDABLE  13, 56, 317, 139
+STYLE WS_CHILD
+FONT 9, "Arial"
+BEGIN
+    GROUPBOX        "Standard-Zeilenvorschub",IDC_STATIC,8,7,152,65
+    CONTROL         "automatische Erke&nnung",IDC_AUTO,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,27,21,130,8
+    CONTROL         "&MS-Dos/Windows-Format (CR/LF)",IDC_CRLF,"Button",
+                    BS_AUTORADIOBUTTON,27,33,130,8
+    CONTROL         "&Unix-Format (LF)",IDC_LF,"Button",BS_AUTORADIOBUTTON,
+                    27,45,130,8
+    CONTROL         "Mac-&Format (CR)",IDC_CR,"Button",BS_AUTORADIOBUTTON,
+                    27,57,130,8
+    GROUPBOX        "Initialer Text- / Hexadezimalmodus",IDC_STATIC,8,79,152,48
+    CONTROL         "&Textmodus",IDC_TEXT,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,26,96,130,8
+    CONTROL         "He&xadezimalmodus",IDC_HEX,"Button",
+                    BS_AUTORADIOBUTTON,26,109,130,8
+    GROUPBOX        "Initialer Zeichensatz",IDC_STATIC,172,7,136,65
+    CONTROL         "&automatische Erkennung",IDC_AUTOENCODING,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,186,21,118,8
+    CONTROL         "AN&SI (Windows)",IDC_ANSI,"Button",
+                    BS_AUTORADIOBUTTON,186,33,68,8
+    CONTROL         "&PC (Dos)",IDC_OEM,"Button",BS_AUTORADIOBUTTON,
+                    186,45,68,8
+    CONTROL         "EB&CDI-Code",IDC_EBCDIC,"Button",BS_AUTORADIOBUTTON,
+                    186,57,68,8
+    CONTROL         "UTF-&8",IDC_UTF8,"Button",BS_AUTORADIOBUTTON,256,33,50,8
+    CONTROL         "UTF-&16 LE",IDC_UTF16LE,"Button",BS_AUTORADIOBUTTON,
+                    256,45,50,8
+    CONTROL         "UTF-1&6 BE",IDC_UTF16BE,"Button",BS_AUTORADIOBUTTON,
+                    256,57,50,8
+    GROUPBOX        "Zeichentabellen",IDC_CODEPAGESTITLE,172,79,136,48
+    LTEXT           "ANS&I-Codepage:",IDC_ANSICPTITLE,194,96,56,8
+    EDITTEXT        IDC_ANSICP,256,94,30,12,ES_AUTOHSCROLL
+    LTEXT           "&OEM-Codepage:",IDC_OEMCPTITLE,194,109,56,8
+    EDITTEXT        IDC_OEMCP,256,107,30,12,ES_AUTOHSCROLL
+    EDITTEXT        101,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    EDITTEXT        100,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+END
+
+7322 DIALOG DISCARDABLE  13, 56, 317, 139
+STYLE WS_CHILD
+FONT 9, "Arial"
+BEGIN
+    CONTROL         "&zusammengehörige Klammern anzeigen",1023,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,17,29,148,10
+    CONTROL         "ku&rze Meldungen",1002,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,17,43,148,10
+    CONTROL         "&Aktivierung bei Drag && Drop",1007,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,17,57,148,10
+    CONTROL         "Zeilen&nummern",1090,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,17,71,148,10
+    CONTROL         "&Hintergrund-Bitmap aktualisieren",IDC_REFRESHBKG,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,85,148,10
+    CONTROL         "he&xadezimale Adressen im Hexadezimal-Modus",1091,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,99,175,10
+    LTEXT           "&Tabulator:",IDC_STATIC,175,30,35,10
+    EDITTEXT        1008,175,42,17,12,ES_AUTOHSCROLL
+    LTEXT           "Zeichen (mittlere Zeichenbreite)",IDC_STATIC,196,44,106,
+                    10
+    LTEXT           "&Maximaler Rollbereich:",IDC_STATIC,175,63,117,9
+    EDITTEXT        IDC_MAXSCROLL,175,75,17,12,ES_AUTOHSCROLL
+    LTEXT           "Zeilen",IDC_STATIC,196,77,20,10
+    EDITTEXT        101,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    EDITTEXT        100,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    GROUPBOX        "",IDC_STATIC,3,13,309,108
+END
+
+7323 DIALOG DISCARDABLE  13, 56, 317, 139
+STYLE WS_CHILD
+FONT 9, "Arial"
+BEGIN
+    GROUPBOX        "Editieren",IDC_STATIC,20,3,272,84
+    CONTROL         "&initialer Einfügemodus",IDC_DEFAULTINSERT,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,26,16,95,10
+    CONTROL         "au&tomatisch schreiben",IDC_AUTOWRITE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,26,30,95,10
+    CONTROL         "aut&omatisch einrücken",IDC_AUTOINDENT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,26,43,97,12
+    CONTROL         "&zeilenübergreifende Cursor-Bewegungen",IDC_NOTEPADNL,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,26,58,206,10
+    CONTROL         "zeile&nübergreifende !/c/d/y-Operationen auf ganzen Zeilen",
+                    IDC_FULLROWEXTEND,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    26,72,206,10
+    LTEXT           "&Undo-Speicher:",IDC_STATIC,171,16,53,10
+    LTEXT           "KB",IDC_STATIC,272,16,13,10
+    EDITTEXT        IDC_UNDOLIMIT,227,14,42,12,ES_AUTOHSCROLL
+    CONTROL         "&Schreibschutz als Default",IDC_READONLY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,171,30,97,10
+    LTEXT           "Einrüc&kung:",IDC_STATIC,171,45,39,10
+    LTEXT           "Leerzeichen",IDC_STATIC,234,45,43,10
+    EDITTEXT        IDC_SHIFTWIDTH,215,43,16,12,ES_AUTOHSCROLL
+    GROUPBOX        "Suchen",IDC_STATIC,20,91,272,41
+    CONTROL         "&Rundumsuche (WrapScan)",IDC_WRAPSCAN,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,26,104,110,10
+    CONTROL         "&Groß-/Kleinschreibung ignorieren",IDC_IGNORECASE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,26,117,119,10
+    CONTROL         "&magic (reguläre Ausdrücke)",IDC_MAGIC,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,171,104,106,10
+    EDITTEXT        101,0,0,0,0,ES_AUTOHSCROLL | WS_GROUP
+    EDITTEXT        100,0,0,0,0,ES_AUTOHSCROLL
+END
+
+7324 DIALOG DISCARDABLE  13, 56, 317, 139
+STYLE WS_CHILD
+FONT 9, "Arial"
+BEGIN
+    GROUPBOX        "Temporäre Datei",IDC_STATIC,7,5,140,80
+    LTEXT           "Auslagern bei &Speicherbelegung ab",IDC_STATIC,14,19,
+                    120,10
+    EDITTEXT        IDC_PAGE_THRESHOLD,13,30,25,12,ES_AUTOHSCROLL
+    LTEXT           "KByte",IDC_STATIC,41,32,47,9
+    CONTROL         "System-Temp-Ordner ver&wenden",IDC_DEFAULTTMP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,14,50,120,12
+    LTEXT           "&Ordner:",IDC_TMPTITLE,14,66,27,11
+    EDITTEXT        IDC_TMPFOLDER,41,64,98,12,ES_AUTOHSCROLL
+    GROUPBOX        "Verschiedenes",IDC_STATIC,155,5,154,80
+    LTEXT           "&Tags-Dateiliste:",IDC_STATIC,162,19,52,10
+    EDITTEXT        IDC_TAGS,161,30,142,12,ES_AUTOHSCROLL
+    LTEXT           "Si&cherheitskopien anlegen:",IDC_BKUPTITLE1,162,52,87,
+                    10
+    EDITTEXT        IDC_NUMBER_OF_BACKUPS,250,51,25,12,ES_AUTOHSCROLL
+    LTEXT           "Dateien",IDC_BKUPTITLE2,277,52,29,9
+    LTEXT           "bei weiteren zu editierenden Dateien",IDC_STATIC,173,68,
+                    130,11
+    CONTROL         "Beenden o&hne Bestätigung",IDC_MOREFILESQUIT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,161,59,139,9
+    GROUPBOX        "Dateinamen",IDC_STATIC,7,88,302,44
+    LTEXT           "Ser&ver-Tab-Expansion in Domains/Workgroups:",
+                    IDC_TABEXPDOMAINTITLE,14,102,160,9
+    EDITTEXT        IDC_TABEXPANDDOMAINS,174,100,129,12,ES_AUTOHSCROLL
+    CONTROL         "Dateinamen in &Kleinbuchstaben umwandeln  (Vorsicht bei NFS-Dateisystemen!)",
+                    1005,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,116,289,10
+    EDITTEXT        101,0,0,0,0,ES_AUTOHSCROLL
+    EDITTEXT        100,0,0,0,0,ES_AUTOHSCROLL
+END
+
+7325 DIALOG DISCARDABLE  13, 56, 317, 139
+STYLE WS_CHILD
+FONT 9, "Arial"
+BEGIN
+    GROUPBOX        "Defi&nierte Makros",IDC_STATIC,4,2,110,130
+    LISTBOX         IDC_MACROLIST,12,17,93,104,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Einzelmakro",IDC_STATIC,121,2,147,130
+    CONTROL         "&Map",IDC_MAP,"Button",BS_AUTORADIOBUTTON,
+                    129,17,49,8
+    CONTROL         "Ab&kürzung",IDC_ABBREV,"Button",BS_AUTORADIOBUTTON,
+                    129,27,49,8
+    LTEXT           "N&ame:",IDC_STATIC,180,14,72,8
+    EDITTEXT        IDC_MACRONAME,179,24,81,12,ES_AUTOHSCROLL
+    LTEXT           "Eingabe-&Tastenfolge:",IDC_STATIC,130,41,131,8
+    EDITTEXT        IDC_MACROINPUT,129,51,131,12,ES_AUTOHSCROLL
+    LTEXT           "a&uszuführende Tastenfolge:",IDC_STATIC,130,66,131,8
+    EDITTEXT        IDC_MACROREPLACE,129,76,131,12,ES_AUTOHSCROLL
+    CONTROL         "Ein&füge- / Ersetzungsmodus",IDC_INSERTMODE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,129,95,120,8
+    CONTROL         "Befehlsm&odus",IDC_COMMANDMODE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,129,106,120,8
+    CONTROL         "Befe&hlszeilen-Modus (ex-Befehl)",IDC_COMMANDLINE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,129,117,134,8
+    PUSHBUTTON      "&Setzen",IDC_SETMACRO,275,6,38,14
+    PUSHBUTTON      "&Löschen",IDC_DELMACRO,275,24,38,14
+    EDITTEXT        101,0,0,0,0,ES_AUTOHSCROLL
+    EDITTEXT        100,0,0,0,0,ES_AUTOHSCROLL
+END
+
+7326 DIALOG DISCARDABLE  13, 56, 317, 139
+STYLE WS_CHILD
+FONT 9, "Arial"
+BEGIN
+    GROUPBOX        "Shell",IDC_STATIC,11,10,293,71
+    LTEXT           "&Pfad und Dateiname der Shell:",IDC_STATIC,21,26,99,10
+    EDITTEXT        IDC_SHELL,127,24,167,12,ES_AUTOHSCROLL
+    LTEXT           "&Kommmandoaufruf mit Shell:",IDC_EXTENSIONSTITLE,
+                    21,43,99,10
+    EDITTEXT        IDC_SHELLCOMMAND,127,41,167,12,ES_AUTOHSCROLL
+    CONTROL         "&Tabulator-Expandierung von Verzeichnissen mit Vorwärts-Schrägstrich",
+                    IDC_TABEXPANDWITHSLASH,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,21,61,273,8
+    GROUPBOX        "Kontexthilfe",IDC_STATIC,11,89,293,36
+    LTEXT           "&URL für die Hilfedatei:",IDC_STATIC,21,105,90,10
+    EDITTEXT        IDC_HELPURL,127,103,167,12,ES_AUTOHSCROLL
+    EDITTEXT        101,0,0,0,0,ES_AUTOHSCROLL
+    EDITTEXT        100,0,0,0,0,ES_AUTOHSCROLL
+END
+
+7327 DIALOG DISCARDABLE  13, 56, 317, 139
+STYLE WS_CHILD
+FONT 9, "Arial"
+BEGIN
+    RTEXT           "Hintergrund",IDC_STATIC,5,27,43,8
+    RTEXT           "Vordergrund",IDC_STATIC,5,43,43,8
+    CTEXT           "Editier- bereich",IDC_STATIC,54,5,27,16
+    CONTROL         "10 Edit bg",1043,"WinVi - ColorCtrl",WS_GROUP | 
+                    WS_TABSTOP,61,26,14,9
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,61,26,14,9
+    CONTROL         "11 Edit fg",1044,"WinVi - ColorCtrl",0x0,61,42,14,9
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,61,42,14,9
+    CTEXT           "selektierter Bereich",IDC_STATIC,84,5,39,16
+    CONTROL         "12 Select bg",1045,"WinVi - ColorCtrl",0x0,97,26,14,9
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,97,26,14,9
+    CONTROL         "13 Select fg",1046,"WinVi - ColorCtrl",0x0,97,42,14,9
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,97,42,14,9
+    CTEXT           "passende Klammern",IDC_STATIC,122,5,37,16
+    CONTROL         "14 Paren bg",1047,"WinVi - ColorCtrl",0x0,133,26,14,9
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,133,26,14,9
+    CONTROL         "15 Paren fg",1048,"WinVi - ColorCtrl",0x0,133,42,14,9
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,133,42,14,9
+    CTEXT           "Zeilen- ende",IDC_STATIC,159,5,34,16
+    CONTROL         "16 Newline fg",1049,"WinVi - ColorCtrl",0x0,169,42,14,9
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,169,42,14,9
+    GROUPBOX        "       ",IDC_STATIC,2,57,214,43
+    GROUPBOX        "       ",IDC_STATIC,221,57,92,43
+    GROUPBOX        "       ",IDC_STATIC,2,104,214,30
+    GROUPBOX        "       ",IDC_STATIC,221,104,92,30
+    CONTROL         "&Grundfarben ",IDC_COLORS,"Button",BS_AUTORADIOBUTTON,8,
+                    57,53,10
+    CONTROL         "be&nutzerdefiniert ",IDC_CUSTOM,"Button",
+                    BS_AUTORADIOBUTTON,227,57,67,10
+    CONTROL         "&Hintergrund-Bitmap ",IDC_BITMAP,"Button",
+                    BS_AUTORADIOBUTTON,8,104,75,10
+    CONTROL         "&Systemfarbe ",IDC_SYSTEM,"Button",BS_AUTORADIOBUTTON,
+                    227,104,53,10
+    CONTROL         "0 black",1027,"WinVi - ColorCtrl",WS_GROUP,20,70,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,20,70,14,10
+    CONTROL         "1 red",1028,"WinVi - ColorCtrl",0x0,43,70,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,43,70,14,10
+    CONTROL         "2 green",1029,"WinVi - ColorCtrl",0x0,66,70,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,66,70,14,10
+    CONTROL         "3 yellow",1030,"WinVi - ColorCtrl",0x0,89,70,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,89,70,14,10
+    CONTROL         "4 blue",1031,"WinVi - ColorCtrl",0x0,112,70,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,112,70,14,10
+    CONTROL         "5 magenta",1032,"WinVi - ColorCtrl",0x0,135,70,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,135,70,14,10
+    CONTROL         "6 cyan",1033,"WinVi - ColorCtrl",0x0,158,70,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,158,70,14,10
+    CONTROL         "7 white",1034,"WinVi - ColorCtrl",0x0,181,70,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,181,70,14,10
+    CONTROL         "8 light gray",1035,"WinVi - ColorCtrl",0x0,20,83,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,20,83,14,10
+    CONTROL         "9 dark red",1036,"WinVi - ColorCtrl",0x0,43,83,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,43,83,14,10
+    CONTROL         "a dark green",1037,"WinVi - ColorCtrl",0x0,66,83,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,66,83,14,10
+    CONTROL         "b dark yellow",1038,"WinVi - ColorCtrl",0x0,89,83,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,89,83,14,10
+    CONTROL         "c dark blue",1039,"WinVi - ColorCtrl",0x0,112,83,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,112,83,14,10
+    CONTROL         "d dark magenta",1040,"WinVi - ColorCtrl",0x0,135,83,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,135,83,14,10
+    CONTROL         "e dark cyan",1041,"WinVi - ColorCtrl",0x0,158,83,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,158,83,14,10
+    CONTROL         "f dark gray",1042,"WinVi - ColorCtrl",0x0,181,83,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,181,83,14,10
+    GROUPBOX        "",1055,58,19,21,19
+    GROUPBOX        "",1056,58,35,21,19,NOT WS_VISIBLE
+    GROUPBOX        "",1057,94,19,21,19,NOT WS_VISIBLE
+    GROUPBOX        "",1058,94,35,21,19,NOT WS_VISIBLE
+    GROUPBOX        "",1059,130,19,21,19,NOT WS_VISIBLE
+    GROUPBOX        "",1060,130,35,21,19,NOT WS_VISIBLE
+    GROUPBOX        "",1061,166,35,21,19,NOT WS_VISIBLE
+    PUSHBUTTON      "&Wählen...",IDC_CHOOSECOLOR,237,75,60,15
+    LTEXT           "Dateiname:",IDC_BITMAPTITLE,8,117,38,9
+    EDITTEXT        IDC_BITMAPEDIT,49,115,92,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "D&urchsuchen...",IDC_BITMAPBROWSE,147,114,61,15
+    CTEXT           "",IDC_SYSCOLOR,223,118,88,10
+    EDITTEXT        101,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    PUSHBUTTON      "",102,0,0,0,0
+    EDITTEXT        100,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+END
+
+7328 DIALOG DISCARDABLE  13, 56, 317, 139
+STYLE WS_CHILD
+FONT 9, "Arial"
+BEGIN
+    GROUPBOX        "Schrift im Text-Modus",IDC_STATIC,9,4,298,60
+    LTEXT           "Schriftart:",IDC_STATIC,15,24,33,9
+    CONTROL         "Courier New,  10 pt.",IDC_FONTNAME_TEXT,"Static",
+                    SS_LEFTNOWORDWRAP | WS_GROUP,56,24,108,9
+    PUSHBUTTON      "Ä&ndern...",IDC_CHANGEFONT_TEXT,56,38,53,14
+    LTEXT           "",IDC_STATIC,166,15,134,43,SS_SUNKEN | NOT WS_GROUP
+    EDITTEXT        IDC_FONTSAMPLE_TEXT,171,18,124,36,ES_CENTER | 
+                    ES_MULTILINE | ES_READONLY | NOT WS_BORDER | NOT 
+                    WS_TABSTOP
+    GROUPBOX        "Schrift im Hexadezimal-Modus",IDC_STATIC,9,71,298,60
+    LTEXT           "Schriftart:",IDC_STATIC,15,91,33,9
+    CONTROL         "Courier New,  10 pt.",IDC_FONTNAME_HEX,"Static",
+                    SS_LEFTNOWORDWRAP | WS_GROUP,56,91,108,9
+    PUSHBUTTON      "Ände&rn...",IDC_CHANGEFONT_HEX,56,105,53,14
+    LTEXT           "",IDC_STATIC,166,82,134,43,SS_SUNKEN | NOT WS_GROUP
+    EDITTEXT        IDC_FONTSAMPLE_HEX,171,85,124,36,ES_CENTER | 
+                    ES_MULTILINE | ES_READONLY | NOT WS_BORDER | NOT 
+                    WS_TABSTOP
+    EDITTEXT        101,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    PUSHBUTTON      "",102,0,0,0,0
+    EDITTEXT        100,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+END
+
+7329 DIALOG DISCARDABLE  13, 56, 317, 139
+STYLE WS_CHILD
+FONT 9, "Arial"
+BEGIN
+    GROUPBOX        "Randabstände",-1,6,2,84,103
+    LTEXT           "li&nks:",-1,11,24,29,11
+    EDITTEXT        1066,43,22,21,12,ES_AUTOHSCROLL
+    LTEXT           "cm",1073,66,24,19,12
+    LTEXT           "&oben:",-1,11,43,29,11
+    EDITTEXT        1067,43,41,21,12,ES_AUTOHSCROLL
+    LTEXT           "cm",1074,66,43,19,12
+    LTEXT           "re&chts:",-1,11,62,29,11
+    EDITTEXT        1068,43,60,21,12,ES_AUTOHSCROLL
+    LTEXT           "cm",1075,66,62,19,12
+    LTEXT           "&unten:",-1,11,81,29,11
+    EDITTEXT        1098,43,79,21,12,ES_AUTOHSCROLL
+    LTEXT           "cm",1076,66,81,19,12
+    GROUPBOX        "Randbereich",-1,98,2,112,103
+    LTEXT           "&Kopfzeile:",-1,103,16,56,9
+    EDITTEXT        1077,104,26,100,12,ES_AUTOHSCROLL
+    LTEXT           "&Fußzeile:",-1,103,43,56,9
+    EDITTEXT        1078,104,54,100,12,ES_AUTOHSCROLL
+    CONTROL         "Umrandungsl&inien",1079,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,104,74,99,11
+    CONTROL         "Kopf-/Fußzeilen ein&rahmen",1082,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,104,87,99,11
+    GROUPBOX        "Textbereich",-1,98,108,112,26
+    CONTROL         "&Zeilennummern drucken",1083,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,104,118,99,11
+    GROUPBOX        "Papierformat",-1,218,2,91,78
+    ICON            "",-1,284,19,18,20
+    CONTROL         "&wie eingestellt",1069,"Button",BS_AUTORADIOBUTTON,223,
+                    16,61,10
+    CONTROL         "&hochkant",1070,"Button",BS_AUTORADIOBUTTON,223,27,57,
+                    10
+    CONTROL         "&quer",1071,"Button",BS_AUTORADIOBUTTON,223,38,82,10
+    CONTROL         "doppe&lspaltig quer",1072,"Button",BS_AUTORADIOBUTTON,
+                    223,49,82,10
+    CONTROL         "mit &Trennlinie",1081,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,234,61,71,11
+    GROUPBOX        "Schriftart",-1,218,84,91,50
+    LTEXT           "",1085,224,94,80,18
+    PUSHBUTTON      "&Schriftart ändern...",1084,228,113,72,14
+    GROUPBOX        "Vorschau",-1,6,105,84,29,NOT WS_VISIBLE
+    PUSHBUTTON      "Preview",1080,14,118,69,11,NOT WS_VISIBLE | NOT 
+                    WS_TABSTOP
+    EDITTEXT        101,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    PUSHBUTTON      "",102,0,0,0,0
+    EDITTEXT        100,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+END
+
+7330 DIALOG DISCARDABLE  13, 56, 317, 139
+STYLE WS_CHILD
+FONT 9, "Arial"
+BEGIN
+    GROUPBOX        "Sprache",IDC_STATIC,59,17,196,99
+    LTEXT           "Wählen Sie eine Sprache:",IDC_STATIC,82,34,156,9
+    CONTROL         "E&nglisch  (English / inglés / anglais)",IDC_ENGLISH,
+                    "Button",BS_AUTORADIOBUTTON | WS_GROUP,82,47,156,10
+    CONTROL         "&Spanisch  (Spanish / español / espagnol)",IDC_SPANISH,
+                    "Button",BS_AUTORADIOBUTTON,82,58,156,10
+    CONTROL         "&Französisch  (French / francés / français)",IDC_FRENCH,
+                    "Button",BS_AUTORADIOBUTTON,82,69,156,10
+    CONTROL         "Deutsch  (&German / alemán / allemand)",IDC_GERMAN,
+                    "Button",BS_AUTORADIOBUTTON,82,80,156,10
+    CONTROL         "automatis&che Auswahl (Windows)",IDC_AUTOLANG,"Button",
+                    BS_AUTORADIOBUTTON,82,96,156,10
+    EDITTEXT        101,0,0,0,0,ES_AUTOHSCROLL | WS_GROUP
+    EDITTEXT        100,0,0,0,0,ES_AUTOHSCROLL
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\r\n"
+    "#include ""TabCtrl.h""\r\n"
+    "#ifdef _WIN32\r\n"
+    "# include ""WinVi32.rc""\r\n"
+    "#else\r\n"
+    "# include ""WinVi16.rc""\r\n"
+    "#endif\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    7102                    "%s: unbekannter Editorbefehl"
+    7103                    "Unbekannte Befehlseinleitung"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    7104                    "Zeile(nbereich) nicht möglich"
+    7105                    "Nur eine Zeile möglich"
+    7106                    "Ungültige Zeichen hinter dem Befehl"
+    7107                    "%s: SCHREIBFEHLER! (Platte voll?)"
+    7108                    "%s: FEHLER BEIM LADEN VON AUSGELAGERTEN SEITEN!"
+    7109                    "%s: INTERNER FEHLER!"
+    7112                    "%s: schreibgeschützt!"
+    7113                    "Kein alternativer Dateiname"
+    7114                    "%s: %s"
+    7115                    "%s: unerwarteter Fehler %d"
+    7116                    "%s: fehlerhafter Pfadname"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    7120                    "Fehler beim Schreiben der temporären Zwischendatei!\n\nSoll stattdessen virtueller Arbeitsspeicher verwendet werden?\nMit Ja wird weitergelesen,\nmit Nein abgebrochen."
+    7121                    "Der virtuelle Arbeitsspeicher ist erschöpft"
+    7123                    "WinVi - Schwerer Fehler"
+    7124                    "Schwerer Fehler!  Bitte in eine neue Datei speichern!"
+    7125                    "Befehlsausführung wird nicht unterstützt!"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    7202                    "Wiebitte?"
+    7203                    "Vorhandene Datei wird ersetzt!"
+    7204                    "Die Datei auf der Platte wurde geändert.\nÄnderungen überschreiben?"
+    7205                    "«%s» wurde noch nicht gespeichert.\n\nJetzt schreiben?"
+    7206                    "Unbenannte Datei wurde noch nicht gespeichert.\n\nJetzt schreiben?"
+    7207                    "«%s» (schreibgeschützt) noch nicht gespeichert.\n\nÄnderungen werden verworfen!"
+    7208                    "Unbenannte Datei (schreibgeschützt) noch nicht gespeichert.\n\nÄnderungen werden verworfen!"
+    7209                    "Nichts selektiert"
+    7210                    "Nicht gefunden bis zum Ende"
+    7212                    "Nicht gefunden bis zum Anfang"
+    7214                    "Nicht gefunden"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    7216                    "Kein bisheriger Suchbefehl"
+    7217                    "Kein bisheriger Suchbefehl"
+    7218                    "Unterbrechung"
+    7219                    "Nichts rückgängig zu machen"
+    7220                    "Keine weiteren Dateien"
+    7221                    "Keine Dateien für Rewind"
+    7222                    "Flag ist kein Boolescher Wert"
+    7223                    "Wert muß zwischen %d und %d liegen"
+    7224                    "Befehl «wq» mit Zeilenangabe nur mit Ausrufungszeichen (!)"
+    7225                    "eXit mit Zeilenangabe nicht erlaubt! Bitte «wq!» benutzen"
+    7226                    "%s: unbekannte Option"
+    7227                    "«%s»: Arbeitsverzeichnis kann nicht gewechselt werden"
+    7228                    "Cd fehlgeschlagen «%s»"
+    7229                    "Arbeitsverzeichnis nicht lokalisierbar"
+    7230                    "Illegale Ziffer nach \\"
+    7231                    "Falsche Gruppierung von \\( und \\)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    7232                    "Weitere Dateien"
+    7233                    "Dateiname fehlt"
+    7234                    "Bisher noch kein Ersetzungsbefehl"
+    7235                    "Kein Befehl zum Wiederholen"
+    7236                    "Datei kann nicht geändert werden"
+    7237                    "Ordner ist «%s»"
+    7238                    "Suchstring nicht gefunden"
+    7239                    "Hexadezimale Eingabe fehlerhaft"
+    7240                    "1 Ersetzung"
+    7241                    "%ld Ersetzungen"
+    7242                    "%ld Ersetzungen in 1 Zeile"
+    7243                    "%ld Ersetzungen in %ld Zeilen"
+    7244                    "«%s» (schreibgeschützt) noch nicht gespeichert.\n\nVerzeichnis wird nun gewechselt!"
+    7245                    "Unbenannte Datei (schreibgeschützt) noch nicht gespeichert.\n\nVerzeichnis wird nun gewechselt!"
+    7246                    "Zoll"
+    7247                    "Seite &p"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    7248                    "Druckerangabe fehlerhaft!"
+    7249                    "Zu viele \\("
+    7250                    "Zu viele \\)"
+    7251                    "Zu tiefe Verschachtelung von \\( \\)"
+    7252                    "\\| nur innerhalb \\( \\) erlaubt"
+    7253                    "%s:\nDie Datei auf der Platte wurde geändert."
+    7254                    "Schriftart (Textmodus)"
+    7255                    "Schriftart (Hexadezimalmodus)"
+    7256                    "Schriftart (Drucken)"
+    7257                    "Beispiel:"
+    7258                    "Nicht gefunden bis Ende, neue Suche vom Anfang"
+    7259                    "Nicht gefunden bis Anfang, neue Suche vom Ende"
+    7260                    "Undo-Eintrag enthält eine ungerade Bytezahl,\nschalten Sie UTF-16 aus und versuchen sie es erneut."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    7280                    "Öffnen (Datei einfügen)"
+    7281                    "Hintergrund-Bitmap auswählen"
+    7282                    " [schreibgeschützt]"
+    7283                    " [nicht gelesen]"
+    7284                    " [geändert]"
+    7285                    " [neue Datei]"
+    7286                    " [Lesen...]"
+    7287                    " [Schreiben...]"
+    7288                    " Zeile %lu von %lu"
+    7289                    " %ld Zeilen, %ld Zeichen"
+    7290                    "Unerwarteter Fehler %04lx"
+    7291                    "Alle Dateien (*.*),*.*,"
+    7292                    "Bitmap-Dateien (*.bmp;*.dib),*.bmp;*.dib,"
+    7293                    " [Testen...]"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    7300                    "SCHWERER FEHLER\nNicht genügend Speicher im Datensegment! (%d)\n\nBitte sofort in eine neue Datei speichern!"
+    7301                    "Fehler bei der Erzeugung des Befehlsfensters"
+    7302                    "Zwischenablage nicht zugreifbar"
+    7303                    "Zwischenablage läßt sich nicht leeren"
+    7304                    "Nicht genügend Speicher für Zwischenablage"
+    7305                    "Speicher der Zwischenablage nicht zugreifbar"
+    7306                    "Text ist in der Zwischenablage nicht verfügbar"
+    7307                    "Zwischenablage mit mehr als 64 KByte nicht unterstützt"
+    7308                    "Nicht genügend Speicher für Yank"
+    7309                    "Fehlerhafter Zahlenwert"
+    7310                    "Wert ist zu klein"
+    7311                    "Wert ist zu groß"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    7312                    "Nicht genügend Speicher für Ersetzung"
+    7313                    "SCHWERER FEHLER\nZu wenig Speicher!\n\nBitte sofort in eine neue Datei speichern!"
+    7314                    "WinVi - Fehler"
+    7315                    "Weitere Dateien!\n\nZum Beenden bitte nochmals schließen."
+    7320                    "Fehler beim Drucken"
+    7321                    "Allgemeiner Fehler beim Drucken"
+    7322                    "Ausdruck abgebrochen"
+    7323                    "Ausdruck vom Benutzer abgebrochen"
+    7324                    "Ausdruck wegen Plattenplatzmangel abgebrochen"
+    7325                    "Ausdruck wegen Speichermangel abgebrochen"
+    7326                    "Fehler %d beim Drucken"
+    7327                    "Kein Standarddrucker festgelegt"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    7328                    "Die Daten für die Zwischenablage enthalten Nullbytes!\n\nIn anderen Anwendungen werden diese Daten\nnicht vollständig eingefügt werden."
+    7329                    "Tag nicht gefunden"
+    7330                    "Tag-Liste ist leer"
+    7331                    "' benötigt einen Buchstaben"
+    7332                    "Marke nicht gesetzt"
+    7334                    "%d Zeilen eingerückt"
+    7335                    "%d Zeilen ausgerückt"
+    7336                    "unbegrenzt"
+    7337                    "Profilename"
+    7338                    "Geben Sie einen Namen für das neue Profile an:"
+    7339                    "Dieser Name ist unzulässig!"
+    7340                    "Abbrechen"
+    7341                    "WinVi - Bestätigung"
+    7342                    "Dieses Profil löschen?\n\n""%s"""
+    7343                    "Alle Einstellungen auf Standardwerte zurücksetzen?"
+    7344                    "System"
+    7345                    "Diese Profil existiert schon!"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    7398                    "Lesefehler"
+    7399                    "Schreibfehler"
+    7401                    "nicht erlaubte Funktion"
+    7402                    "Datei nicht gefunden"
+    7403                    "Pfad nicht gefunden"
+    7404                    "zu viele offene Dateien"
+    7405                    "Zugriff verweigert"
+    7406                    "ungültige Zugriffsnummer"
+    7407                    "Speicherumgebung zerstört"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    7408                    "nicht genügend Arbeitsspeicher zum Schreiben"
+    7409                    "fehlerhafte Blocknummer"
+    7410                    "Umgebungsbereich zerstört"
+    7411                    "falsches Format"
+    7412                    "ungültiger Zugriff"
+    7413                    "ungültige Daten"
+    7415                    "ungültiges Laufwerk"
+    7416                    "ungültiges Arbeitsverzeichnis"
+    7417                    "nicht selbes Gerät"
+    7418                    "Dateisystem voll"
+    7419                    "Schreibschutzfehler"
+    7420                    "fehlerhafte Einheit"
+    7421                    "Gerät nicht bereit"
+    7422                    "fehlerhafter Befehl"
+    7423                    "CRC-Fehler"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    7424                    "falsche Länge"
+    7425                    "Positionierungsfehler"
+    7426                    "Dateisystem nicht unterstützt"
+    7427                    "Sektor nicht gefunden"
+    7428                    "kein Papier"
+    7429                    "Schreibfehler"
+    7430                    "Lesefehler"
+    7431                    "allgemeiner Fehler"
+    7432                    "Zugriffsschutzverletzung"
+    7433                    "gesperrt"
+    7434                    "falsche Platte"
+    7435                    "FCB nicht verfügbar"
+    7436                    "Puffer für gemeinsamen Zugriff überschritten"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    7450                    "nicht unterstützt"
+    7451                    "entfernte Seite unbekannt"
+    7452                    "doppelter Name"
+    7453                    "falscher Netzpfad"
+    7454                    "Netzwerk überlastet"
+    7455                    "Gerät existiert nicht"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    7456                    "zu viele Befehle"
+    7457                    "Adapter-Hardwarefehler"
+    7458                    "falsche Netzantwort"
+    7459                    "unerwarteter Netzwerkfehler"
+    7460                    "fehlerhafter entfernter Adapter"
+    7461                    "Drucker-Warteschlange voll"
+    7462                    "Spool-Bereich erschöpft"
+    7463                    "Ausdruck abgebrochen"
+    7464                    "Netzname gelöscht"
+    7465                    "Netzwerkzugriff abgelehnt"
+    7466                    "falscher Gerätetyp"
+    7467                    "falscher Netzwerkname"
+    7468                    "zu viele Namen"
+    7469                    "zu viele Sitzungen"
+    7470                    "Sharing unterbrochen"
+    7471                    "Anforderung abgewiesen"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    7472                    "Umleitung unterbrochen"
+    7480                    "Datei existiert"
+    7481                    "mehrfacher FCB"
+    7482                    "nicht erzeugbar"
+    7483                    "Fehler bei Interrupt 24"
+    7484                    "Strukturen erschöpft"
+    7485                    "bereits zugewiesen"
+    7486                    "ungültiges Kennwort"
+    7487                    "ungültiger Parameter"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    7488                    "Schreibfehler im Netz"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    7700                    "Datei ist nicht ausführbar"
+    7702                    "Datei nicht gefunden"
+    7703                    "Pfad nicht gefunden"
+    7705                    "Zugriffsschutzfehler"
+    7706                    "keine getrennten Datensegmente"
+    7708                    "nicht genügend Speicher"
+    7710                    "inkompatible Windows-Version"
+    7711                    "ungültige Ausführungsdatei"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    7712                    "inkompatibles Betriebssystem"
+    7713                    "DOS-4.0-Anwendung nicht ausführbar"
+    7714                    "unbekannter Ausführungsdateityp"
+    7715                    "Datei im Real-Modus nicht ausführbar"
+    7716                    "läuft bereits"
+    7719                    "Datei ist komprimiert"
+    7720                    "benutzt ungültige DLL"
+    7721                    "32-Bit-Erweiterung erforderlich"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    7901                    "(unbenannt)"
+    7902                    "Num"
+    7903                    "Groß"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    7904                    "Ei&nfügemodus,Er&setzungsmodus,&Befehlsmodus,&Tag,Tag &zurück,&Rückgängig,&Ausschneiden,&Kopieren,&Einfügen,&Löschen,Alles &markieren,Akt&ualisieren"
+    7905                    "Neue Datei,Öffnen,Speichern,Drucken,Ausschneiden,Kopieren,Einfügen,Rückgängig,Suchen,Weitersuchen,ANSI-Zeichensatz,DOS-Zeichensatz,UTF-8-Zeichensatz,UTF-16LE oder UTF-16BE (Umschalter),Hexadezimal-Modus"
+    7906                    "Erzeugt neues Dokument,Öffnet eine vorhandene Datei...,Speichert aktuelle Datei,Druckt aktuelle Datei...,Kopiert in Zwischenablage und löscht,Kopiert in Zwischenablage,Fügt aus Zwischenablage ein"
+    7907                    "Letzte Änderung widerrufen,Suchen und ersetzen in aktueller Datei...,Letzte Suche wiederholen"
+    7908                    "Zeichenein-/-ausgabe für Windows-Dateien,Zeichenein-/-ausgabe für DOS-Dateien,Zeichenein-/-ausgabe für UTF-8-Dateien,Umschalter für UTF-16 Little Endian und UTF-16 Big Endian,Schaltet hexadezimalen Editiermodus um"
+    7909                    "Schließen"
+    7910                    "&Statusfeld kopieren"
+    7911                    "&Dateiname kopieren"
+    7912                    "Profil,Dateityp,Anzeige,Editieren,Dateien,Tastatur-Makros,Shell,Farben,Schriftart,Drucken,Sprache"
+    7913                    "BDE:"
+    7914                    "Hold"
+END
+
+#endif    // German (Germany) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+9305 DIALOG DISCARDABLE  8, 36, 294, 113
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Info about WinVi"
+FONT 9, "Arial"
+BEGIN
+    ICON            100,IDC_STATIC,9,4,21,20
+    CTEXT           "WinVi",IDS_VERSIONTITLE,50,7,76,14
+    CONTROL         "",IDC_FRAME,"WinVi - SunkenBox",0x0,4,28,285,81 ABOUTSTYLE
+    LTEXT           "Version",IDS_VERSION,13,35,68,9
+    CTEXT           "(-- bit)",IDS_VERSIONBITS,81,35,38,9
+    RTEXT           "Freeware GPLv3",IDC_STATIC,115,35,64,9
+    LTEXT           "Compiler:",IDC_STATIC,13,45,39,9
+    RTEXT           COMPILER_IDENT,IDS_COMPILER,52,45,127,9
+    LTEXT           "Author:",IDC_STATIC,13,55,23,9
+    RTEXT           "Stephanie W. Myers, Raphael Molle",IDS_AUTHOR,40,55,139,9
+    LTEXT           "French:",IDC_STATIC,13,65,39,9
+    RTEXT           "Valérie Gunslay, Yves Bélanger",IDC_STATIC,61,65,117,9
+    LTEXT           "Spanish:",IDC_STATIC,13,74,39,9
+    RTEXT           "José María Romero",IDC_STATIC,61,74,117,9
+    LTEXT           "Web:",IDC_STATIC,13,84,19,9
+    RTEXT           "https://www.open-source.tech/WinVi-Minimalist-Text-Hex-Editor/",IDS_WEBADDRESS,37,84,241,9
+    LTEXT           "Copyright",IDC_STATIC,13,94,32,9
+    RTEXT           "© 1994-2021 Stephanie W. Myers, Raphael Molle",IDC_STATIC,54,94,
+                    224,9
+    DEFPUSHBUTTON   "OK",IDCANCEL,249,7,36,14
+END
+
+9306 DIALOG DISCARDABLE  140, 10, 206, 138
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Search"
+FONT 9, "Arial"
+BEGIN
+    LTEXT           "&Search string:",IDC_STATIC,4,8,132,9
+    EDITTEXT        IDC_SEARCHSTRING,6,19,132,12,ES_AUTOHSCROLL
+    CONTROL         "regular expressio&n search",IDC_MAGIC,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,6,39,116,9
+    CONTROL         "he&xadecimal",IDC_HEXSEARCH,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,6,50,81,9
+    CONTROL         "match &case",IDC_MATCHCASE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,6,61,81,9
+    CONTROL         "&whole word",IDC_WHOLEWORD,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,6,72,81,9
+    CONTROL         "wrap around E&OF",IDC_WRAPSCAN,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,6,83,81,9
+    CONTROL         "&up",IDC_BACKWARD,"Button",BS_AUTORADIOBUTTON,94,72,51,10
+    CONTROL         "&down",IDC_FORWARD,"Button",BS_AUTORADIOBUTTON,94,83,51,10
+    DEFPUSHBUTTON   "&Find Next",IDOK,149,6,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,149,23,50,14
+    LTEXT           "R&eplace string:",IDC_STATIC,4,101,132,8
+    EDITTEXT        IDC_REPLACESTRING,6,113,132,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "R&eplace >>",IDC_SHOWREPLACE,149,73,50,14
+    PUSHBUTTON      "&Replace",IDC_REPLACE,149,100,50,14
+    PUSHBUTTON      "Replace &All",IDC_REPLACEALL,149,117,50,14
+END
+
+9307 DIALOG DISCARDABLE  12, 60, 322, 92
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "WinVi - List of Files"
+FONT 9, "Arial"
+BEGIN
+    LTEXT           "List of Files:",-1,6,5,117,8
+    LISTBOX         1022,7,16,253,68,LBS_USETABSTOPS | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Edit File",1,266,6,50,14
+    DEFPUSHBUTTON   "Cancel",2,266,23,50,14
+END
+
+9310 DIALOG DISCARDABLE  8, 36, 170, 45
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Printing"
+FONT 9, "Arial"
+BEGIN
+    LTEXT           "Printout in progress.",-1,14,12,80,9
+    LTEXT           "Printing page:",-1,14,23,53,9
+    LTEXT           "",IDC_PAGESPRINTED,67,23,30,9
+    DEFPUSHBUTTON   "Cancel",IDCANCEL,126,7,36,14
+END
+
+9313 DIALOG DISCARDABLE  120, -30, 218, 26
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "WinVi - Replace"
+FONT 9, "Arial"
+BEGIN
+    DEFPUSHBUTTON   "&Y: Replace",IDOK,6,6,66,14
+    PUSHBUTTON      "&N: Search again",100,76,6,72,14
+    PUSHBUTTON      "Cancel",IDCANCEL,152,6,60,14
+END
+
+9300 DIALOG DISCARDABLE  16, 34, 342, 225
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Settings"
+FONT 9, "Arial"
+BEGIN
+    LTEXT           "Profile name&:",IDC_PROFILETITLE,42,10,42,10
+    COMBOBOX        IDC_PROFILENAME,88,8,95,133,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Tab1",IDC_SETTINGSTAB,TABCTRLCLASS,
+                    WS_TABSTOP | TCS_MULTILINE,7,28,328,170
+    EDITTEXT        101,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    PUSHBUTTON      "",102,0,0,0,0
+    EDITTEXT        100,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    CONTROL         "&Permanent setting",IDC_SAVEPERMANENTLY,"Button",
+                    BS_AUTORADIOBUTTON,7,203,165,9
+    CONTROL         "&Temporary setting (current instance only)",
+                    IDC_ONETIMESETTING,"Button",BS_AUTORADIOBUTTON,7,213,165,9
+    DEFPUSHBUTTON   "OK",IDOK,177,206,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,231,206,50,14
+    PUSHBUTTON      "&Apply",ID_APPLY,285,206,50,14
+END
+
+9320 DIALOG DISCARDABLE  13, 56, 317, 139
+STYLE WS_CHILD
+FONT 9, "Arial"
+BEGIN
+    PUSHBUTTON      "&Create new profile...",IDC_NEWPROFILE,63,14,84,15
+    PUSHBUTTON      "&Delete profile",IDC_DELPROFILE,183,14,61,15
+    GROUPBOX        "Activation of this profile",IDC_STATIC,10,40,293,70
+    LTEXT           "Please specify a comma-separated list in each field:",
+                    IDC_PROFILEACTIVATE,20,54,271,12
+    LTEXT           "Pat&h (Drive, UNC):",IDC_DRIVEPATHUNCTITLE,20,74,73,10
+    EDITTEXT        IDC_DRIVEPATHUNC,100,72,193,12,ES_AUTOHSCROLL
+    LTEXT           "&File name extension:",IDC_EXTENSIONSTITLE,20,88,73,10
+    EDITTEXT        IDC_EXTENSIONS,100,86,193,12,ES_AUTOHSCROLL
+    CONTROL         "Per&manent setting as default for this dialog box",
+                    IDC_AUTOPERMANENT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    20,120,274,10
+    EDITTEXT        101,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    EDITTEXT        100,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+END
+
+9321 DIALOG DISCARDABLE  13, 56, 317, 139
+STYLE WS_CHILD
+FONT 9, "Arial"
+BEGIN
+    GROUPBOX        "Standard newline character",IDC_STATIC,8,7,152,65
+    CONTROL         "Automatic detectio&n",IDC_AUTO,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,27,21,130,8
+    CONTROL         "&MS-Dos/Windows format (CR/LF)",IDC_CRLF,"Button",
+                    BS_AUTORADIOBUTTON,27,33,130,8
+    CONTROL         "Unix format (&LF)",IDC_LF,"Button",BS_AUTORADIOBUTTON,
+                    27,45,130,8
+    CONTROL         "Ma&c format (CR)",IDC_CR,"Button",BS_AUTORADIOBUTTON,
+                    27,57,130,8
+    GROUPBOX        "Initial text / hexadecimal mode",IDC_STATIC,8,79,152,48
+    CONTROL         "T&ext mode",IDC_TEXT,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,26,96,130,8
+    CONTROL         "He&xadecimal mode",IDC_HEX,"Button",
+                    BS_AUTORADIOBUTTON,26,109,130,8
+    GROUPBOX        "Initial character set",IDC_STATIC,172,7,136,65
+    CONTROL         "A&utomatic detection",IDC_AUTOENCODING,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,186,21,118,8
+    CONTROL         "AN&SI (Windows)",IDC_ANSI,"Button",
+                    BS_AUTORADIOBUTTON,186,33,68,8
+    CONTROL         "PC (&Dos)",IDC_OEM,"Button",BS_AUTORADIOBUTTON,
+                    186,45,68,8
+    CONTROL         "E&BCDI code",IDC_EBCDIC,"Button",BS_AUTORADIOBUTTON,
+                    186,57,68,8
+    CONTROL         "UTF-&8",IDC_UTF8,"Button",BS_AUTORADIOBUTTON,256,33,50,8
+    CONTROL         "UTF-&16 LE",IDC_UTF16LE,"Button",BS_AUTORADIOBUTTON,
+                    256,45,50,8
+    CONTROL         "UTF-1&6 BE",IDC_UTF16BE,"Button",BS_AUTORADIOBUTTON,
+                    256,57,50,8
+    GROUPBOX        "Character mapping",IDC_STATIC,172,79,136,48
+    LTEXT           "ANS&I codepage:",IDC_STATIC,194,96,56,8
+    EDITTEXT        IDC_ANSICP,256,94,30,12,ES_AUTOHSCROLL
+    LTEXT           "&OEM codepage:",IDC_STATIC,194,109,56,8
+    EDITTEXT        IDC_OEMCP,256,107,30,12,ES_AUTOHSCROLL
+    EDITTEXT        101,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    EDITTEXT        100,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+END
+
+9322 DIALOG DISCARDABLE  13, 56, 317, 139
+STYLE WS_CHILD
+FONT 9, "Arial"
+BEGIN
+    CONTROL         "S&howMatch (hilite matching parentheses)",1023,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,17,29,148,10
+    CONTROL         "T&erse (short status messages)",1002,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,17,43,148,10
+    CONTROL         "A&utomatic activation on file drag && drop",1007,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,57,148,10
+    CONTROL         "Line num&bers",1090,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,17,71,148,10
+    CONTROL         "&Refresh background bitmap",IDC_REFRESHBKG,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,17,85,148,10
+    CONTROL         "He&xadecimal address representation (hexadecimal mode only)",
+                    1091,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,99,275,10
+    LTEXT           "Tab&Stop:",IDC_STATIC,175,30,35,10
+    EDITTEXT        1008,175,42,17,12,ES_AUTOHSCROLL
+    LTEXT           "average characters",IDC_STATIC,196,44,106,10
+    LTEXT           "&Maximum scroll range:",IDC_STATIC,175,63,117,9
+    EDITTEXT        IDC_MAXSCROLL,175,75,17,12,ES_AUTOHSCROLL
+    LTEXT           "lines",IDC_STATIC,196,77,20,10
+    EDITTEXT        101,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    EDITTEXT        100,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    GROUPBOX        "",IDC_STATIC,3,13,309,108
+END
+
+9323 DIALOG DISCARDABLE  13, 56, 317, 139
+STYLE WS_CHILD
+FONT 9, "Arial"
+BEGIN
+    GROUPBOX        "Edit",IDC_STATIC,20,3,272,84
+    CONTROL         "&Initial insert mode",IDC_DEFAULTINSERT,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,26,16,95,10
+    CONTROL         "Auto&Write",IDC_AUTOWRITE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,26,30,97,10
+    CONTROL         "&AutoIndent",IDC_AUTOINDENT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,26,43,97,12
+    CONTROL         "&Line wrapping horizontal cursor movements",
+                    IDC_NOTEPADNL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,26,
+                    58,206,10
+    CONTROL         "Multi-lin&e !/c/d/y operations on entire rows",
+                    IDC_FULLROWEXTEND,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    26,72,206,10
+    LTEXT           "&Undo memory:",IDC_STATIC,163,16,50,9
+    LTEXT           "KB",IDC_STATIC,266,16,18,9
+    EDITTEXT        IDC_UNDOLIMIT,218,14,45,12,ES_AUTOHSCROLL
+    CONTROL         "&ReadOnly as default",IDC_READONLY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,163,30,97,10
+    LTEXT           "&ShiftWidth:",IDC_STATIC,163,45,39,10
+    LTEXT           "spaces",IDC_STATIC,223,45,43,10
+    EDITTEXT        IDC_SHIFTWIDTH,205,43,16,12,ES_AUTOHSCROLL
+    GROUPBOX        "Search",IDC_STATIC,20,91,272,41
+    CONTROL         "WrapS&can (search across EOF)",IDC_WRAPSCAN,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,26,104,120,10
+    CONTROL         "Ig&noreCase (upper case same as lower case)",
+                    IDC_IGNORECASE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,26,
+                    117,160,10
+    CONTROL         "&Magic (regular expression matching)",IDC_MAGIC,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,163,104,126,10
+    EDITTEXT        101,0,0,0,0,ES_AUTOHSCROLL | WS_GROUP
+    EDITTEXT        100,0,0,0,0,ES_AUTOHSCROLL
+END
+
+9324 DIALOG DISCARDABLE  13, 56, 317, 139
+STYLE WS_CHILD
+FONT 9, "Arial"
+BEGIN
+    GROUPBOX        "Temporary File",IDC_STATIC,7,5,140,80
+    LTEXT           "Start dis&k paging at occupation of",IDC_STATIC,14,19,
+                    120,10
+    EDITTEXT        IDC_PAGE_THRESHOLD,13,30,25,12,ES_AUTOHSCROLL
+    LTEXT           "KByte",IDC_STATIC,41,32,47,9
+    CONTROL         "Use system default temp folde&r",IDC_DEFAULTTMP,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,50,120,12
+    LTEXT           "Fol&der:",IDC_TMPTITLE,14,66,27,11
+    EDITTEXT        IDC_TMPFOLDER,41,64,98,12,ES_AUTOHSCROLL
+    GROUPBOX        "Miscellaneous",IDC_STATIC,155,5,154,80
+    LTEXT           "Tag&s file list:",IDC_STATIC,162,19,52,10
+    EDITTEXT        IDC_TAGS,161,30,142,12,ES_AUTOHSCROLL
+    LTEXT           "&Create backup files:",IDC_BKUPTITLE1,162,52,87,10
+    EDITTEXT        IDC_NUMBER_OF_BACKUPS,250,51,25,12,ES_AUTOHSCROLL
+    LTEXT           "Files",IDC_BKUPTITLE2,277,52,29,9
+    LTEXT           "",IDC_STATIC,173,68,130,11
+    CONTROL         "&Quit immediately if more files to edit",
+                    IDC_MOREFILESQUIT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    161,65,139,9
+    GROUPBOX        "File Names",IDC_STATIC,7,88,302,44
+    LTEXT           "Ser&ver tab expansion in domains/workgroups:",
+                    IDC_TABEXPDOMAINTITLE,14,102,160,9
+    EDITTEXT        IDC_TABEXPANDDOMAINS,174,100,129,12,ES_AUTOHSCROLL
+    CONTROL         "&Lower-case file names",1005,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,14,116,289,10
+    EDITTEXT        101,0,0,0,0,ES_AUTOHSCROLL
+    EDITTEXT        100,0,0,0,0,ES_AUTOHSCROLL
+END
+
+9325 DIALOG DISCARDABLE  13, 56, 317, 139
+STYLE WS_CHILD
+FONT 9, "Arial"
+BEGIN
+    GROUPBOX        "Defined Ma&cros",IDC_STATIC,4,2,110,130
+    LISTBOX         IDC_MACROLIST,12,17,93,104,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Single Macro",IDC_STATIC,119,2,151,130
+    CONTROL         "&Map",IDC_MAP,"Button",BS_AUTORADIOBUTTON,
+                    127,17,53,8
+    CONTROL         "A&bbreviation",IDC_ABBREV,"Button",BS_AUTORADIOBUTTON,
+                    127,27,53,8
+    LTEXT           "&Name:",IDC_STATIC,182,14,81,8
+    EDITTEXT        IDC_MACRONAME,181,24,81,12,ES_AUTOHSCROLL
+    LTEXT           "Inp&ut key sequence:",IDC_STATIC,128,41,134,8
+    EDITTEXT        IDC_MACROINPUT,127,51,135,12,ES_AUTOHSCROLL
+    LTEXT           "&Key sequence to replace with:",IDC_STATIC,128,66,134,8
+    EDITTEXT        IDC_MACROREPLACE,127,76,135,12,ES_AUTOHSCROLL
+    CONTROL         "&Insert / replace mode",IDC_INSERTMODE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,127,95,120,8
+    CONTROL         "Comman&d mode",IDC_COMMANDMODE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,127,106,120,8
+    CONTROL         "Command line mode (e&x commands)",IDC_COMMANDLINE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,127,117,134,8
+    PUSHBUTTON      "&Set",IDC_SETMACRO,275,6,38,14
+    PUSHBUTTON      "D&elete",IDC_DELMACRO,275,24,38,14
+    EDITTEXT        101,0,0,0,0,ES_AUTOHSCROLL
+    EDITTEXT        100,0,0,0,0,ES_AUTOHSCROLL
+END
+
+9326 DIALOG DISCARDABLE  13, 56, 317, 139
+STYLE WS_CHILD
+FONT 9, "Arial"
+BEGIN
+    GROUPBOX        "Shell",IDC_STATIC,11,10,293,71
+    LTEXT           "Pat&h and file name of shell:",IDC_STATIC,21,26,90,10
+    EDITTEXT        IDC_SHELL,118,24,175,12,ES_AUTOHSCROLL
+    LTEXT           "&Format of shell command:",IDC_EXTENSIONSTITLE,21,43,90,10
+    EDITTEXT        IDC_SHELLCOMMAND,118,41,175,12,ES_AUTOHSCROLL
+    CONTROL         "&Expand tab key with forward slash for directories",
+                    IDC_TABEXPANDWITHSLASH,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,21,61,273,8
+    GROUPBOX        "Context help",IDC_STATIC,11,89,293,36
+    LTEXT           "&URL for help file:",IDC_STATIC,21,105,90,10
+    EDITTEXT        IDC_HELPURL,118,103,175,12,ES_AUTOHSCROLL
+    EDITTEXT        101,0,0,0,0,ES_AUTOHSCROLL
+    EDITTEXT        100,0,0,0,0,ES_AUTOHSCROLL
+END
+
+9327 DIALOG DISCARDABLE  13, 56, 317, 139
+STYLE WS_CHILD
+FONT 9, "Arial"
+BEGIN
+    RTEXT           "Background",IDC_STATIC,5,27,43,8
+    RTEXT           "Foreground",IDC_STATIC,5,43,43,8
+    CTEXT           "Edit area",IDC_STATIC,54,5,27,16
+    CONTROL         "10 Edit bg",1043,"WinVi - ColorCtrl",WS_GROUP | 
+                    WS_TABSTOP,61,26,14,9
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,61,26,14,9
+    CONTROL         "11 Edit fg",1044,"WinVi - ColorCtrl",0x0,61,42,14,9
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,61,42,14,9
+    CTEXT           "Selected area",IDC_STATIC,84,5,39,16
+    CONTROL         "12 Select bg",1045,"WinVi - ColorCtrl",0x0,97,26,14,9
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,97,26,14,9
+    CONTROL         "13 Select fg",1046,"WinVi - ColorCtrl",0x0,97,42,14,9
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,97,42,14,9
+    CTEXT           "Matched parenthesis",IDC_STATIC,122,5,37,16
+    CONTROL         "14 Paren bg",1047,"WinVi - ColorCtrl",0x0,133,26,14,9
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,133,26,14,9
+    CONTROL         "15 Paren fg",1048,"WinVi - ColorCtrl",0x0,133,42,14,9
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,133,42,14,9
+    CTEXT           "End\nof line",IDC_STATIC,159,5,34,16
+    CONTROL         "16 Newline fg",1049,"WinVi - ColorCtrl",0x0,169,42,14,9
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,169,42,14,9
+    GROUPBOX        "       ",IDC_STATIC,2,57,214,43
+    GROUPBOX        "       ",IDC_STATIC,221,57,92,43
+    GROUPBOX        "       ",IDC_STATIC,2,104,214,30
+    GROUPBOX        "       ",IDC_STATIC,221,104,92,30
+    CONTROL         "Ba&sic colors ",IDC_COLORS,"Button",BS_AUTORADIOBUTTON,
+                    8,57,52,10
+    CONTROL         "&User defined ",IDC_CUSTOM,"Button",BS_AUTORADIOBUTTON,
+                    227,57,54,10
+    CONTROL         "Ba&ckground bitmap ",IDC_BITMAP,"Button",
+                    BS_AUTORADIOBUTTON,8,104,75,10
+    CONTROL         "Syste&m color ",IDC_SYSTEM,"Button",BS_AUTORADIOBUTTON,
+                    227,104,54,10
+    CONTROL         "0 black",1027,"WinVi - ColorCtrl",WS_GROUP,20,70,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,20,70,14,10
+    CONTROL         "1 red",1028,"WinVi - ColorCtrl",0x0,43,70,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,43,70,14,10
+    CONTROL         "2 green",1029,"WinVi - ColorCtrl",0x0,66,70,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,66,70,14,10
+    CONTROL         "3 yellow",1030,"WinVi - ColorCtrl",0x0,89,70,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,89,70,14,10
+    CONTROL         "4 blue",1031,"WinVi - ColorCtrl",0x0,112,70,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,112,70,14,10
+    CONTROL         "5 magenta",1032,"WinVi - ColorCtrl",0x0,135,70,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,135,70,14,10
+    CONTROL         "6 cyan",1033,"WinVi - ColorCtrl",0x0,158,70,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,158,70,14,10
+    CONTROL         "7 white",1034,"WinVi - ColorCtrl",0x0,181,70,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,181,70,14,10
+    CONTROL         "8 light gray",1035,"WinVi - ColorCtrl",0x0,20,83,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,20,83,14,10
+    CONTROL         "9 dark red",1036,"WinVi - ColorCtrl",0x0,43,83,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,43,83,14,10
+    CONTROL         "a dark green",1037,"WinVi - ColorCtrl",0x0,66,83,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,66,83,14,10
+    CONTROL         "b dark yellow",1038,"WinVi - ColorCtrl",0x0,89,83,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,89,83,14,10
+    CONTROL         "c dark blue",1039,"WinVi - ColorCtrl",0x0,112,83,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,112,83,14,10
+    CONTROL         "d dark magenta",1040,"WinVi - ColorCtrl",0x0,135,83,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,135,83,14,10
+    CONTROL         "e dark cyan",1041,"WinVi - ColorCtrl",0x0,158,83,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,158,83,14,10
+    CONTROL         "f dark gray",1042,"WinVi - ColorCtrl",0x0,181,83,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,181,83,14,10
+    GROUPBOX        "",1055,58,19,21,19
+    GROUPBOX        "",1056,58,35,21,19,NOT WS_VISIBLE
+    GROUPBOX        "",1057,94,19,21,19,NOT WS_VISIBLE
+    GROUPBOX        "",1058,94,35,21,19,NOT WS_VISIBLE
+    GROUPBOX        "",1059,130,19,21,19,NOT WS_VISIBLE
+    GROUPBOX        "",1060,130,35,21,19,NOT WS_VISIBLE
+    GROUPBOX        "",1061,166,35,21,19,NOT WS_VISIBLE
+    PUSHBUTTON      "C&hoose...",IDC_CHOOSECOLOR,237,75,60,15
+    LTEXT           "&File name:",IDC_BITMAPTITLE,8,117,38,9
+    EDITTEXT        IDC_BITMAPEDIT,47,115,105,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Browse...",IDC_BITMAPBROWSE,157,114,51,15
+    CTEXT           "",IDC_SYSCOLOR,223,118,88,10
+    EDITTEXT        101,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    PUSHBUTTON      "",102,0,0,0,0
+    EDITTEXT        100,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+END
+
+9328 DIALOG DISCARDABLE  13, 56, 317, 139
+STYLE WS_CHILD
+FONT 9, "Arial"
+BEGIN
+    GROUPBOX        "Text Mode",IDC_STATIC,9,4,298,60
+    LTEXT           "Font:",IDC_STATIC,15,24,33,9
+    CONTROL         "Courier New,  10 pt.",IDC_FONTNAME_TEXT,"Static",
+                    SS_LEFTNOWORDWRAP | WS_GROUP,56,24,112,9
+    PUSHBUTTON      "&Change...",IDC_CHANGEFONT_TEXT,56,38,53,14
+    LTEXT           "",IDC_STATIC,172,15,128,43,SS_SUNKEN | NOT WS_GROUP
+    EDITTEXT        IDC_FONTSAMPLE_TEXT,177,18,118,36,ES_CENTER | 
+                    ES_MULTILINE | ES_READONLY | NOT WS_BORDER | NOT 
+                    WS_TABSTOP
+    GROUPBOX        "Hexadecimal Mode",IDC_STATIC,9,71,298,60
+    LTEXT           "Font:",IDC_STATIC,15,91,33,9
+    CONTROL         "Courier New,  10 pt.",IDC_FONTNAME_HEX,"Static",
+                    SS_LEFTNOWORDWRAP | WS_GROUP,56,91,112,9
+    PUSHBUTTON      "C&hange...",IDC_CHANGEFONT_HEX,56,105,53,14
+    LTEXT           "",IDC_STATIC,172,82,128,43,SS_SUNKEN | NOT WS_GROUP
+    EDITTEXT        IDC_FONTSAMPLE_HEX,177,85,118,36,ES_CENTER | 
+                    ES_MULTILINE | ES_READONLY | NOT WS_BORDER | NOT 
+                    WS_TABSTOP
+    EDITTEXT        101,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    PUSHBUTTON      "",102,0,0,0,0
+    EDITTEXT        100,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+END
+
+9329 DIALOG DISCARDABLE  13, 56, 317, 139
+STYLE WS_CHILD
+FONT 9, "Arial"
+BEGIN
+    GROUPBOX        "Border Distances",-1,6,2,84,103
+    LTEXT           "&Left:",-1,11,24,29,11
+    EDITTEXT        1066,43,22,21,12,ES_AUTOHSCROLL
+    LTEXT           "cm",1073,66,24,19,12
+    LTEXT           "T&op:",-1,11,43,29,11
+    EDITTEXT        1067,43,41,21,12,ES_AUTOHSCROLL
+    LTEXT           "cm",1074,66,43,19,12
+    LTEXT           "&Right:",-1,11,62,29,11
+    EDITTEXT        1068,43,60,21,12,ES_AUTOHSCROLL
+    LTEXT           "cm",1075,66,62,19,12
+    LTEXT           "Botto&m:",-1,11,81,29,11
+    EDITTEXT        1098,43,79,21,12,ES_AUTOHSCROLL
+    LTEXT           "cm",1076,66,81,19,12
+    GROUPBOX        "Border Area",-1,98,2,112,103
+    LTEXT           "&Header text:",-1,103,16,56,9
+    EDITTEXT        1077,104,26,100,12,ES_AUTOHSCROLL
+    LTEXT           "&Footer text:",-1,103,43,56,9
+    EDITTEXT        1078,104,54,100,12,ES_AUTOHSCROLL
+    CONTROL         "&Border lines",1079,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,104,74,99,11
+    CONTROL         "Bo&xed header / footer",1082,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,104,87,99,11
+    GROUPBOX        "Text Area",-1,98,108,112,26
+    CONTROL         "Print line &numbers",1083,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,104,118,99,11
+    GROUPBOX        "Paper Format",-1,218,2,91,78
+    ICON            "",-1,284,19,18,20
+    CONTROL         "Us&e default",1069,"Button",BS_AUTORADIOBUTTON,223,16,
+                    61,10
+    CONTROL         "Portra&it",1070,"Button",BS_AUTORADIOBUTTON,223,27,57,
+                    10
+    CONTROL         "Lan&dscape",1071,"Button",BS_AUTORADIOBUTTON,223,38,82,
+                    10
+    CONTROL         "Do&uble column",1072,"Button",BS_AUTORADIOBUTTON,223,49,
+                    82,10
+    CONTROL         "&Separator line",1081,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,234,61,71,11
+    GROUPBOX        "Font",-1,218,84,91,50
+    LTEXT           "",1085,224,94,80,18
+    PUSHBUTTON      "&Change font...",1084,228,113,72,14
+    GROUPBOX        "Preview",-1,6,105,84,29,NOT WS_VISIBLE
+    PUSHBUTTON      "Preview",1080,14,118,69,11,NOT WS_VISIBLE | NOT 
+                    WS_TABSTOP
+    EDITTEXT        101,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    PUSHBUTTON      "",102,0,0,0,0
+    EDITTEXT        100,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+END
+
+9330 DIALOG DISCARDABLE  13, 56, 317, 139
+STYLE WS_CHILD
+FONT 9, "Arial"
+BEGIN
+    GROUPBOX        "Language",IDC_STATIC,59,17,196,99
+    LTEXT           "Please choose a language:",IDC_STATIC,82,34,156,9
+    CONTROL         "E&nglish  (inglés / anglais / englisch)",IDC_ENGLISH,
+                    "Button",BS_AUTORADIOBUTTON,82,47,156,10
+    CONTROL         "&Spanish  (español / espagnol / spanisch)",IDC_SPANISH,
+                    "Button",BS_AUTORADIOBUTTON,82,58,156,10
+    CONTROL         "&French  (francés / français / französisch)",IDC_FRENCH,
+                    "Button",BS_AUTORADIOBUTTON,82,69,156,10
+    CONTROL         "&German  (alemán / allemand / deutsch)",IDC_GERMAN,
+                    "Button",BS_AUTORADIOBUTTON,82,80,156,10
+    CONTROL         "Automati&c selection",IDC_AUTOLANG,"Button",
+                    BS_AUTORADIOBUTTON,82,96,113,10
+    EDITTEXT        101,0,0,0,0,ES_AUTOHSCROLL | WS_GROUP
+    EDITTEXT        100,0,0,0,0,ES_AUTOHSCROLL
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Spanish (Castilian) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ESP)
+#ifdef _WIN32
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+10305 DIALOG DISCARDABLE  8, 36, 294, 113
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Información sobre WinVi"
+FONT 9, "Arial"
+BEGIN
+    ICON            100,IDC_STATIC,9,4,21,20
+    CTEXT           "WinVi",IDS_VERSIONTITLE,50,7,76,14
+    CONTROL         "",IDC_FRAME,"WinVi - SunkenBox",0x0,4,28,285,81 ABOUTSTYLE
+    LTEXT           "Versión",IDS_VERSION,13,35,68,9
+    CTEXT           "(-- bit)",IDS_VERSIONBITS,81,35,38,9
+    RTEXT           "Freeware GPLv3",IDC_STATIC,115,35,64,9
+    LTEXT           "Compiler:",IDC_STATIC,13,45,39,9
+    RTEXT           COMPILER_IDENT,IDS_COMPILER,52,45,127,9
+    LTEXT           "Autor:",IDC_STATIC,13,55,23,9
+    RTEXT           "Stephanie W. Myers, Raphael Molle",IDS_AUTHOR,40,55,139,9
+    LTEXT           "francés:",IDC_STATIC,13,65,39,9
+    RTEXT           "Valérie Gunslay, Yves Bélanger",IDC_STATIC,61,65,117,9
+    LTEXT           "español:",IDC_STATIC,13,74,39,9
+    RTEXT           "José María Romero",IDC_STATIC,61,74,117,9
+    LTEXT           "Web:",IDC_STATIC,13,84,19,9
+    RTEXT           "https://www.open-source.tech/WinVi-Minimalist-Text-Hex-Editor/",IDS_WEBADDRESS,37,84,241,9
+    LTEXT           "Copyright",IDC_STATIC,13,94,32,9
+    RTEXT           "© 1994-2021 Stephanie W. Myers, Raphael Molle",IDC_STATIC,54,94,
+                    224,9
+    DEFPUSHBUTTON   "OK",IDCANCEL,249,7,36,14
+END
+
+10306 DIALOG DISCARDABLE  140, 10, 216, 138
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Buscar"
+FONT 9, "Arial"
+BEGIN
+    LTEXT           "&Cadena a buscar:",IDC_STATIC,4,8,132,9
+    EDITTEXT        IDC_SEARCHSTRING,6,19,132,12,ES_AUTOHSCROLL
+    CONTROL         "&Expresión regular",IDC_MAGIC,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,6,39,116,9
+    CONTROL         "He&xadecimal",IDC_HEXSEARCH,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,6,50,81,9
+    CONTROL         "&Distinguir mayúsculas de minúsculas",IDC_MATCHCASE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,6,61,132,9
+    CONTROL         "&Palabra completa",IDC_WHOLEWORD,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,6,72,78,9
+    CONTROL         "&Búsqueda cíclica",IDC_WRAPSCAN,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,6,83,78,9
+    CONTROL         "&Hacia arriba",IDC_BACKWARD,"Button",BS_AUTORADIOBUTTON,
+                    88,72,51,10
+    CONTROL         "H&acia abajo",IDC_FORWARD,"Button",BS_AUTORADIOBUTTON,
+                    88,83,51,10
+    DEFPUSHBUTTON   "Buscar &siguiente",IDOK,149,6,60,14
+    PUSHBUTTON      "Cancelar",IDCANCEL,149,23,60,14
+    LTEXT           "&Reemplazar con:",IDC_STATIC,4,101,132,8
+    EDITTEXT        IDC_REPLACESTRING,6,113,132,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Reemplazar >>",IDC_SHOWREPLACE,149,73,60,14
+    PUSHBUTTON      "Reempla&zar",IDC_REPLACE,149,100,60,14
+    PUSHBUTTON      "Reemplazar &todo",IDC_REPLACEALL,149,117,60,14
+END
+
+10307 DIALOG DISCARDABLE  12, 60, 322, 92
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "WinVi - Lista de Ficheros"
+FONT 9, "Arial"
+BEGIN
+    LTEXT           "Lista de Ficheros:",-1,6,5,117,8
+    LISTBOX         1022,7,16,253,68,LBS_USETABSTOPS | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Editar Fichero",1,266,6,50,14
+    DEFPUSHBUTTON   "Cancelar",2,266,23,50,14
+END
+
+10310 DIALOG DISCARDABLE  8, 36, 170, 45
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Imprimiendo"
+FONT 9, "Arial"
+BEGIN
+    LTEXT           "Impresión en curso.",-1,14,12,80,9
+    LTEXT           "Imprimiendo página núm.:",-1,14,23,53,9
+    LTEXT           "",IDC_PAGESPRINTED,67,23,30,9
+    DEFPUSHBUTTON   "Cancelar",IDCANCEL,126,7,36,14
+END
+
+10313 DIALOG DISCARDABLE  120, -30, 218, 26
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "WinVi - Reemplazar"
+FONT 9, "Arial"
+BEGIN
+    DEFPUSHBUTTON   "&Y: Reemplazar",IDOK,6,6,66,14
+    PUSHBUTTON      "&N: Buscar siguiente",100,76,6,76,14
+    PUSHBUTTON      "Cancelar",IDCANCEL,156,6,56,14
+END
+
+10300 DIALOG DISCARDABLE  16, 34, 342, 225
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Configuración"
+FONT 9, "Arial"
+BEGIN
+    LTEXT           "Nombre del perfil&:",IDC_PROFILETITLE,42,10,60,10
+    COMBOBOX        IDC_PROFILENAME,106,8,95,133,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Tab1",IDC_SETTINGSTAB,TABCTRLCLASS,
+                    WS_TABSTOP | TCS_MULTILINE,7,28,328,170
+    EDITTEXT        101,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    PUSHBUTTON      "",102,0,0,0,0
+    EDITTEXT        100,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    CONTROL         "Configuración &permanente",IDC_SAVEPERMANENTLY,"Button",
+                    BS_AUTORADIOBUTTON,7,203,165,9
+    CONTROL         "Configuración p&rovisional",IDC_ONETIMESETTING,"Button",
+                    BS_AUTORADIOBUTTON,7,213,165,9
+    DEFPUSHBUTTON   "OK",IDOK,177,206,50,14
+    PUSHBUTTON      "Cancelar",IDCANCEL,231,206,50,14
+    PUSHBUTTON      "&Aplicar",ID_APPLY,285,206,50,14
+END
+
+10320 DIALOG DISCARDABLE  13, 56, 317, 139
+STYLE WS_CHILD
+FONT 9, "Arial"
+BEGIN
+    PUSHBUTTON      "&Crear nuevo perfil...",IDC_NEWPROFILE,63,14,84,15
+    PUSHBUTTON      "&Suprimir perfil",IDC_DELPROFILE,183,14,61,15
+    GROUPBOX        "Activación de este perfil",IDC_STATIC,10,40,293,70
+    LTEXT           "Especifique una lista con campos separados con comas:",
+                    IDC_PROFILEACTIVATE,20,54,271,12
+    LTEXT           "Pat&h (Drive, UNC):",IDC_DRIVEPATHUNCTITLE,20,74,73,10
+    EDITTEXT        IDC_DRIVEPATHUNC,100,72,193,12,ES_AUTOHSCROLL
+    LTEXT           "&Extension del fichero:",IDC_EXTENSIONSTITLE,20,88,73,10
+    EDITTEXT        IDC_EXTENSIONS,100,86,193,12,ES_AUTOHSCROLL
+    CONTROL         "&Opcion defecta para este dialogo",
+                    IDC_AUTOPERMANENT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    20,120,274,10
+    EDITTEXT        101,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    EDITTEXT        100,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+END
+
+10321 DIALOG DISCARDABLE  13, 56, 317, 139
+STYLE WS_CHILD
+FONT 9, "Arial"
+BEGIN
+    GROUPBOX        "Caracter 'newline' standard",IDC_STATIC,8,7,152,65
+    CONTROL         "D&escubrimiento automatico",IDC_AUTO,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,27,21,130,8
+    CONTROL         "Formato &MS-Dos/Windows (CR/LF)",IDC_CRLF,"Button",
+                    BS_AUTORADIOBUTTON,27,33,130,8
+    CONTROL         "Formato &Unix (LF)",IDC_LF,"Button",BS_AUTORADIOBUTTON,
+                    27,45,130,8
+    CONTROL         "Formato Ma&c (CR)",IDC_CR,"Button",BS_AUTORADIOBUTTON,
+                    27,57,130,8
+    GROUPBOX        "Texto inicial / modo hexadecimal",IDC_STATIC,8,79,152,48
+    CONTROL         "Modo de &texto",IDC_TEXT,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,26,96,130,8
+    CONTROL         "Modo He&xadecimal",IDC_HEX,"Button",
+                    BS_AUTORADIOBUTTON,26,109,130,8
+    GROUPBOX        "Serie inicial de carácteres",IDC_STATIC,172,7,136,65
+    CONTROL         "Descubrimie&nto automatico",IDC_AUTOENCODING,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,186,21,118,8
+    CONTROL         "AN&SI (Windows)",IDC_ANSI,"Button",
+                    BS_AUTORADIOBUTTON,186,33,68,8
+    CONTROL         "PC (&Dos)",IDC_OEM,"Button",BS_AUTORADIOBUTTON,
+                    186,45,68,8
+    CONTROL         "E&BCDI code",IDC_EBCDIC,"Button",BS_AUTORADIOBUTTON,
+                    186,57,68,8
+    CONTROL         "UTF-&8",IDC_UTF8,"Button",BS_AUTORADIOBUTTON,256,33,50,8
+    CONTROL         "UTF-&16 LE",IDC_UTF16LE,"Button",BS_AUTORADIOBUTTON,
+                    256,45,50,8
+    CONTROL         "UTF-1&6 BE",IDC_UTF16BE,"Button",BS_AUTORADIOBUTTON,
+                    256,57,50,8
+    GROUPBOX        "Asignación de carácteres",IDC_STATIC,172,79,136,48
+    LTEXT           "ANS&I codepage:",IDC_STATIC,194,96,56,8
+    EDITTEXT        IDC_ANSICP,256,94,33,12,ES_AUTOHSCROLL
+    LTEXT           "&OEM codepage:",IDC_STATIC,194,109,56,8
+    EDITTEXT        IDC_OEMCP,256,107,33,12,ES_AUTOHSCROLL
+    EDITTEXT        101,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    EDITTEXT        100,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+END
+
+10322 DIALOG DISCARDABLE  13, 56, 317, 139
+STYLE WS_CHILD
+FONT 9, "Arial"
+BEGIN
+    CONTROL         "&Mostrar parejas de paréntesis",1023,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,17,29,148,10
+    CONTROL         "M&ensajes de estado breves",1002,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,17,43,148,10
+    CONTROL         "Activación automática al arrastrar &y soltar ficheros",
+                    1007,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,57,175,10
+    CONTROL         "Númer&os de línea",1090,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,17,71,148,10
+    CONTROL         "Re&frescar la imagen del fondo",IDC_REFRESHBKG,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,17,85,148,10
+    CONTROL         "Direcciones he&xadecimales",1091,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,17,99,275,10
+    LTEXT           "Saltos de &tabulación:",IDC_STATIC,188,30,117,10
+    EDITTEXT        1008,188,42,17,12,ES_AUTOHSCROLL
+    LTEXT           "caracteres",IDC_STATIC,209,44,106,10
+    LTEXT           "Al&cance máximo del desplazamiento:",IDC_STATIC,188,71,
+                    124,10
+    EDITTEXT        IDC_MAXSCROLL,188,83,17,12,ES_AUTOHSCROLL
+    LTEXT           "líneas",IDC_STATIC,209,85,20,10
+    EDITTEXT        101,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    EDITTEXT        100,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    GROUPBOX        "",IDC_STATIC,3,13,309,108
+END
+
+10323 DIALOG DISCARDABLE  13, 56, 317, 139
+STYLE WS_CHILD
+FONT 9, "Arial"
+BEGIN
+    GROUPBOX        "Editar",IDC_STATIC,20,3,272,84
+    CONTROL         "Insertar acti&vado",IDC_DEFAULTINSERT,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,26,16,120,10
+    CONTROL         "A&utoguardar",IDC_AUTOWRITE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,26,30,97,10
+    CONTROL         "Autoin&dentación",IDC_AUTOINDENT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,26,43,97,12
+    CONTROL         "&Lineas nuevas como en Notepad",IDC_NOTEPADNL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,26,58,206,10
+    CONTROL         "Las &operaciones !/c/d/y afectan a la línea completa",
+                    IDC_FULLROWEXTEND,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    26,72,206,10
+    LTEXT           "M&emoria para deshacer:",IDC_STATIC,148,16,78,10
+    LTEXT           "KB",IDC_STATIC,272,16,13,10
+    EDITTEXT        IDC_UNDOLIMIT,229,14,40,12,ES_AUTOHSCROLL
+    CONTROL         "&Solo lectura por defecto",IDC_READONLY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,148,30,127,10
+    LTEXT           "Despla&zar:",IDC_STATIC,148,45,39,10
+    LTEXT           "espacios",IDC_STATIC,208,45,43,10
+    EDITTEXT        IDC_SHIFTWIDTH,190,43,16,12,ES_AUTOHSCROLL
+    GROUPBOX        "Búsqueda",IDC_STATIC,20,91,272,41
+    CONTROL         "&Búsqueda cíclica (WrapScan)",IDC_WRAPSCAN,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,26,104,120,10
+    CONTROL         "&Ignorar las mayúsculas / minúsculas",IDC_IGNORECASE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,26,117,160,10
+    CONTROL         "&Mágica (encajar expresiones regulares)",IDC_MAGIC,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,148,104,140,10
+    EDITTEXT        101,0,0,0,0,ES_AUTOHSCROLL | WS_GROUP
+    EDITTEXT        100,0,0,0,0,ES_AUTOHSCROLL
+END
+
+10324 DIALOG DISCARDABLE  13, 56, 317, 139
+STYLE WS_CHILD
+FONT 9, "Arial"
+BEGIN
+    GROUPBOX        "Fichero temporal",IDC_STATIC,7,5,154,80
+    LTEXT           "Iniciar la paginación al superar los",IDC_STATIC,14,19,
+                    145,10
+    LTEXT           "&KByte de tamaño",IDC_STATIC,41,32,60,9
+    EDITTEXT        IDC_PAGE_THRESHOLD,13,30,25,12,ES_AUTOHSCROLL
+    CONTROL         "&Utilizar la carpeta temporal del sistema",
+                    IDC_DEFAULTTMP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,
+                    50,136,12
+    LTEXT           "&Carpeta:",IDC_TMPTITLE,14,66,29,11
+    EDITTEXT        IDC_TMPFOLDER,44,64,106,12,ES_AUTOHSCROLL
+    GROUPBOX        "Varios",IDC_STATIC,169,5,140,80
+    LTEXT           "&Ficheros de tags:",IDC_STATIC,176,19,125,10
+    EDITTEXT        IDC_TAGS,175,30,123,12,ES_AUTOHSCROLL
+    LTEXT           "&Crear copias preventivas:",IDC_BKUPTITLE1,176,52,87,10
+    EDITTEXT        IDC_NUMBER_OF_BACKUPS,245,51,25,12,ES_AUTOHSCROLL
+    LTEXT           "ficheros",IDC_BKUPTITLE2,272,52,29,9
+    LTEXT           "",IDC_STATIC,176,68,125,11
+    CONTROL         "&Salir aunque haya ficheros por editar",
+                    IDC_MOREFILESQUIT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    175,65,130,9
+    GROUPBOX        "Nombre de ficheros",IDC_STATIC,7,88,302,44
+    LTEXT           "Ser&ver tab ensanche en domains/workgroups:",
+                    IDC_TABEXPDOMAINTITLE,14,102,160,9
+    EDITTEXT        IDC_TABEXPANDDOMAINS,174,100,129,12,ES_AUTOHSCROLL
+    CONTROL         "&Nombre de ficheros en minúscula",1005,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,14,116,289,10
+    EDITTEXT        101,0,0,0,0,ES_AUTOHSCROLL
+    EDITTEXT        100,0,0,0,0,ES_AUTOHSCROLL
+END
+
+10325 DIALOG DISCARDABLE  13, 56, 317, 139
+STYLE WS_CHILD
+FONT 9, "Arial"
+BEGIN
+    GROUPBOX        "Ma&cros definidos",IDC_STATIC,4,2,110,130
+    LISTBOX         IDC_MACROLIST,12,17,93,104,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Un solo Macro",IDC_STATIC,119,2,151,130
+    CONTROL         "&Mapa",IDC_MAP,"Button",BS_AUTORADIOBUTTON,
+                    127,17,53,8
+    CONTROL         "Abre&viatura",IDC_ABBREV,"Button",BS_AUTORADIOBUTTON,
+                    127,27,53,8
+    LTEXT           "Nombre:",IDC_STATIC,182,14,81,8
+    EDITTEXT        IDC_MACRONAME,181,24,81,12,ES_AUTOHSCROLL
+    LTEXT           "&Entrar serie:",IDC_STATIC,128,41,134,8
+    EDITTEXT        IDC_MACROINPUT,127,51,135,12,ES_AUTOHSCROLL
+    LTEXT           "&Serie para reemplazar con:",IDC_STATIC,128,66,134,8
+    EDITTEXT        IDC_MACROREPLACE,127,76,135,12,ES_AUTOHSCROLL
+    CONTROL         "&Modo insertar / reemplazar",IDC_INSERTMODE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,127,95,120,8
+    CONTROL         "M&odo de comando",IDC_COMMANDMODE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,127,106,120,8
+    CONTROL         "Mo&do de lineas de comando 'e&x'",IDC_COMMANDLINE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,127,117,134,8
+    PUSHBUTTON      "&Fijar",IDC_SETMACRO,275,6,38,14
+    PUSHBUTTON      "&Borrar",IDC_DELMACRO,275,24,38,14
+    EDITTEXT        101,0,0,0,0,ES_AUTOHSCROLL
+    EDITTEXT        100,0,0,0,0,ES_AUTOHSCROLL
+END
+
+10326 DIALOG DISCARDABLE  13, 56, 317, 139
+STYLE WS_CHILD
+FONT 9, "Arial"
+BEGIN
+    GROUPBOX        "Shell",IDC_STATIC,11,10,293,71
+    LTEXT           "&Localización y nombre de la shell:",IDC_STATIC,
+                    21,26,105,10
+    EDITTEXT        IDC_SHELL,133,24,160,12,ES_AUTOHSCROLL
+    LTEXT           "&Formato de los comandos shell:",IDC_EXTENSIONSTITLE,
+                    21,43,105,10
+    EDITTEXT        IDC_SHELLCOMMAND,133,41,160,12,ES_AUTOHSCROLL
+    CONTROL         "&Expand tab key with forward slash for directories",
+                    IDC_TABEXPANDWITHSLASH,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,21,61,273,8
+    GROUPBOX        "Ayuda en contexto",IDC_STATIC,11,89,293,36
+    LTEXT           "&URL para el fichero de ayuda:",IDC_STATIC,21,105,105,10
+    EDITTEXT        IDC_HELPURL,133,103,160,12,ES_AUTOHSCROLL
+    EDITTEXT        101,0,0,0,0,ES_AUTOHSCROLL
+    EDITTEXT        100,0,0,0,0,ES_AUTOHSCROLL
+END
+
+10327 DIALOG DISCARDABLE  13, 56, 317, 139
+STYLE WS_CHILD
+FONT 9, "Arial"
+BEGIN
+    RTEXT           "Fondo",IDC_STATIC,5,27,43,8
+    RTEXT           "Primer plano",IDC_STATIC,5,43,43,8
+    CTEXT           "Area de edición",IDC_STATIC,54,5,27,16
+    CONTROL         "10 Edit bg",1043,"WinVi - ColorCtrl",WS_GROUP | 
+                    WS_TABSTOP,61,26,14,9
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,61,26,14,9
+    CONTROL         "11 Edit fg",1044,"WinVi - ColorCtrl",0x0,61,42,14,9
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,61,42,14,9
+    CTEXT           "Area seleccionada",IDC_STATIC,84,5,43,16
+    CONTROL         "12 Select bg",1045,"WinVi - ColorCtrl",0x0,101,26,14,9
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,101,26,14,9
+    CONTROL         "13 Select fg",1046,"WinVi - ColorCtrl",0x0,101,42,14,9
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,101,42,14,9
+    CTEXT           "Paréntesis emparejados",IDC_STATIC,131,5,41,16
+    CONTROL         "14 Paren bg",1047,"WinVi - ColorCtrl",0x0,141,26,14,9
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,141,26,14,9
+    CONTROL         "15 Paren fg",1048,"WinVi - ColorCtrl",0x0,141,42,14,9
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,141,42,14,9
+    CTEXT           "Fin\nde línea",IDC_STATIC,173,5,30,16
+    CONTROL         "16 Newline fg",1049,"WinVi - ColorCtrl",0x0,181,42,14,9
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,181,42,14,9
+    GROUPBOX        "       ",IDC_STATIC,2,57,214,43
+    GROUPBOX        "       ",IDC_STATIC,221,57,92,43
+    GROUPBOX        "       ",IDC_STATIC,2,104,214,30
+    GROUPBOX        "       ",IDC_STATIC,221,104,92,30
+    CONTROL         "C&olores básicos ",IDC_COLORS,"Button",
+                    BS_AUTORADIOBUTTON,8,57,64,10
+    CONTROL         "Def. por &usuario ",IDC_CUSTOM,"Button",
+                    BS_AUTORADIOBUTTON,227,57,65,10
+    CONTROL         "&Imagen del fondo ",IDC_BITMAP,"Button",
+                    BS_AUTORADIOBUTTON,8,104,69,10
+    CONTROL         "Co&nfig. del sistema ",IDC_SYSTEM,"Button",
+                    BS_AUTORADIOBUTTON,227,104,73,10
+    CONTROL         "0 black",1027,"WinVi - ColorCtrl",WS_GROUP,20,70,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,20,70,14,10
+    CONTROL         "1 red",1028,"WinVi - ColorCtrl",0x0,43,70,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,43,70,14,10
+    CONTROL         "2 green",1029,"WinVi - ColorCtrl",0x0,66,70,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,66,70,14,10
+    CONTROL         "3 yellow",1030,"WinVi - ColorCtrl",0x0,89,70,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,89,70,14,10
+    CONTROL         "4 blue",1031,"WinVi - ColorCtrl",0x0,112,70,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,112,70,14,10
+    CONTROL         "5 magenta",1032,"WinVi - ColorCtrl",0x0,135,70,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,135,70,14,10
+    CONTROL         "6 cyan",1033,"WinVi - ColorCtrl",0x0,158,70,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,158,70,14,10
+    CONTROL         "7 white",1034,"WinVi - ColorCtrl",0x0,181,70,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,181,70,14,10
+    CONTROL         "8 light gray",1035,"WinVi - ColorCtrl",0x0,20,83,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,20,83,14,10
+    CONTROL         "9 dark red",1036,"WinVi - ColorCtrl",0x0,43,83,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,43,83,14,10
+    CONTROL         "a dark green",1037,"WinVi - ColorCtrl",0x0,66,83,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,66,83,14,10
+    CONTROL         "b dark yellow",1038,"WinVi - ColorCtrl",0x0,89,83,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,89,83,14,10
+    CONTROL         "c dark blue",1039,"WinVi - ColorCtrl",0x0,112,83,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,112,83,14,10
+    CONTROL         "d dark magenta",1040,"WinVi - ColorCtrl",0x0,135,83,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,135,83,14,10
+    CONTROL         "e dark cyan",1041,"WinVi - ColorCtrl",0x0,158,83,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,158,83,14,10
+    CONTROL         "f dark gray",1042,"WinVi - ColorCtrl",0x0,181,83,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,181,83,14,10
+    GROUPBOX        "",1055,58,19,21,19
+    GROUPBOX        "",1056,58,35,21,19,NOT WS_VISIBLE
+    GROUPBOX        "",1057,98,19,21,19,NOT WS_VISIBLE
+    GROUPBOX        "",1058,98,35,21,19,NOT WS_VISIBLE
+    GROUPBOX        "",1059,138,19,21,19,NOT WS_VISIBLE
+    GROUPBOX        "",1060,138,35,21,19,NOT WS_VISIBLE
+    GROUPBOX        "",1061,178,35,21,19,NOT WS_VISIBLE
+    PUSHBUTTON      "&Escoger...",IDC_CHOOSECOLOR,237,75,60,15
+    LTEXT           "&Fichero:",IDC_BITMAPTITLE,8,117,30,9
+    EDITTEXT        IDC_BITMAPEDIT,38,115,118,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Mirar...",IDC_BITMAPBROWSE,161,114,47,15
+    CTEXT           "",IDC_SYSCOLOR,223,118,88,10
+    EDITTEXT        101,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    PUSHBUTTON      "",102,0,0,0,0
+    EDITTEXT        100,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+END
+
+10328 DIALOG DISCARDABLE  13, 56, 317, 139
+STYLE WS_CHILD
+FONT 9, "Arial"
+BEGIN
+    GROUPBOX        "Modo de texto",IDC_STATIC,9,4,298,60
+    LTEXT           "Tipos de letra:",IDC_STATIC,20,24,48,9
+    CONTROL         "Courier New,  10 pt.",IDC_FONTNAME_TEXT,"Static",
+                    SS_LEFTNOWORDWRAP | WS_GROUP,70,24,98,9
+    PUSHBUTTON      "&Cambiar...",IDC_CHANGEFONT_TEXT,70,38,53,14
+    LTEXT           "",IDC_STATIC,172,15,128,43,SS_SUNKEN | NOT WS_GROUP
+    EDITTEXT        IDC_FONTSAMPLE_TEXT,177,18,118,36,ES_CENTER | 
+                    ES_MULTILINE | ES_READONLY | NOT WS_BORDER | NOT 
+                    WS_TABSTOP
+    GROUPBOX        "Modo hexadecimal",IDC_STATIC,9,71,298,60
+    LTEXT           "Tipos de letra:",IDC_STATIC,20,91,48,9
+    CONTROL         "Courier New,  10 pt.",IDC_FONTNAME_HEX,"Static",
+                    SS_LEFTNOWORDWRAP | WS_GROUP,70,91,98,9
+    PUSHBUTTON      "Ca&mbiar...",IDC_CHANGEFONT_HEX,70,105,53,14
+    LTEXT           "",IDC_STATIC,172,82,128,43,SS_SUNKEN | NOT WS_GROUP
+    EDITTEXT        IDC_FONTSAMPLE_HEX,177,85,118,36,ES_CENTER | 
+                    ES_MULTILINE | ES_READONLY | NOT WS_BORDER | NOT 
+                    WS_TABSTOP
+    EDITTEXT        101,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    PUSHBUTTON      "",102,0,0,0,0
+    EDITTEXT        100,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+END
+
+10329 DIALOG DISCARDABLE  13, 56, 317, 139
+STYLE WS_CHILD
+FONT 9, "Arial"
+BEGIN
+    GROUPBOX        "Márgenes",-1,6,2,84,103
+    LTEXT           "I&zquierdo:",-1,11,24,31,11
+    EDITTEXT        1066,43,22,21,12,ES_AUTOHSCROLL
+    LTEXT           "cm.",1073,66,24,19,12
+    LTEXT           "S&uperior:",-1,11,43,29,11
+    EDITTEXT        1067,43,41,21,12,ES_AUTOHSCROLL
+    LTEXT           "cm.",1074,66,43,19,12
+    LTEXT           "&Derecho:",-1,11,62,29,11
+    EDITTEXT        1068,43,60,21,12,ES_AUTOHSCROLL
+    LTEXT           "cm.",1075,66,62,19,12
+    LTEXT           "&Inferior:",-1,11,81,29,11
+    EDITTEXT        1098,43,79,21,12,ES_AUTOHSCROLL
+    LTEXT           "cm.",1076,66,81,19,12
+    GROUPBOX        "Zona de márgenes",-1,96,2,110,103
+    LTEXT           "Enca&bezado:",-1,101,16,56,9
+    EDITTEXT        1077,102,26,97,12,ES_AUTOHSCROLL
+    LTEXT           "Pi&e de página:",-1,101,43,56,9
+    EDITTEXT        1078,102,54,97,12,ES_AUTOHSCROLL
+    CONTROL         "Lí&neas separadoras",1079,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,102,74,96,11
+    CONTROL         "En&marcar encabezado/pie",1082,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,102,87,96,11
+    GROUPBOX        "Zona del texto",-1,96,108,109,26
+    CONTROL         "Imprimir número&s de línea",1083,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,102,118,99,11
+    GROUPBOX        "Orientación del papel",-1,211,2,98,78
+    ICON            "",-1,280,19,18,20
+    CONTROL         "P&or defecto",1069,"Button",BS_AUTORADIOBUTTON,216,16,
+                    61,10
+    CONTROL         "&Vertical",1070,"Button",BS_AUTORADIOBUTTON,216,27,57,
+                    10
+    CONTROL         "&Horizontal",1071,"Button",BS_AUTORADIOBUTTON,216,38,82,
+                    10
+    CONTROL         "Doble &columna",1072,"Button",BS_AUTORADIOBUTTON,216,49,
+                    90,10
+    CONTROL         "&Línea de separación",1081,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,227,61,80,11
+    GROUPBOX        "Tipo de letra",-1,211,84,98,50
+    LTEXT           "",1085,217,94,83,18
+    PUSHBUTTON      "Cambiar&...",1084,224,113,72,14
+    GROUPBOX        "Vista previa",-1,6,105,84,29,NOT WS_VISIBLE
+    PUSHBUTTON      "Preview",1080,14,118,69,11,NOT WS_VISIBLE | NOT 
+                    WS_TABSTOP
+    EDITTEXT        101,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    PUSHBUTTON      "",102,0,0,0,0
+    EDITTEXT        100,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+END
+
+10330 DIALOG DISCARDABLE  13, 56, 317, 139
+STYLE WS_CHILD
+FONT 9, "Arial"
+BEGIN
+    GROUPBOX        "Elegir idioma",IDC_STATIC,59,17,196,99
+    LTEXT           "Elegir un idioma para WinVi:",IDC_STATIC,82,34,156,9
+    CONTROL         "I&nglés  (English / anglais / englisch)",IDC_ENGLISH,
+                    "Button",BS_AUTORADIOBUTTON,82,47,156,10
+    CONTROL         "E&spañol  (Spanish / espagnol / spanisch)",IDC_SPANISH,
+                    "Button",BS_AUTORADIOBUTTON,82,58,156,10
+    CONTROL         "&Francés  (French / français / französisch)",IDC_FRENCH,
+                    "Button",BS_AUTORADIOBUTTON,82,69,156,10
+    CONTROL         "Alemán  (&German / allemand / deutsch)",IDC_GERMAN,
+                    "Button",BS_AUTORADIOBUTTON,82,80,156,10
+    CONTROL         "Sele&cción automática",IDC_AUTOLANG,"Button",
+                    BS_AUTORADIOBUTTON,82,96,113,10
+    EDITTEXT        101,0,0,0,0,ES_AUTOHSCROLL | WS_GROUP
+    EDITTEXT        100,0,0,0,0,ES_AUTOHSCROLL
+END
+
+#endif    // Spanish (Castilian) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// French (France) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FRA)
+#ifdef _WIN32
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+12305 DIALOG DISCARDABLE  8, 36, 294, 113
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "A propos de WinVi"
+FONT 9, "Arial"
+BEGIN
+    ICON            100,IDC_STATIC,9,4,21,20
+    CTEXT           "WinVi",IDS_VERSIONTITLE,50,7,76,14
+    CONTROL         "",IDC_FRAME,"WinVi - SunkenBox",0x0,4,28,285,81 ABOUTSTYLE
+    LTEXT           "Version",IDS_VERSION,13,35,68,9
+    CTEXT           "(-- bit)",IDS_VERSIONBITS,81,35,38,9
+    RTEXT           "Freeware GPLv3",IDC_STATIC,115,35,64,9
+    LTEXT           "Compiler:",IDC_STATIC,13,45,39,9
+    RTEXT           COMPILER_IDENT,IDS_COMPILER,52,45,127,9
+    LTEXT           "Auteur:",IDC_STATIC,13,55,23,9
+    RTEXT           "Stephanie W. Myers, Raphael Molle",IDS_AUTHOR,40,55,139,9
+    LTEXT           "français:",IDC_STATIC,13,65,39,9
+    RTEXT           "Valérie Gunslay, Yves Bélanger",IDC_STATIC,61,65,117,9
+    LTEXT           "espagnol:",IDC_STATIC,13,74,39,9
+    RTEXT           "José María Romero",IDC_STATIC,61,74,117,9
+    LTEXT           "Web:",IDC_STATIC,13,84,19,9
+    RTEXT           "https://www.open-source.tech/WinVi-Minimalist-Text-Hex-Editor/",IDS_WEBADDRESS,37,84,241,9
+    LTEXT           "Copyright",IDC_STATIC,13,94,32,9
+    RTEXT           "© 1994-2021 Stephanie W. Myers, Raphael Molle",IDC_STATIC,54,94,
+                    224,9
+    DEFPUSHBUTTON   "OK",IDCANCEL,249,7,36,14
+END
+
+12306 DIALOG DISCARDABLE  140, 10, 216, 138
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Recherche"
+FONT 9, "Arial"
+BEGIN
+    LTEXT           "R&echercher...",IDC_STATIC,4,8,132,9
+    EDITTEXT        IDC_SEARCHSTRING,6,19,132,12,ES_AUTOHSCROLL
+    CONTROL         "comme expre&ssion régulière",IDC_MAGIC,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,6,39,116,9
+    CONTROL         "he&xadécimal",IDC_HEXSEARCH,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,6,50,141,9
+    CONTROL         "&distinguer majuscules/minuscules",IDC_MATCHCASE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,6,61,141,9
+    CONTROL         "comme &mot",IDC_WHOLEWORD,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,6,72,81,9
+    CONTROL         "rec&herche circulaire",IDC_WRAPSCAN,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,6,83,81,9
+    CONTROL         "vers le h&aut",IDC_BACKWARD,"Button",BS_AUTORADIOBUTTON,
+                    89,72,56,10
+    CONTROL         "vers le &bas",IDC_FORWARD,"Button",BS_AUTORADIOBUTTON,
+                    89,83,56,10
+    DEFPUSHBUTTON   "&Continuer",IDOK,149,6,60,14
+    PUSHBUTTON      "Annuler",IDCANCEL,149,23,60,14
+    LTEXT           "&Remplacer par :",IDC_STATIC,4,101,132,8
+    EDITTEXT        IDC_REPLACESTRING,6,113,132,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Remplacer >>",IDC_SHOWREPLACE,149,73,60,14
+    PUSHBUTTON      "Rem&placer",IDC_REPLACE,149,100,60,14
+    PUSHBUTTON      "Remplacer &tout",IDC_REPLACEALL,149,117,60,14
+END
+
+12307 DIALOG DISCARDABLE  12, 60, 322, 92
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "WinVi - Liste des Fichiers"
+FONT 9, "Arial"
+BEGIN
+    LTEXT           "Liste des Fichiers :",-1,6,5,117,8
+    LISTBOX         1022,7,16,246,68,LBS_USETABSTOPS | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Choisir le fichier",1,258,6,58,14
+    DEFPUSHBUTTON   "Annuler",IDCANCEL,258,23,58,14
+END
+
+12310 DIALOG DISCARDABLE  8, 36, 170, 45
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Impression en cours"
+FONT 9, "Arial"
+BEGIN
+    LTEXT           "Impression en cours.",-1,14,12,80,9
+    LTEXT           "Imprimer la page:",-1,14,23,63,9
+    LTEXT           "",IDC_PAGESPRINTED,77,23,30,9
+    DEFPUSHBUTTON   "Annuler",IDCANCEL,126,7,36,14
+END
+
+12313 DIALOG DISCARDABLE  120, -30, 218, 26
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "WinVi - Remplacer"
+FONT 9, "Arial"
+BEGIN
+    DEFPUSHBUTTON   "&Y: Remplacer",IDOK,6,6,64,14
+    PUSHBUTTON      "&N: Répéter la recherche",100,74,6,90,14
+    PUSHBUTTON      "Annuler",IDCANCEL,168,6,44,14
+END
+
+12300 DIALOG DISCARDABLE  16, 34, 342, 225
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Paramètres"
+FONT 9, "Arial"
+BEGIN
+    LTEXT           "Nom du profil &:",IDC_PROFILETITLE,42,10,50,10
+    COMBOBOX        IDC_PROFILENAME,96,8,95,133,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Tab1",IDC_SETTINGSTAB,TABCTRLCLASS,
+                    WS_TABSTOP | TCS_MULTILINE,7,28,328,170
+    EDITTEXT        101,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    PUSHBUTTON      "",102,0,0,0,0
+    EDITTEXT        100,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    CONTROL         "Configuration &permanente",IDC_SAVEPERMANENTLY,"Button",
+                    BS_AUTORADIOBUTTON,7,203,168,9
+    CONTROL         "Configuration &temporaire (session WinVi en cours)",
+                    IDC_ONETIMESETTING,"Button",BS_AUTORADIOBUTTON,7,213,175,9
+    DEFPUSHBUTTON   "OK",IDOK,185,206,46,14
+    PUSHBUTTON      "Annuler",IDCANCEL,235,206,46,14
+    PUSHBUTTON      "&Appliquer",ID_APPLY,285,206,46,14
+END
+
+12320 DIALOG DISCARDABLE  13, 56, 317, 139
+STYLE WS_CHILD
+FONT 9, "Arial"
+BEGIN
+    PUSHBUTTON      "&Créer un nouveau profil...",IDC_NEWPROFILE,63,14,90,15
+    PUSHBUTTON      "&Supprimer ce profil",IDC_DELPROFILE,173,14,75,15
+    GROUPBOX        "Activation de ce profil",IDC_STATIC,10,40,293,70
+    LTEXT           "Spécifier une liste dont les champs sont séparés par des virgules :",
+                    IDC_PROFILEACTIVATE,20,54,271,12
+    LTEXT           "C&hemin (unité de disque, UNC) :",IDC_DRIVEPATHUNCTITLE,
+                    20,74,105,10
+    EDITTEXT        IDC_DRIVEPATHUNC,127,72,166,12,ES_AUTOHSCROLL
+    LTEXT           "&Extensions de noms de fichier :",IDC_EXTENSIONSTITLE,
+                    20,88,105,10
+    EDITTEXT        IDC_EXTENSIONS,127,86,166,12,ES_AUTOHSCROLL
+    CONTROL         "C&onfiguration permanente par défaut pour cette boîte de dialogue",
+                    IDC_AUTOPERMANENT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    20,120,274,10
+    EDITTEXT        101,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    EDITTEXT        100,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+END
+
+12321 DIALOG DISCARDABLE  13, 56, 317, 139
+STYLE WS_CHILD
+FONT 9, "Arial"
+BEGIN
+    GROUPBOX        "Caractère standard de fin de ligne",IDC_STATIC,8,7,152,65
+    CONTROL         "&Sélection automatique",IDC_AUTO,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,27,21,130,8
+    CONTROL         "Format &MS-Dos/Windows (CR/LF)",IDC_CRLF,"Button",
+                    BS_AUTORADIOBUTTON,27,33,130,8
+    CONTROL         "Format &Unix (LF)",IDC_LF,"Button",BS_AUTORADIOBUTTON,
+                    27,45,130,8
+    CONTROL         "Format Ma&c (CR)",IDC_CR,"Button",BS_AUTORADIOBUTTON,
+                    27,57,130,8
+    GROUPBOX        "Mode initial texte / hexadecimal",IDC_STATIC,8,79,152,48
+    CONTROL         "Mode t&exte",IDC_TEXT,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,26,96,130,8
+    CONTROL         "Mode he&xadecimal",IDC_HEX,"Button",
+                    BS_AUTORADIOBUTTON,26,109,130,8
+    GROUPBOX        "Jeu de caractères initial",IDC_STATIC,172,7,136,65
+    CONTROL         "Sé&lection automatique",IDC_AUTOENCODING,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,186,21,118,8
+    CONTROL         "A&NSI (Windows)",IDC_ANSI,"Button",
+                    BS_AUTORADIOBUTTON,186,33,68,8
+    CONTROL         "PC (&Dos)",IDC_OEM,"Button",BS_AUTORADIOBUTTON,
+                    186,45,68,8
+    CONTROL         "Codage E&BCDI",IDC_EBCDIC,"Button",BS_AUTORADIOBUTTON,
+                    186,57,68,8
+    CONTROL         "UTF-&8",IDC_UTF8,"Button",BS_AUTORADIOBUTTON,256,33,50,8
+    CONTROL         "UTF-&16 LE",IDC_UTF16LE,"Button",BS_AUTORADIOBUTTON,
+                    256,45,50,8
+    CONTROL         "UTF-1&6 BE",IDC_UTF16BE,"Button",BS_AUTORADIOBUTTON,
+                    256,57,50,8
+    GROUPBOX        "Tableau de caractères",IDC_STATIC,172,79,136,48
+    LTEXT           "Page de codage ANS&I :",IDC_STATIC,187,96,76,8
+    EDITTEXT        IDC_ANSICP,264,94,34,12,ES_AUTOHSCROLL
+    LTEXT           "Page de codage &OEM :",IDC_STATIC,187,109,76,8
+    EDITTEXT        IDC_OEMCP,264,107,34,12,ES_AUTOHSCROLL
+    EDITTEXT        101,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    EDITTEXT        100,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+END
+
+12322 DIALOG DISCARDABLE  13, 56, 317, 139
+STYLE WS_CHILD
+FONT 9, "Arial"
+BEGIN
+    CONTROL         "Appareiller l&es parenthèses",1023,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,17,29,148,10
+    CONTROL         "&Messages brefs",1002,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,17,43,148,10
+    CONTROL         "Activer par &Glisser && déplacer",1007,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,17,57,148,10
+    CONTROL         "&Numérotation des lignes",1090,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,17,71,148,10
+    CONTROL         "A&ctualiser l'image de fond",IDC_REFRESHBKG,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,17,85,148,10
+    CONTROL         "Adresses en he&xadécimal",1091,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,17,99,275,10
+    LTEXT           "Ta&bulation :",IDC_STATIC,175,30,117,10
+    EDITTEXT        1008,175,42,17,12,ES_AUTOHSCROLL
+    LTEXT           "caractères (largeur moyenne)",IDC_STATIC,196,44,106,10
+    LTEXT           "&Zone de défilement maximum :",IDC_STATIC,175,63,117,9
+    EDITTEXT        IDC_MAXSCROLL,175,75,17,12,ES_AUTOHSCROLL
+    LTEXT           "lignes",IDC_STATIC,196,77,20,10
+    EDITTEXT        101,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    EDITTEXT        100,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    GROUPBOX        "",IDC_STATIC,3,13,309,108
+END
+
+12323 DIALOG DISCARDABLE  13, 56, 317, 139
+STYLE WS_CHILD
+FONT 9, "Arial"
+BEGIN
+    GROUPBOX        "Édition",IDC_STATIC,20,3,272,84
+    CONTROL         "Commencer en &mode d'insertion",IDC_DEFAULTINSERT,
+                    "Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,26,16,
+                    130,10
+    CONTROL         "Sauv&egarde automatique",IDC_AUTOWRITE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,26,30,97,10
+    CONTROL         "Paragraphe a&utomatique",IDC_AUTOINDENT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,26,43,97,12
+    CONTROL         "&Déplacements du curseur au fil du texte (flèches horizontales)",
+                    IDC_NOTEPADNL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,26,
+                    58,226,10
+    CONTROL         "C&ommandes multi-lignes (!, c, d, y) pour toutes les lignes concernées",
+                    IDC_FULLROWEXTEND,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    26,72,226,10
+    LTEXT           "Mémoire d'annulatio&n :",IDC_STATIC,155,16,74,10
+    LTEXT           "Ko",IDC_STATIC,272,16,13,10
+    EDITTEXT        IDC_UNDOLIMIT,238,14,31,12,ES_AUTOHSCROLL
+    CONTROL         "&Lecture seule par défaut",IDC_READONLY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,155,30,127,10
+    LTEXT           "Largeur de dépla&cement :",IDC_STATIC,155,45,83,10
+    LTEXT           "espaces",IDC_STATIC,257,45,28,10
+    EDITTEXT        IDC_SHIFTWIDTH,238,43,16,12,ES_AUTOHSCROLL
+    GROUPBOX        "Recherche",IDC_STATIC,20,91,272,41
+    CONTROL         "Rec&herche circulaire",IDC_WRAPSCAN,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,26,104,120,10
+    CONTROL         "Igno&rer les majuscules/minuscules",IDC_IGNORECASE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,26,117,160,10
+    CONTROL         "A&vancée (fonction magique)",IDC_MAGIC,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,155,104,126,10
+    EDITTEXT        101,0,0,0,0,ES_AUTOHSCROLL | WS_GROUP
+    EDITTEXT        100,0,0,0,0,ES_AUTOHSCROLL
+END
+
+12324 DIALOG DISCARDABLE  13, 56, 317, 139
+STYLE WS_CHILD
+FONT 9, "Arial"
+BEGIN
+    GROUPBOX        "Fichier temporaire",IDC_STATIC,7,5,163,80
+    LTEXT           "Espace d'échange sur disque si la taille atteint",
+                    IDC_STATIC,14,19,154,10
+    LTEXT           "&Ko",IDC_STATIC,42,32,47,9
+    EDITTEXT        IDC_PAGE_THRESHOLD,14,30,25,12,ES_AUTOHSCROLL
+    CONTROL         "Utili&ser le dossier temporaire du système",
+                    IDC_DEFAULTTMP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,
+                    50,140,12
+    LTEXT           "&Dossier :",IDC_TMPTITLE,14,66,29,11
+    EDITTEXT        IDC_TMPFOLDER,46,64,115,12,ES_AUTOHSCROLL
+    GROUPBOX        "Divers",IDC_STATIC,176,5,133,80
+    LTEXT           "Liste des fic&hiers tags :",IDC_STATIC,183,19,123,10
+    EDITTEXT        IDC_TAGS,183,30,118,12,ES_AUTOHSCROLL
+    LTEXT           "&Créer fichiers backup :",IDC_BKUPTITLE1,183,52,87,10
+    EDITTEXT        IDC_NUMBER_OF_BACKUPS,252,51,23,12,ES_AUTOHSCROLL
+    LTEXT           "fichiers",IDC_BKUPTITLE2,277,52,29,9
+    LTEXT           "",IDC_STATIC,181,68,125,11
+    CONTROL         "Ignorer les autres &fichiers en cours",
+                    IDC_MOREFILESQUIT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    183,65,123,9
+    GROUPBOX        "Noms des fichiers",IDC_STATIC,7,88,302,44
+    LTEXT           "&Expansion avec Tab des svrs des dom./groupes de trav. :",
+                    IDC_TABEXPDOMAINTITLE,14,102,185,9
+    EDITTEXT        IDC_TABEXPANDDOMAINS,200,100,101,12,ES_AUTOHSCROLL
+    CONTROL         "N&oms des fichiers en minuscules",1005,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,14,116,289,10
+    EDITTEXT        101,0,0,0,0,ES_AUTOHSCROLL
+    EDITTEXT        100,0,0,0,0,ES_AUTOHSCROLL
+END
+
+12325 DIALOG DISCARDABLE  13, 56, 317, 139
+STYLE WS_CHILD
+FONT 9, "Arial"
+BEGIN
+    GROUPBOX        "Ma&cros définies",IDC_STATIC,4,2,110,130
+    LISTBOX         IDC_MACROLIST,12,17,93,104,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Définition de la macro",IDC_STATIC,119,2,151,130
+    CONTROL         "&Mappage",IDC_MAP,"Button",BS_AUTORADIOBUTTON,
+                    127,17,53,8
+    CONTROL         "A&bbréviation",IDC_ABBREV,"Button",BS_AUTORADIOBUTTON,
+                    127,27,53,8
+    LTEXT           "&Nom:",IDC_STATIC,182,14,81,8
+    EDITTEXT        IDC_MACRONAME,181,24,81,12,ES_AUTOHSCROLL
+    LTEXT           "Séquence de tou&ches en entrée :",IDC_STATIC,128,41,134,8
+    EDITTEXT        IDC_MACROINPUT,127,51,135,12,ES_AUTOHSCROLL
+    LTEXT           "&Remplacer la séquence par :",IDC_STATIC,128,66,134,8
+    EDITTEXT        IDC_MACROREPLACE,127,76,135,12,ES_AUTOHSCROLL
+    CONTROL         "Mode &Insertion / Remplacement",IDC_INSERTMODE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,127,95,120,8
+    CONTROL         "Mode de comman&des",IDC_COMMANDMODE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,127,106,120,8
+    CONTROL         "Mode ligne de commandes 'e&x'",IDC_COMMANDLINE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,127,117,134,8
+    PUSHBUTTON      "Dé&finir",IDC_SETMACRO,275,6,38,14
+    PUSHBUTTON      "Effac&er",IDC_DELMACRO,275,24,38,14
+    EDITTEXT        101,0,0,0,0,ES_AUTOHSCROLL
+    EDITTEXT        100,0,0,0,0,ES_AUTOHSCROLL
+END
+
+12326 DIALOG DISCARDABLE  13, 56, 317, 139
+STYLE WS_CHILD
+FONT 9, "Arial"
+BEGIN
+    GROUPBOX        "Shell",IDC_STATIC,11,10,293,71
+    LTEXT           "&Chemin et nom de fichier du shell :",IDC_STATIC,
+                    21,26,116,10
+    EDITTEXT        IDC_SHELL,138,24,155,12,ES_AUTOHSCROLL
+    LTEXT           "&Format de la commande du shell :",IDC_EXTENSIONSTITLE,
+                    21,43,116,10
+    EDITTEXT        IDC_SHELLCOMMAND,138,41,155,12,ES_AUTOHSCROLL
+    CONTROL         "&Expansion des tabulateurs avec forward slash",
+                    IDC_TABEXPANDWITHSLASH,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,21,61,273,8
+    GROUPBOX        "Aide contextuelle",IDC_STATIC,11,89,293,36
+    LTEXT           "&URL du fichier d'aide :",IDC_STATIC,21,105,116,10
+    EDITTEXT        IDC_HELPURL,138,103,155,12,ES_AUTOHSCROLL
+    EDITTEXT        101,0,0,0,0,ES_AUTOHSCROLL
+    EDITTEXT        100,0,0,0,0,ES_AUTOHSCROLL
+END
+
+12327 DIALOG DISCARDABLE  13, 56, 317, 139
+STYLE WS_CHILD
+FONT 9, "Arial"
+BEGIN
+    RTEXT           "Fond",IDC_STATIC,5,27,43,8
+    RTEXT           "Texte",IDC_STATIC,5,43,43,8
+    CTEXT           "Zone de travail",IDC_STATIC,54,5,27,16
+    CONTROL         "10 Edit bg",1043,"WinVi - ColorCtrl",WS_GROUP | 
+                    WS_TABSTOP,61,26,14,9
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,61,26,14,9
+    CONTROL         "11 Edit fg",1044,"WinVi - ColorCtrl",0x0,61,42,14,9
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,61,42,14,9
+    CTEXT           "Zone selectionnée",IDC_STATIC,81,5,43,16
+    CONTROL         "12 Select bg",1045,"WinVi - ColorCtrl",0x0,97,26,14,9
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,97,26,14,9
+    CONTROL         "13 Select fg",1046,"WinVi - ColorCtrl",0x0,97,42,14,9
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,97,42,14,9
+    CTEXT           "Parenthèse relative ",IDC_STATIC,123,5,37,16
+    CONTROL         "14 Paren bg",1047,"WinVi - ColorCtrl",0x0,133,26,14,9
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,133,26,14,9
+    CONTROL         "15 Paren fg",1048,"WinVi - ColorCtrl",0x0,133,42,14,9
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,133,42,14,9
+    CTEXT           "Fin\nde ligne",IDC_STATIC,161,5,30,16
+    CONTROL         "16 Newline fg",1049,"WinVi - ColorCtrl",0x0,169,42,14,9
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,169,42,14,9
+    GROUPBOX        "       ",IDC_STATIC,2,57,214,43
+    GROUPBOX        "       ",IDC_STATIC,221,57,92,43
+    GROUPBOX        "       ",IDC_STATIC,2,104,214,30
+    GROUPBOX        "       ",IDC_STATIC,221,104,92,30
+    CONTROL         "C&ouleurs de base ",IDC_COLORS,"Button",
+                    BS_AUTORADIOBUTTON,8,57,69,10
+    CONTROL         "Def. par &utilisateur ",IDC_CUSTOM,"Button",
+                    BS_AUTORADIOBUTTON,227,57,71,10
+    CONTROL         "&Image de fond ",IDC_BITMAP,"Button",BS_AUTORADIOBUTTON,
+                    8,104,60,10
+    CONTROL         "Co&nfig. du système ",IDC_SYSTEM,"Button",
+                    BS_AUTORADIOBUTTON,227,104,74,10
+    CONTROL         "0 black",1027,"WinVi - ColorCtrl",WS_GROUP,20,70,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,20,70,14,10
+    CONTROL         "1 red",1028,"WinVi - ColorCtrl",0x0,43,70,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,43,70,14,10
+    CONTROL         "2 green",1029,"WinVi - ColorCtrl",0x0,66,70,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,66,70,14,10
+    CONTROL         "3 yellow",1030,"WinVi - ColorCtrl",0x0,89,70,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,89,70,14,10
+    CONTROL         "4 blue",1031,"WinVi - ColorCtrl",0x0,112,70,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,112,70,14,10
+    CONTROL         "5 magenta",1032,"WinVi - ColorCtrl",0x0,135,70,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,135,70,14,10
+    CONTROL         "6 cyan",1033,"WinVi - ColorCtrl",0x0,158,70,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,158,70,14,10
+    CONTROL         "7 white",1034,"WinVi - ColorCtrl",0x0,181,70,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,181,70,14,10
+    CONTROL         "8 light gray",1035,"WinVi - ColorCtrl",0x0,20,83,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,20,83,14,10
+    CONTROL         "9 dark red",1036,"WinVi - ColorCtrl",0x0,43,83,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,43,83,14,10
+    CONTROL         "a dark green",1037,"WinVi - ColorCtrl",0x0,66,83,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,66,83,14,10
+    CONTROL         "b dark yellow",1038,"WinVi - ColorCtrl",0x0,89,83,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,89,83,14,10
+    CONTROL         "c dark blue",1039,"WinVi - ColorCtrl",0x0,112,83,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,112,83,14,10
+    CONTROL         "d dark magenta",1040,"WinVi - ColorCtrl",0x0,135,83,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,135,83,14,10
+    CONTROL         "e dark cyan",1041,"WinVi - ColorCtrl",0x0,158,83,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,158,83,14,10
+    CONTROL         "f dark gray",1042,"WinVi - ColorCtrl",0x0,181,83,14,10
+    CONTROL         "",IDC_STATIC,"WinVi - SunkenBox",0x0,181,83,14,10
+    GROUPBOX        "",1055,58,19,21,19
+    GROUPBOX        "",1056,58,35,21,19,NOT WS_VISIBLE
+    GROUPBOX        "",1057,94,19,21,19,NOT WS_VISIBLE
+    GROUPBOX        "",1058,94,35,21,19,NOT WS_VISIBLE
+    GROUPBOX        "",1059,130,19,21,19,NOT WS_VISIBLE
+    GROUPBOX        "",1060,130,35,21,19,NOT WS_VISIBLE
+    GROUPBOX        "",1061,166,35,21,19,NOT WS_VISIBLE
+    PUSHBUTTON      "C&hoisir...",IDC_CHOOSECOLOR,237,75,60,15
+    LTEXT           "&Fichier :",IDC_BITMAPTITLE,8,117,29,9
+    EDITTEXT        IDC_BITMAPEDIT,38,115,107,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Par&courir...",IDC_BITMAPBROWSE,151,114,57,15
+    CTEXT           "",IDC_SYSCOLOR,223,118,88,10
+    EDITTEXT        101,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    PUSHBUTTON      "",102,0,0,0,0
+    EDITTEXT        100,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+END
+
+12328 DIALOG DISCARDABLE  13, 56, 317, 139
+STYLE WS_CHILD
+FONT 9, "Arial"
+BEGIN
+    GROUPBOX        "Mode texte",IDC_STATIC,9,4,298,60
+    LTEXT           "Police :",IDC_STATIC,15,24,33,9
+    CONTROL         "Courier New,  10 pt.",IDC_FONTNAME_TEXT,"Static",
+                    SS_LEFTNOWORDWRAP | WS_GROUP,56,24,112,9
+    PUSHBUTTON      "&Changer...",IDC_CHANGEFONT_TEXT,56,38,53,14
+    LTEXT           "",IDC_STATIC,172,15,128,43,SS_SUNKEN | NOT WS_GROUP
+    EDITTEXT        IDC_FONTSAMPLE_TEXT,177,18,118,36,ES_CENTER | 
+                    ES_MULTILINE | ES_READONLY | NOT WS_BORDER | NOT 
+                    WS_TABSTOP
+    GROUPBOX        "Mode hexadécimal",IDC_STATIC,9,71,298,60
+    LTEXT           "Police :",IDC_STATIC,15,91,33,9
+    CONTROL         "Courier New,  10 pt.",IDC_FONTNAME_HEX,"Static",
+                    SS_LEFTNOWORDWRAP | WS_GROUP,56,91,112,9
+    PUSHBUTTON      "C&hanger...",IDC_CHANGEFONT_HEX,56,105,53,14
+    LTEXT           "",IDC_STATIC,172,82,128,43,SS_SUNKEN | NOT WS_GROUP
+    EDITTEXT        IDC_FONTSAMPLE_HEX,177,85,118,36,ES_CENTER | 
+                    ES_MULTILINE | ES_READONLY | NOT WS_BORDER | NOT 
+                    WS_TABSTOP
+    EDITTEXT        101,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    PUSHBUTTON      "",102,0,0,0,0
+    EDITTEXT        100,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+END
+
+12329 DIALOG DISCARDABLE  13, 56, 317, 139
+STYLE WS_CHILD
+FONT 9, "Arial"
+BEGIN
+    GROUPBOX        "Marges",-1,6,2,84,103
+    LTEXT           "Ga&uche :",-1,11,24,29,11
+    EDITTEXT        1066,43,22,21,12,ES_AUTOHSCROLL
+    LTEXT           "cm",1073,66,24,19,12
+    LTEXT           "&Haut :",-1,11,43,29,11
+    EDITTEXT        1067,43,41,21,12,ES_AUTOHSCROLL
+    LTEXT           "cm",1074,66,43,19,12
+    LTEXT           "Droit&e :",-1,11,62,29,11
+    EDITTEXT        1068,43,60,21,12,ES_AUTOHSCROLL
+    LTEXT           "cm",1075,66,62,19,12
+    LTEXT           "&Bas :",-1,11,81,29,11
+    EDITTEXT        1098,43,79,21,12,ES_AUTOHSCROLL
+    LTEXT           "cm",1076,66,81,19,12
+    GROUPBOX        "Zone des marges",-1,94,2,122,103
+    LTEXT           "E&ntête :",-1,100,24,30,9
+    EDITTEXT        1077,149,22,59,12,ES_AUTOHSCROLL
+    LTEXT           "Pie&d de page :",-1,100,44,49,9
+    EDITTEXT        1078,149,43,59,12,ES_AUTOHSCROLL
+    CONTROL         "Te&xte encadré",1079,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,100,68,96,11
+    CONTROL         "Entête/pieds de page encad&rés",1082,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,100,83,113,11
+    GROUPBOX        "Zone du texte",-1,94,105,122,29
+    CONTROL         "Numérotat&ion des lignes",1083,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,100,118,98,11
+    GROUPBOX        "Orientation du papier",-1,220,2,92,78
+    ICON            "",-1,284,27,21,20
+    CONTROL         "Dé&faut (Imprimante)",1069,"Button",BS_AUTORADIOBUTTON,
+                    226,16,81,10
+    CONTROL         "P&ortrait",1070,"Button",BS_AUTORADIOBUTTON,226,27,50,
+                    10
+    CONTROL         "Pa&ysage",1071,"Button",BS_AUTORADIOBUTTON,226,38,50,10
+    CONTROL         "Paysage (&2 colonnes)",1072,"Button",BS_AUTORADIOBUTTON,
+                    226,49,83,10
+    CONTROL         "Ligne &séparatrice",1081,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,237,61,71,11
+    GROUPBOX        "Police",-1,220,80,92,54
+    LTEXT           "",1085,226,92,80,18
+    PUSHBUTTON      "&Changer la police...",1084,230,112,72,14
+    GROUPBOX        "Prévision",-1,6,105,84,29,NOT WS_VISIBLE
+    PUSHBUTTON      "Preview",1080,14,118,69,11,NOT WS_VISIBLE | NOT 
+                    WS_TABSTOP
+    EDITTEXT        101,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    PUSHBUTTON      "",102,0,0,0,0
+    EDITTEXT        100,0,0,0,0,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+END
+
+12330 DIALOG DISCARDABLE  13, 56, 317, 139
+STYLE WS_CHILD
+FONT 9, "Arial"
+BEGIN
+    GROUPBOX        "Sélection d'une langue",IDC_STATIC,59,17,196,99
+    LTEXT           "Choisissez une langue pour WinVi :",IDC_STATIC,82,34,
+                    156,9
+    CONTROL         "A&nglais  (English / inglés / englisch)",IDC_ENGLISH,
+                    "Button",BS_AUTORADIOBUTTON,82,47,156,10
+    CONTROL         "E&spagnol  (Spanish / español / spanisch)",IDC_SPANISH,
+                    "Button",BS_AUTORADIOBUTTON,82,58,156,10
+    CONTROL         "&Français  (French / francés / französisch)",IDC_FRENCH,
+                    "Button",BS_AUTORADIOBUTTON,82,69,156,10
+    CONTROL         "Allemand  (&German / alemán / deutsch)",IDC_GERMAN,
+                    "Button",BS_AUTORADIOBUTTON,82,80,156,10
+    CONTROL         "Séle&ction automatique (Windows)",IDC_AUTOLANG,"Button",
+                    BS_AUTORADIOBUTTON,82,96,156,10
+    EDITTEXT        101,0,0,0,0,ES_AUTOHSCROLL | WS_GROUP
+    EDITTEXT        100,0,0,0,0,ES_AUTOHSCROLL
+END
+
+#endif    // French (France) resources
+/////////////////////////////////////////////////////////////////////////////
+
+

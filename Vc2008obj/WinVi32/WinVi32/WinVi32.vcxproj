@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7522E985-AF79-4C58-BD79-48CC40250A00}</ProjectGuid>
+    <RootNamespace>WinVi32</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>16.0.30712.155</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)\bin\$(Configuration)\$(PlatformName)\</OutDir>
+    <IntDir>$(SolutionDir)\tmp\$(ProjectName)\$(Configuration)\$(PlatformName)\</IntDir>
+    <GenerateManifest>true</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)\bin\$(Configuration)\$(PlatformName)\</OutDir>
+    <IntDir>$(SolutionDir)\tmp\$(ProjectName)\$(Configuration)\$(PlatformName)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;_SECURE_CRT_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>mpr.lib comctl32.lib %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalManifestDependencies>type=%27win32%27 name=%27Microsoft.Windows.Common-Controls%27 version=%276.0.0.0%27 processorArchitecture=%27X86%27 publicKeyToken=%276595b64144ccf1df%27 language=%27*%27;%(AdditionalManifestDependencies)</AdditionalManifestDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Manifest />
+    <ManifestResourceCompile>
+      <ResourceOutputFileName>
+      </ResourceOutputFileName>
+    </ManifestResourceCompile>
+    <Manifest>
+      <AdditionalManifestFiles>
+      </AdditionalManifestFiles>
+      <InputResourceManifests>
+      </InputResourceManifests>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MinSpace</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;_SECURE_CRT_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>mpr.lib comctl32.lib %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalManifestDependencies>type=%27win32%27 name=%27Microsoft.Windows.Common-Controls%27 version=%276.0.0.0%27 processorArchitecture=%27X86%27 publicKeyToken=%276595b64144ccf1df%27 language=%27*%27;%(AdditionalManifestDependencies)</AdditionalManifestDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Manifest />
+    <Manifest>
+      <AdditionalManifestFiles>
+      </AdditionalManifestFiles>
+      <InputResourceManifests>
+      </InputResourceManifests>
+    </Manifest>
+    <ManifestResourceCompile>
+      <ResourceOutputFileName>
+      </ResourceOutputFileName>
+    </ManifestResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Assert.c" />
+    <ClCompile Include="..\..\..\Bmp.c" />
+    <ClCompile Include="..\..\..\CharFlags.c" />
+    <ClCompile Include="..\..\..\Clipbrd.c" />
+    <ClCompile Include="..\..\..\Colors.c" />
+    <ClCompile Include="..\..\..\Command.c" />
+    <ClCompile Include="..\..\..\Ctl3d.c" />
+    <ClCompile Include="..\..\..\Exec.c" />
+    <ClCompile Include="..\..\..\Externs.c" />
+    <ClCompile Include="..\..\..\File.c" />
+    <ClCompile Include="..\..\..\FileList.c" />
+    <ClCompile Include="..\..\..\Font.c" />
+    <ClCompile Include="..\..\..\Input.c" />
+    <ClCompile Include="..\..\..\InsDel.c" />
+    <ClCompile Include="..\..\..\InterCom.c" />
+    <ClCompile Include="..\..\..\Map.c" />
+    <ClCompile Include="..\..\..\Misc.c" />
+    <ClCompile Include="..\..\..\Mouse.c" />
+    <ClCompile Include="..\..\..\Page.c" />
+    <ClCompile Include="..\..\..\Paint.c" />
+    <ClCompile Include="..\..\..\PathExp.c" />
+    <ClCompile Include="..\..\..\Position.c" />
+    <ClCompile Include="..\..\..\Print.c" />
+    <ClCompile Include="..\..\..\Profile.c" />
+    <ClCompile Include="..\..\..\Search.c" />
+    <ClCompile Include="..\..\..\Settings.c" />
+    <ClCompile Include="..\..\..\SnPrintf.c" />
+    <ClCompile Include="..\..\..\SrchDlg.c" />
+    <ClCompile Include="..\..\..\Status.c" />
+    <ClCompile Include="..\..\..\TabCtrl.c" />
+    <ClCompile Include="..\..\..\Tags.c" />
+    <ClCompile Include="..\..\..\ToolBar.c" />
+    <ClCompile Include="..\..\..\Undo.c" />
+    <ClCompile Include="..\..\..\Version.c" />
+    <ClCompile Include="..\..\..\WinVi.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Colors.h" />
+    <ClInclude Include="..\..\..\Ctl3d.h" />
+    <ClInclude Include="..\..\..\Exec.h" />
+    <ClInclude Include="..\..\..\InterCom.h" />
+    <ClInclude Include="..\..\..\Map.h" />
+    <ClInclude Include="..\..\..\MyAssert.h" />
+    <ClInclude Include="..\..\..\Page.h" />
+    <ClInclude Include="..\..\..\Paint.h" />
+    <ClInclude Include="..\..\..\PathExp.h" />
+    <ClInclude Include="..\..\..\PrintH.h" />
+    <ClInclude Include="..\..\..\resource.h" />
+    <ClInclude Include="..\..\..\Status.h" />
+    <ClInclude Include="..\..\..\TabCtrl.h" />
+    <ClInclude Include="..\..\..\ToolBar.h" />
+    <ClInclude Include="..\..\..\WinVi.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\Colors32.bmp" />
+    <Image Include="..\..\..\WinVi.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\..\WinVi.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
