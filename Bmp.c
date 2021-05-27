@@ -12,6 +12,7 @@
 
 /* revision log:
  *		3-Dec-2000	first publication of source code
+ *		22-May-2021	reviewed by Stephanie W. Myers
  */
 
 #include <windows.h>
