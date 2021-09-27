@@ -1,6 +1,6 @@
 # WinVi Minimalist Text Hex Editor version 3.3.0.0
 
-> Updated Sep 03 2021
+> Updated Sep 27 2021
 
 ## WinVi Minimalist Text Hex Editor 3.3.0.0 is the open source Windows Notepad replacement based on UNIX Vi like a minimalist Don Ho Notepad++ fork with hexadecimal/binary editing mode and various color themes.
 
